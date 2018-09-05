@@ -160,7 +160,7 @@ const nav = [
   }
 ];
 
-const arr = nav.reverse();
+const arr = nav;
 
 class SimpleLineChart extends PureComponent {
   render() {
@@ -170,11 +170,11 @@ class SimpleLineChart extends PureComponent {
       <Col xs={12} md={12} lg={12} xl={12}>
         <ResponsiveContainer height={80}>
           <LineChart data={arr} margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
-            syncId="chart">
+          >
             <Tooltip content={<CustomTooltip />} />
             <Line type='monotone' dataKey='navOne' stroke='#ee1a2d' activeDot={{ r: 6 }} />
             <YAxis minTickGap={50} hide={true} padding={{ top: 20, bottom: 20, left: 10, right: 10 }} domain={[dataMin => (Math.abs(dataMin)), dataMax => (Math.abs(dataMax))]} />
-            <XAxis reversed={true} hide={true} padding={{ top: 0, bottom: 0, left: 10, right: 10 }} dataKey='dataDate' />
+            <XAxis hide={true} padding={{ top: 0, bottom: 0, left: 10, right: 10 }} dataKey='dataDate' />
           </LineChart>
         </ResponsiveContainer>
 
