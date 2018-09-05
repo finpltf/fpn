@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Switch} from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import MainWrapper from './MainWrapper';
 import Layout from '../containers/_layout';
 
@@ -17,8 +17,8 @@ import Tabs from '../containers/ui/tabs';
 import Timeline from '../containers/ui/timeline';
 import Tooltips from '../containers/ui/tooltips';
 
-import fundsList from '../containers/ui/funds';
-import fundPage from '../containers/ui/fundPage';
+import fundsList from '../containers/funds';
+import fundPage from '../containers/fundPage';
 
 
 import BasicTables from '../containers/tables/basic_tables';
@@ -60,7 +60,7 @@ import FormValidation from '../containers/form/form_validation';
 import MaskForm from '../containers/form/mask_form';
 import WizardForm from '../containers/form/wizard_form';
 import MaterialForm from '../containers/form/material_form';
-import FloatingLabelsForm from '../containers/form/floating_labels_form';
+import InvestorProfile from '../containers/investor';
 import FormPicker from '../containers/form/form_picker';
 
 import Cart from '../containers/e-commerce/cart';
@@ -100,14 +100,14 @@ const Router = () => (
   <MainWrapper>
     <main>
       <Switch>
-        <Route exact path='/' component={Landing}/>
-        <Route path='/404' component={NotFound404}/>
-        <Route path='/lock_screen' component={LockScreen}/>
-        <Route path='/log_in' component={LogIn}/>
-        <Route path='/log_in_photo' component={LogInPhoto}/>
-        <Route path='/register' component={Register}/>
-        <Route path='/register_photo' component={RegisterPhoto}/>
-        <Route path='/' component={wrappedRoutes}/>
+        <Route exact path='/' component={Landing} />
+        <Route path='/404' component={NotFound404} />
+        <Route path='/lock_screen' component={LockScreen} />
+        <Route path='/log_in' component={LogIn} />
+        <Route path='/log_in_photo' component={LogInPhoto} />
+        <Route path='/register' component={Register} />
+        <Route path='/register_photo' component={RegisterPhoto} />
+        <Route path='/' component={wrappedRoutes} />
       </Switch>
     </main>
   </MainWrapper>
@@ -115,145 +115,146 @@ const Router = () => (
 
 const wrappedRoutes = () => (
   <div>
-    <Layout/>
+    <Layout />
     <div className='container__wrap'>
-      <Route path='/dashboard_default' component={DefaultDashboard}/>
-      <Route path='/dashboard_e_commerce' component={Commerce}/>
-      <Route path='/dashboard_fitness' component={FitnessDashboard}/>
-      <Route path='/dashboard_crypto' component={Crypto}/>
-      <Route path='/ui' component={UI}/>
-      <Route path='/mail' component={Mail}/>
-      <Route path='/chat' component={Chat}/>
-      <Route path='/forms' component={Forms}/>
-      <Route path='/tables' component={Tables}/>
-      <Route path='/charts' component={Charts}/>
-      <Route path='/maps' component={Maps}/>
-      <Route path='/account' component={Account}/>
-      <Route path='/e-commerce' component={ECommerce}/>
-      <Route path='/default_pages' component={DefaultPages}/>
-      <Route path='/documentation' component={Documentation}/>
+      <Route path='/dashboard_default' component={DefaultDashboard} />
+      <Route path='/dashboard_e_commerce' component={Commerce} />
+      <Route path='/dashboard_fitness' component={FitnessDashboard} />
+      <Route path='/dashboard_crypto' component={Crypto} />
+      <Route path='/funds' component={fundsList} />
+      <Route path='/fundPage' component={fundPage} />
+      <Route path='/investor' component={InvestorProfile} />
+      <Route path='/ui' component={UI} />
+      <Route path='/mail' component={Mail} />
+      <Route path='/chat' component={Chat} />
+      <Route path='/forms' component={Forms} />
+      <Route path='/tables' component={Tables} />
+      <Route path='/charts' component={Charts} />
+      <Route path='/maps' component={Maps} />
+      <Route path='/account' component={Account} />
+      <Route path='/e-commerce' component={ECommerce} />
+      <Route path='/default_pages' component={DefaultPages} />
+      <Route path='/documentation' component={Documentation} />
     </div>
   </div>
 );
 
 const UI = () => (
   <Switch>
-    <Route path='/ui/alerts' component={Alerts}/>
-    <Route path='/ui/buttons' component={Buttons}/>
-    <Route path='/ui/carousel' component={Carousel}/>
-    <Route path='/ui/collapse' component={Collapse}/>
-    <Route path='/ui/grids' component={Grids}/>
-    <Route path='/ui/modals' component={Modals}/>
-    <Route path='/ui/notifications' component={Notifications}/>
-    <Route path='/ui/panels' component={Panels}/>
-    <Route path='/ui/progress_bars' component={ProgressBars}/>
-    <Route path='/ui/range_sliders' component={RangeSliders}/>
-    <Route path='/ui/tabs' component={Tabs}/>
-    <Route path='/ui/timeline' component={Timeline}/>
-    <Route path='/ui/tooltips' component={Tooltips}/>
-    <Route path='/ui/funds' component={fundsList}/>
-    <Route path='/ui/fundPage' component={fundPage}/>    
+    <Route path='/ui/alerts' component={Alerts} />
+    <Route path='/ui/buttons' component={Buttons} />
+    <Route path='/ui/carousel' component={Carousel} />
+    <Route path='/ui/collapse' component={Collapse} />
+    <Route path='/ui/grids' component={Grids} />
+    <Route path='/ui/modals' component={Modals} />
+    <Route path='/ui/notifications' component={Notifications} />
+    <Route path='/ui/panels' component={Panels} />
+    <Route path='/ui/progress_bars' component={ProgressBars} />
+    <Route path='/ui/range_sliders' component={RangeSliders} />
+    <Route path='/ui/tabs' component={Tabs} />
+    <Route path='/ui/timeline' component={Timeline} />
+    <Route path='/ui/tooltips' component={Tooltips} />
   </Switch>
 );
 
 const Forms = () => (
   <Switch>
-    <Route path='/forms/basic_form' component={BasicForm}/>
-    <Route path='/forms/check_form_controls' component={CheckFormControls}/>
-    <Route path='/forms/file_upload' component={FileUpload}/>
-    <Route path='/forms/floating_labels_form' component={FloatingLabelsForm}/>
-    <Route path='/forms/form_dropzone' component={FormDropzone}/>
-    <Route path='/forms/form_layouts' component={FormLayouts}/>
-    <Route path='/forms/form_picker' component={FormPicker}/>
-    <Route path='/forms/form_validation' component={FormValidation}/>
-    <Route path='/forms/mask_form' component={MaskForm}/>
-    <Route path='/forms/material_form' component={MaterialForm}/>
-    <Route path='/forms/wizard_form' component={WizardForm}/>
+    <Route path='/forms/basic_form' component={BasicForm} />
+    <Route path='/forms/check_form_controls' component={CheckFormControls} />
+    <Route path='/forms/file_upload' component={FileUpload} />
+
+    <Route path='/forms/form_dropzone' component={FormDropzone} />
+    <Route path='/forms/form_layouts' component={FormLayouts} />
+    <Route path='/forms/form_picker' component={FormPicker} />
+    <Route path='/forms/form_validation' component={FormValidation} />
+    <Route path='/forms/mask_form' component={MaskForm} />
+    <Route path='/forms/material_form' component={MaterialForm} />
+    <Route path='/forms/wizard_form' component={WizardForm} />
   </Switch>
 );
 
 const Tables = () => (
   <Switch>
-    <Route path='/tables/basic_tables' component={BasicTables}/>
-    <Route path='/tables/data_table' component={DataTable}/>
-    <Route path='/tables/editable_table' component={EditableTable}/>
+    <Route path='/tables/basic_tables' component={BasicTables} />
+    <Route path='/tables/data_table' component={DataTable} />
+    <Route path='/tables/editable_table' component={EditableTable} />
   </Switch>
 );
 
 const Charts = () => (
   <Switch>
-    <Route path='/charts/charts_js' component={ChartsJS}/>
-    <Route path='/charts/react_vis' component={ReactVis}/>
-    <Route path='/charts/recharts' component={Recharts}/>
+    <Route path='/charts/charts_js' component={ChartsJS} />
+    <Route path='/charts/react_vis' component={ReactVis} />
+    <Route path='/charts/recharts' component={Recharts} />
   </Switch>
 );
 
 const Maps = () => (
   <Switch>
-    <Route path='/maps/google_map' component={GoogleMap}/>
-    <Route path='/maps/vector_map' component={VectorMap}/>
+    <Route path='/maps/google_map' component={GoogleMap} />
+    <Route path='/maps/vector_map' component={VectorMap} />
   </Switch>
 );
 
 const Account = () => (
   <Switch>
-    <Route path='/account/profile' component={Profile}/>
-    <Route path='/account/email_confirmation' component={EmailConfirmation}/>
+    <Route path='/account/profile' component={Profile} />
+    <Route path='/account/email_confirmation' component={EmailConfirmation} />
   </Switch>
 );
 
 const ECommerce = () => (
   <Switch>
-    <Route path='/e-commerce/cart' component={Cart}/>
-    <Route path='/e-commerce/catalog' component={Catalog}/>
-    <Route path='/e-commerce/orders_list' component={OrdersList}/>
-    <Route path='/e-commerce/payment' component={Payment}/>
-    <Route path='/e-commerce/product_edit' component={ProductEdit}/>
-    <Route path='/e-commerce/product_page' component={ProductPage}/>
-    <Route path='/e-commerce/products_list' component={ProductsList}/>
+    <Route path='/e-commerce/cart' component={Cart} />
+    <Route path='/e-commerce/catalog' component={Catalog} />
+    <Route path='/e-commerce/orders_list' component={OrdersList} />
+    <Route path='/e-commerce/payment' component={Payment} />
+    <Route path='/e-commerce/product_edit' component={ProductEdit} />
+    <Route path='/e-commerce/product_page' component={ProductPage} />
+    <Route path='/e-commerce/products_list' component={ProductsList} />
   </Switch>
 );
 
 const DefaultPages = () => (
   <Switch>
-    <Route path='/default_pages/calendar' component={Calendar}/>
-    <Route path='/default_pages/faq' component={FAQ}/>
-    <Route path='/default_pages/gallery' component={Gallery}/>
-    <Route path='/default_pages/invoice_template' component={InvoiceTemplate}/>
-    <Route path='/default_pages/pricing_cards' component={PricingCards}/>
-    <Route path='/default_pages/search_results' component={SearchResults}/>
-    <Route path='/default_pages/text_editor' component={TextEditor}/>
+    <Route path='/default_pages/calendar' component={Calendar} />
+    <Route path='/default_pages/faq' component={FAQ} />
+    <Route path='/default_pages/gallery' component={Gallery} />
+    <Route path='/default_pages/invoice_template' component={InvoiceTemplate} />
+    <Route path='/default_pages/pricing_cards' component={PricingCards} />
+    <Route path='/default_pages/search_results' component={SearchResults} />
+    <Route path='/default_pages/text_editor' component={TextEditor} />
   </Switch>
 );
 
 const Documentation = () => (
   <Switch>
-    <Route path='/documentation/introduction' component={Introduction}/>
-    <Route path='/documentation/installation' component={Installation}/>
-    <Route path='/documentation/file_structure' component={FileStructure}/>
-    <Route path='/documentation/components' component={Components}/>
-    <Route path='/documentation/form' component={Form}/>
-    <Route path='/documentation/color_themes' component={ColorThemes}/>
-    <Route path='/documentation/navigation_item' component={NavigationItem}/>
-    <Route path='/documentation/resources' component={Resources}/>
-    <Route path='/documentation/changelog' component={Changelog}/>
+    <Route path='/documentation/introduction' component={Introduction} />
+    <Route path='/documentation/installation' component={Installation} />
+    <Route path='/documentation/file_structure' component={FileStructure} />
+    <Route path='/documentation/components' component={Components} />
+    <Route path='/documentation/form' component={Form} />
+    <Route path='/documentation/color_themes' component={ColorThemes} />
+    <Route path='/documentation/navigation_item' component={NavigationItem} />
+    <Route path='/documentation/resources' component={Resources} />
+    <Route path='/documentation/changelog' component={Changelog} />
   </Switch>
 );
 
 const Crypto = () => (
   <Switch>
-    <Route exact path='/dashboard_crypto' component={CryptoDashboard}/>
-    <Route path='/dashboard_crypto/edit/:index' component={CryptoDashboardEdit}/>
-    <Route exact path='/funds' component={fundsList}/>
+    <Route exact path='/dashboard_crypto' component={CryptoDashboard} />
+    <Route path='/dashboard_crypto/edit/:index' component={CryptoDashboardEdit} />
+    <Route exact path='/funds' component={fundsList} />
 
-    
+
   </Switch>
 );
 
 const Commerce = () => (
   <Switch>
-    <Route exact path='/dashboard_e_commerce' component={ECommerceDashboard}/>
-    <Route path='/dashboard_e_commerce/edit/:index' component={ECommerceDashboardEdit}/>
+    <Route exact path='/dashboard_e_commerce' component={ECommerceDashboard} />
+    <Route path='/dashboard_e_commerce/edit/:index' component={ECommerceDashboardEdit} />
   </Switch>
 );
 

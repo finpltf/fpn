@@ -1,9 +1,9 @@
-import React, {PureComponent} from 'react';
-import {Card, CardBody, Col} from 'reactstrap';
-import {Field, reduxForm} from 'redux-form';
+import React, { PureComponent } from 'react';
+import { Card, CardBody, Col } from 'reactstrap';
+import { Field, reduxForm } from 'redux-form';
 import renderRadioButtonField from '../../../../components/form/RadioButton';
 import renderCheckBoxField from '../../../../components/form/CheckBox';
-import {translate} from 'react-i18next';
+import { translate } from 'react-i18next';
 
 class DefaultControls extends PureComponent {
   render() {
@@ -12,7 +12,7 @@ class DefaultControls extends PureComponent {
       // reset,
       t
     } = this.props;
-    
+
     return (
       <Col md={12} lg={12} xl={6}>
         <Card>

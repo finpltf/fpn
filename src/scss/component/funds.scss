@@ -1,88 +1,60 @@
-.fundsList {
+.fundsList, .fund__page {
 
     max-width: 1360px;
+
+
+
+    
 }
 
 .fundFilter {
     width: 100%;
     max-width: 100%;
 }
-.funds {
-    
 
-    .card-body {
-        padding: 25px 20px 25px 20px;
-        box-shadow: 0px 5px 15px 2px rgba(0, 0, 0, 0.13);
-        cursor: pointer;
-        transition: all 0.3s;                
-        &:hover {
-          box-shadow: 0px 0px 20px 0px rgba(149, 149, 149, 0.52);
-        }
-      }
+.funds__page, .fund__page {
 
-    .fund__card, .fund__page {
-
-        .subhead {
+       .subhead {
             line-height: 28px;
             color:#999999;
+
+
+            svg {
+    font-size: inherit;
+    height: 14px;
+    background: #ee1a2d;
+    border-radius: 75px;
+    width: 14px;
+    color: #FFF;
+    vertical-align: middle;
+}
         }
+
+
+        .dashboard__total-tooltip {
+
+            background: #FFF;
+            box-shadow: 0px 5px 15px 2px rgba(0, 0, 0, 0.13);
+            padding:10px;
+            border-radius: 5px;
+        }
+            .badge {
+        font-size: 65%;
+        background: transparent;
+    }
+
         h3 {
                 line-height: 18px;
+                font-size: 20px;
+                text-transform: uppercase;
+
             span {
                 font-size: 14px;
                 
             }  
     
         }
-    
-        .plus {            
-            color: #63b502;
-        }
-    .graph {
-        position: relative;
-        z-index: 10;
-    }        
-    .dashboard__total-tooltip {
-        background:#FFF;
-        padding: 15px;
-        box-shadow: 0px 5px 15px 2px rgba(0, 0, 0, 0.13);
-        z-index: 50;
-        border-radius: 5px;
-    }
- 
-    }
 
-
-}
-
-.fund__page {
-
-    .card-body {
-        padding: 25px 20px 25px 20px;
-        box-shadow: 0px 5px 15px 2px rgba(0, 0, 0, 0.13);
-        cursor: default;
-        transition: all 0s;                
-        &:hover {
-            box-shadow: 0px 5px 15px 2px rgba(0, 0, 0, 0.13);
-        }
-      }
-    .page-title {
-        font-size: 28px;
-    }
-    .badge {
-        font-size: 65%;
-        background: transparent;
-    }
-
-    .subhead {
-        line-height: 28px;
-        color:#999999;
-    }
-
-h4 {
-    line-height: 24px;
-    margin-bottom: 24px;
-}
 
 .side {
     height: auto;
@@ -98,22 +70,179 @@ h4 {
     
 
 }
-    table th {
+    table th, .th {
         font-weight:400;
+            color: #777777;
     }
 
-    .table tbody td {
+    .table tbody td, .td {
         font-weight:400;
-        font-size: 24px;
+        font-size: 20px;
         color: #333;
 
-        &.red {
-            color:#ee1a2d;
-        }
-    }
-    .plus {
-        color: #4caf50;
+     
     }
 
+
+
+
+
+    
+    .graph {
+        position: relative;
+        z-index: 10;
+        opacity: 0.7;
+    }        
+ 
+    
+
+    .noListItems {
+        margin: 5px 0;
+         list-style: none;
+    }
+  
+    .red {
+        color:$color-accent !important;
+    }
+    .green {
+        color: $color-green !important;
+    }
+    .yellow {
+        color:$color-yellow !important;
+    }
 }
+.funds__page {
+    
+
+
+
+
+
+    .card-body {
+        padding: 20px;
+        box-shadow: 0px 5px 15px 2px rgba(0, 0, 0, 0.13);
+        cursor: pointer;
+        transition: all 0.3s;                
+        &:hover {
+          box-shadow: 0px 0px 20px 0px rgba(149, 149, 149, 0.52);
+        }
+      }
+     .card__title {
+            margin-bottom: 0px;
+        }
+    .graph {
+        opacity: 0.4;
+    }        
+&:hover {
+    
+    .graph {
+        opacity: 1;
+    }        
+}
+}          
+
+.fund__page {
+
+    .card-body {
+        padding: 25px 20px 15px 20px;
+        box-shadow: 0px 5px 15px 2px rgba(0, 0, 0, 0.13);
+        cursor: default;        
+        transition: all 0s;                
+        &:hover {
+            box-shadow: 0px 5px 15px 2px rgba(0, 0, 0, 0.13);
+        }
+
+.table {
+    min-width: 600px;
+}
+
+.dynamic {
+    overflow: auto;
+}
+h3 {
+                    margin-bottom: 25px;    
+}
+        h4 {
+    margin-bottom: 0px;
+}
+
+hr {
+    width: 30%;
+}
+.row {
+    width:100%;
+}
+.docs {
+
+    a {
+        color: #333;
+        display: inline-block;
+        margin: 15px;
+    }
+    img {
+    max-width: 45px;
+    float: left;
+    margin: 5px;
+    }
+    span {
+        vertical-align: middle;
+    }
+}
+    .margin-30 {
+        margin: 30px 5px 30px 5px;
+    }
+
+
+    .body-btn {
+        max-width: 300px;
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+      }
+    .page-title {
+        font-size: 28px;
+    }
+
+.list-deco {
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+
+    .list-deco__item {
+    padding-left: 40px;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 20px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 22px;
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAaCAMAAACTisy7AAAARVBMVEUAAADt7e3s7Ozl5eXr6+vs7Ozs7Ozt7e3r6+vvEijp6ens7Ozy8vLvFCrs7Ozr6+vt7e3s7Ozs7OzudYDs7Ozug43vEykV8bw8AAAAFHRSTlMAxr4JP+bCmIF/LycSgOebmXd24Xg7ii0AAACnSURBVCjPhdLbDoMgEEVRGIGqWG899v8/tUNKewJiu590VkzkYj7FXTzgZY+mzgV8C66g7oaiW0ebLKrspONhSN/RqJ0ZnnfFBY2Wtzm0OtS00LZHsrFtB0bF/sLQK0p+PyqDKHoOCoNXBEfVQ8JSaQl9qTSff4hKg+SlUGnouQnnBY3cvlPBpFwb83VYW7YmuTzsX9fkzwVjzpKsM3VxkxmYZYucvQBZ4Sk9pHDzhgAAAABJRU5ErkJggg==);
+        left: 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+}
+
+}
+
 

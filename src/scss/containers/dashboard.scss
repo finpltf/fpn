@@ -1,6 +1,15 @@
-.dashboard {
+  .dashboard {
 
   //default
+    .red {
+        color:$color-accent !important;
+    }
+    .green {
+        color: $color-green !important;
+    }
+    .yellow {
+        color:$color-yellow !important;
+    }
 
   .dashboard__visitors-chart-title {
 
@@ -228,23 +237,23 @@
 
   .dashboard__sales-report-title {
     color: $color-additional;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 13px;
     margin-bottom: 10px;
   }
 
   .dashboard__sales-report-now {
     font-weight: 500;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 18px;
     margin-bottom: 4px;
   }
 
   .dashboard__sales-report-plan {
-    font-size: 11px;
+    font-size: 14px;
     line-height: 15px;
     color: $color-additional;
-    opacity: 0.5;
+    opacity: 0.8;
     margin-bottom: 10px;
   }
 

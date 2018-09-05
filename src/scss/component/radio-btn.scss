@@ -23,7 +23,7 @@
   }
 
   .radio-btn__radio:checked + .radio-btn__radio-custom {
-    border-color: $color-accent;
+    border-color: $color-additional;
   }
 
   .radio-btn__label {
@@ -57,11 +57,11 @@
   &:hover {
 
     .radio-btn__radio-custom {
-      border-color: $color-accent;
+      border-color: $color-additional;
     }
 
     .radio-btn__label {
-      color: $color-accent;
+      color: $color-additional;
     }
   }
 
@@ -74,14 +74,14 @@
   &.radio-btn--colored {
 
     .radio-btn__radio-custom {
-      border: 2px solid $color-accent;
+      border: 2px solid $color-additional;
     }
   }
 
   &.radio-btn--colored-click {
 
     .radio-btn__radio:checked + .radio-btn__radio-custom {
-      background: $color-accent;
+      background: red;
 
       &::before {
         background: #ffffff;
@@ -94,21 +94,20 @@
         background: transparent;
 
         &::before {
-          background: $color-accent;
+          background: $color-additional;
         }
       }
     }
   }
 
   &.radio-btn--button {
-    background: $color-accent;
+    background: $color-additional;
     min-width: 150px;
     color: #ffffff;
-    height: 24px;
-    border-radius: 4px;
+    border-radius:25px;
     transition: all 0.3s;
     display: flex;
-    padding: 0 6px;
+    padding: 10px 6px;
     width: 100%;
 
     .radio-btn__radio-custom {
@@ -129,8 +128,13 @@
         display: none;
       }
     }
+    .radio-btn__radio:checked {
+          background: red !important;
 
+    }
     .radio-btn__radio:checked ~ .radio-btn__label-svg {
+
+  
 
       .radio-btn__label-check {
         display: block;
@@ -148,7 +152,7 @@
     }
 
     &:hover {
-      background: $color-accent-hover;
+      background: $color-additional-hover;
 
       .radio-btn__label {
         color: #ffffff;

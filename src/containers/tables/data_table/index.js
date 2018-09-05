@@ -1,11 +1,11 @@
-import React, {PureComponent} from 'react';
-import {Col, Container, Row} from 'reactstrap';
+import React, { PureComponent } from 'react';
+import { Col, Container, Row } from 'reactstrap';
 import Table from './components/DataTable';
-import {translate} from 'react-i18next';
+import { translate } from 'react-i18next';
 
 class DataTable extends PureComponent {
   render() {
-    const {t} = this.props;
+    const { t } = this.props;
 
     return (
       <Container>
@@ -17,7 +17,7 @@ class DataTable extends PureComponent {
           </Col>
         </Row>
         <Row>
-          <Table/>
+          <Table />
         </Row>
       </Container>
     )

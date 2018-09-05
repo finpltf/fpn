@@ -1,9 +1,8 @@
-import React, {PureComponent} from 'react';
-import {Card, CardBody, Col} from 'reactstrap';
-import {Field, reduxForm} from 'redux-form';
-import renderRadioButtonField from '../../../../components/form/RadioButton';
+import React, { PureComponent } from 'react';
+import { Card, CardBody, Col } from 'reactstrap';
+import { Field, reduxForm } from 'redux-form';
 import renderCheckBoxField from '../../../../components/form/CheckBox';
-import {translate} from 'react-i18next';
+import { translate } from 'react-i18next';
 
 class DefaultControls extends PureComponent {
   render() {
@@ -12,7 +11,7 @@ class DefaultControls extends PureComponent {
       // reset,
       t
     } = this.props;
-    
+
     return (
       <Col md={12} lg={12} xl={6}>
         <Card>
@@ -24,168 +23,16 @@ class DefaultControls extends PureComponent {
               </h5>
             </div>
             <form className='form form--preview' onSubmit={handleSubmit}>
+
               <div>
-                <p>Select color</p>
-                <div className='form__select-color'>
-                  <div className='form__form-group'>
-                    <div className='form__form-group-field'>
-                      <Field
-                        name='4ce1b6'
-                        component={renderCheckBoxField}
-                        defaultChecked={true}
-                        color='#4ce1b6'
-                        class='colored'
-                      />
-                    </div>
-                  </div>
-                  <div className='form__form-group'>
-                    <div className='form__form-group-field'>
-                      <Field
-                        name='70bbfd'
-                        component={renderCheckBoxField}
-                        color='#70bbfd'
-                        class='colored'
-                      />
-                    </div>
-                  </div>
-                  <div className='form__form-group'>
-                    <div className='form__form-group-field'>
-                      <Field
-                        name='fa4a86'
-                        component={renderCheckBoxField}
-                        color='#fa4a86'
-                        class='colored'
-                      />
-                    </div>
-                  </div>
-                  <div className='form__form-group'>
-                    <div className='form__form-group-field'>
-                      <Field
-                        name='f6da6e'
-                        component={renderCheckBoxField}
-                        color='#f6da6e'
-                        class='colored'
-                      />
-                    </div>
-                  </div>
-                  <div className='form__form-group'>
-                    <div className='form__form-group-field'>
-                      <Field
-                        name='7ed321'
-                        component={renderCheckBoxField}
-                        color='#7ed321'
-                        class='colored'
-                      />
-                    </div>
-                  </div>
-                  <div className='form__form-group'>
-                    <div className='form__form-group-field'>
-                      <Field
-                        name='b635ba'
-                        component={renderCheckBoxField}
-                        color='#b635ba'
-                        class='colored'
-                      />
-                    </div>
-                  </div>
-                  <div className='form__form-group'>
-                    <div className='form__form-group-field'>
-                      <Field
-                        name='ff4861'
-                        component={renderCheckBoxField}
-                        color='#ff4861'
-                        class='colored'
-                      />
-                    </div>
-                  </div>
-                  <div className='form__form-group'>
-                    <div className='form__form-group-field'>
-                      <Field
-                        name='38c3d7'
-                        component={renderCheckBoxField}
-                        color='#38c3d7'
-                        class='colored'
-                      />
-                    </div>
-                  </div>
-                  <div className='form__form-group'>
-                    <div className='form__form-group-field'>
-                      <Field
-                        name='f98330'
-                        component={renderCheckBoxField}
-                        color='#f98330'
-                        class='colored'
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
+
+
                 <div className='form__form-group'>
                   <div className='form__form-group-field'>
                     <Field
-                      name='checkbox_one'
+                      name='radio_disabled'
                       component={renderCheckBoxField}
-                      label='Checkbox 1'
-                      defaultChecked={true}
-                      class='button'
-                    />
-                  </div>
-                </div>
-                <div className='form__form-group'>
-                  <div className='form__form-group-field'>
-                    <Field
-                      name='checkbox_two'
-                      component={renderCheckBoxField}
-                      label='Checkbox 2'
-                      class='button'
-                    />
-                  </div>
-                </div>
-                <div className='form__form-group'>
-                  <div className='form__form-group-field'>
-                    <Field
-                      name='checkbox_disable'
-                      component={renderCheckBoxField}
-                      label='Checkbox Disabled'
-                      disabled
-                      class='button'
-                    />
-                  </div>
-                </div>
-                <div className='form__form-group'>
-                  <div className='form__form-group-field'>
-                    <Field
-                      name='checkbox_disable_check'
-                      component={renderCheckBoxField}
-                      label='Disabled & checked'
-                      defaultChecked={true}
-                      disabled
-                      class='button'
-                    />
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div className='form__form-group'>
-                  <div className='form__form-group-field'>
-                    <Field
-                      name='radio'
-                      component={renderRadioButtonField}
-                      label='Radio button 1'
-                      radioValue='1'
-                      defaultChecked
-                      class='button'
-                    />
-                  </div>
-                </div>
-                <div className='form__form-group'>
-                  <div className='form__form-group-field'>
-                    <Field
-                      name='radio'
-                      component={renderRadioButtonField}
-                      label='Radio button 2'
-                      radioValue='2'
+                      label='1 год'
                       class='button'
                     />
                   </div>
@@ -194,34 +41,20 @@ class DefaultControls extends PureComponent {
                   <div className='form__form-group-field'>
                     <Field
                       name='radio_disabled'
-                      component={renderRadioButtonField}
-                      label='Radio button disabled'
-                      radioValue='1'
-                      disabled
-                      class='button'
-                    />
-                  </div>
-                </div>
-                <div className='form__form-group'>
-                  <div className='form__form-group-field'>
-                    <Field
-                      name='radio_disabled'
-                      component={renderRadioButtonField}
-                      label='Disabled & checked'
-                      radioValue='2'
-                      defaultChecked
-                      disabled
+                      component={renderCheckBoxField}
+                      label='2 года'
+                      defaultChecked={true}
                       class='button'
                     />
                   </div>
                 </div>
               </div>
-              {/*<ButtonToolbar className='form__button-toolbar'>*/}
-              {/*<Button color='primary' type='submit'>Submit</Button>*/}
-              {/*<Button type='button' onClick={reset}>*/}
-              {/*Cancel*/}
-              {/*</Button>*/}
-              {/*</ButtonToolbar>*/}
+              <div>
+
+
+
+              </div>
+
             </form>
           </CardBody>
         </Card>

@@ -1,5 +1,5 @@
-import React, {PureComponent} from 'react';
-import {Col, Container, Row} from 'reactstrap';
+import React, { PureComponent } from 'react';
+import { Col, Container, Row } from 'reactstrap';
 import BTC from './components/BTC';
 import ETH from './components/ETH';
 import BCH from './components/BCH';
@@ -10,12 +10,14 @@ import ABTestingAnalytics from './components/ABTestingAnalytics';
 import CryptotrendsToday from './components/CryptotrendsToday';
 import TopTen from './components/TopTen';
 import PlaceOrder from './components/PlaceOrder';
-import BudgetStatistic from './components/BudgetStatistic';
-import {translate} from 'react-i18next';
+
+import SalesReport from './components/SalesReport';
+
+import { translate } from 'react-i18next';
 
 class CryptoDashboard extends PureComponent {
   render() {
-    const {t} = this.props;
+    const { t } = this.props;
 
     return (
       <Container className='dashboard'>
@@ -25,15 +27,16 @@ class CryptoDashboard extends PureComponent {
           </Col>
         </Row>
         <Row>
-        <BudgetStatistic/>
-          <BTC/>
-          <ETH/>
-            </Row>
-        <Row>               
-        <ABTestingAnalytics/>
-          <CryptotrendsToday/>          
-          <PlaceOrder/>
-          <TopTen/>
+          <SalesReport />
+
+          <BTC />
+          <ETH />
+        </Row>
+        <Row>
+          <ABTestingAnalytics />
+          <CryptotrendsToday />
+          <PlaceOrder />
+          <TopTen />
         </Row>
       </Container>
     )

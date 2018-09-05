@@ -1,10 +1,10 @@
-import React, {PureComponent} from 'react';
-import {Button, ButtonToolbar, Card, CardBody, Col, UncontrolledTooltip} from 'reactstrap';
-import {translate} from 'react-i18next';
+import React, { PureComponent } from 'react';
+import { Button, ButtonToolbar, Card, CardBody, Col, UncontrolledTooltip } from 'reactstrap';
+import { translate } from 'react-i18next';
 
 class TooltipBottom extends PureComponent {
   render() {
-    const {t} = this.props;
+    const { t } = this.props;
 
     return (
       <Col sm={12} md={6} lg={6} xl={3}>

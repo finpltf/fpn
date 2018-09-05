@@ -63,6 +63,12 @@
     border-radius: 0;
   }
 
+  &.w100 {
+    width:100%;
+    max-width:300px;
+    margin:15px auto;
+    display: block;
+  }
   &.rounded {
     border-radius: 30px !important;
     overflow: visible;
@@ -76,11 +82,11 @@
     border: solid 2px #ffffff;
     transition: all 0.2s;
     border-color: #ee1a2d;
-    z-index: 3;
-    background: transparent;
-    width: calc(100% + 14px);
-    height: calc(100% + 14px);
-    transform: translate(-7px, -7px);
+    background: transparent !important;
+    z-index: 3;    
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    transform: translate(-5px, -5px);
     }
   }
 

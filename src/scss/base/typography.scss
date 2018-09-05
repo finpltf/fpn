@@ -151,3 +151,15 @@ blockquote {
   background: $color-accent;
 }
 
+
+hr {
+
+  &.invis {
+    border: 0;
+    height: 35px;
+
+    &.h15 {
+      height: 15px;
+    }
+  }
+}

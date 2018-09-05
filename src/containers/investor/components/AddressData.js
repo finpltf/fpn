@@ -1,12 +1,11 @@
-import React, {PureComponent} from 'react';
-import {Card, CardBody, Col, Button, ButtonToolbar} from 'reactstrap';
-import {Field, reduxForm} from 'redux-form';
+import React, { PureComponent } from 'react';
+import { Card, CardBody, Col, Button, ButtonToolbar } from 'reactstrap';
+import { Field, reduxForm } from 'redux-form';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
-import {translate} from 'react-i18next';
+import { translate } from 'react-i18next';
 
-const renderTextField = ({input, label, meta: {touched, error}, children, select}) => (
-
+const renderTextField = ({ input, label, meta: { touched, error }, children, select }) => (
   <TextField
     className='material-form__field'
     label={label}
@@ -21,35 +20,19 @@ const renderTextField = ({input, label, meta: {touched, error}, children, select
   />
 );
 
-class PassportData extends PureComponent {
+class AddresData extends PureComponent {
   render() {
-    const {handleSubmit, reset, t} = this.props;
-    return (    
+    const { handleSubmit, reset, t } = this.props;
+    return (
       <Col md={12} lg={12}>
         <Card>
           <CardBody>
             <div className='card__title'>
-              <h5 className='bold-text'>{t('forms.floating_labels_form.animated_line_inputs')}</h5>
-              <h5 className='subhead'>Material fields with a property <span className='red-text'>label</span></h5>
+              <h3>Анкеты ПОД/ФТ и FATCA</h3>
+              <h5 className='subhead'>Скажите нам где вы живёте. Мы не придём в гости без разрешения.</h5>
             </div>
             <form className='material-form' onSubmit={handleSubmit}>
-              <div>
-                <Field
-                  name='username'
-                  component={renderTextField}
-                  placeholder='Name'
-                  label='Username'
-                />
-              </div>
-              <div>
-                <Field
-                  name='email'
-                  component={renderTextField}
-                  placeholder='example@mail.com'
-                  type='email'
-                  label='Email'
-                />
-              </div>
+
               <div>
                 <Field
                   name='url'
@@ -88,12 +71,7 @@ class PassportData extends PureComponent {
                   label='Text Area'
                 />
               </div>
-              <ButtonToolbar className='form__button-toolbar'>
-                <Button color='primary' type='submit'>Submit</Button>
-                <Button type='button' onClick={reset}>
-                  Cancel
-                </Button>
-              </ButtonToolbar>
+              <Button color='primary' type='submit' className='rounded w100'>Сохранить</Button>
             </form>
           </CardBody>
         </Card>
@@ -103,5 +81,5 @@ class PassportData extends PureComponent {
 }
 
 export default reduxForm({
-  form: 'PassportData', // a unique identifier for this form
-})(translate('common')(PassportData));
+  form: 'AddresData', // a unique identifier for this form
+})(translate('common')(AddresData));

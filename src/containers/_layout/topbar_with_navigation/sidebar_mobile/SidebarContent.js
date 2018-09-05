@@ -39,7 +39,7 @@ class SidebarContent extends PureComponent {
                     <SidebarLink title='Tabs' route='/ui/tabs' onClick={this.hideSidebar}/>
                     <SidebarLink title='Timeline' route='/ui/timeline' onClick={this.hideSidebar}/>
                     <SidebarLink title='Tooltips & Popovers' route='/ui/tooltips' onClick={this.hideSidebar}/>
-                    <SidebarLink title='funds' route='/ui/funds' onClick={this.hideSidebar}/>
+                    <SidebarLink title='funds' route='/funds' onClick={this.hideSidebar}/>
                 </SidebarCategory>
                 <SidebarLink title='Mail Application' icon='envelope' route='/mail' onClick={this.hideSidebar}/>
                 <SidebarLink title='Chat Application' icon='bubble' route='/chat' onClick={this.hideSidebar}/>

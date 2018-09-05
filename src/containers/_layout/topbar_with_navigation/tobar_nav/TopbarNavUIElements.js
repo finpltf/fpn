@@ -52,7 +52,7 @@ export default class TopbarNavUIElements extends PureComponent {
             <TopbarNavLink title='Tooltips & Popovers' route='/ui/tooltips'/>
           </DropdownItem>
           <DropdownItem>
-            <TopbarNavLink title='funds' route='/ui/funds'/>
+            <TopbarNavLink title='funds' route='/funds'/>
           </DropdownItem>
         </DropdownMenu>
       </UncontrolledDropdown>

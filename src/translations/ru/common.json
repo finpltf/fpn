@@ -1,17 +1,17 @@
 {
   "dashboard_default": {
     "page_title": "Дашборд",
-    "visits":  "Посетители",
-    "total_page_views":  "Просмотры",
-    "new_users":  "Новые пользователи",
-    "bounce_rate":  "Показатель отказов",
-    "ab_testing":  "A/B тесты",
-    "visitors_sessions":  "Сессии",
-    "sales_statistic":  "Статистика продаж",
-    "budget_statistic":  "Бюджет",
-    "audience_by_country":  "Страны",
-    "best_selling":  "Лидеры по продажам",
-    "goals_completion":  "Достижение цели"
+    "visits": "Посетители",
+    "total_page_views": "Просмотры",
+    "new_users": "Новые пользователи",
+    "bounce_rate": "Показатель отказов",
+    "ab_testing": "A/B тесты",
+    "visitors_sessions": "Сессии",
+    "sales_statistic": "Статистика продаж",
+    "budget_statistic": "Бюджет",
+    "audience_by_country": "Страны",
+    "best_selling": "Лидеры по продажам",
+    "goals_completion": "Достижение цели"
   },
   "dashboard_commerce": {
     "page_title": "Dashboard E-commerce",
@@ -177,11 +177,11 @@
     "search": "Поиск"
   },
   "chat_application": {
-    "page_title": "Chat Application",
-    "search": "Search",
-    "type_here": "Type here",
-    "download": "Download",
-    "no_messages": "No messages"
+    "page_title": "Сообщения",
+    "search": "Поиск",
+    "type_here": "Напишите что-нибуль",
+    "download": "Скачать",
+    "no_messages": "Нет сообщений"
   },
   "forms": {
     "title": "Forms",
@@ -263,7 +263,7 @@
       "responsive_table": "Responsive table"
     },
     "data_table": {
-      "title": "Data table"
+      "title": "Журнал документов"
     },
     "editable_table": {
       "title": "Editable table"
