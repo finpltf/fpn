@@ -288,18 +288,18 @@
   .dashboard__weight-stat-value {
     font-size: 36px;
     line-height: 48px;
-
+    font-weight: 500;
     @media screen and (min-width: 768px) {
       font-size: 48px;
       line-height: 62px;
     }
 
     &.dashboard__weight-stat-value--control {
-      color: $color-yellow;
+      color: $colorText;
     }
 
     &.dashboard__weight-stat-value--total {
-      color: $color-red;
+      color: $color-green;
     }
   }
 

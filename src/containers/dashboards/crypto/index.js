@@ -11,7 +11,14 @@ import CryptotrendsToday from './components/CryptotrendsToday';
 import TopTen from './components/TopTen';
 import PlaceOrder from './components/PlaceOrder';
 
-import SalesReport from './components/SalesReport';
+import MyIncomes from './components/MyIncomes';
+import NavDay from './components/NavDay';
+import NavMounth from './components/NavMounth';
+import NavYear from './components/NavYear';
+import NavTotal from './components/NavTotal';
+import FundsNavChart from './components/FundsNavChart';
+import MyFundCard from './components/MyFundCard';
+
 
 import { translate } from 'react-i18next';
 
@@ -21,22 +28,43 @@ class CryptoDashboard extends PureComponent {
 
     return (
       <Container className='dashboard'>
+
+
         <Row>
           <Col md={12}>
-            <h3 className='page-title'>{t('dashboard_crypto.page_title')}</h3>
+            <h3 className='page-title'>Доходность</h3>
           </Col>
         </Row>
-        <Row>
-          <SalesReport />
 
-          <BTC />
-          <ETH />
-        </Row>
         <Row>
-          <ABTestingAnalytics />
-          <CryptotrendsToday />
-          <PlaceOrder />
-          <TopTen />
+
+          <Col lg={6}>
+            <MyIncomes />
+          </Col>
+
+          <Col lg={6}>
+            <FundsNavChart />
+          </Col>
+
+
+
+        </Row>
+
+        <Row>
+
+        </Row>
+
+        <Row>
+          <Col md={12}>
+            <h3 className='page-title'>Ваш портфель</h3>
+          </Col>
+        </Row>
+
+        <Row>
+          <MyFundCard />
+          <MyFundCard />
+          <MyFundCard />
+          <MyFundCard />
         </Row>
       </Container>
     )

@@ -128,7 +128,18 @@
     color: #555555;
 
     &:before {
-      background-color: darken(#e7e2e2, 10%);
+    content: '';
+    display: inline-block;
+    position: absolute;
+    border-radius: 35.5px;
+    border: solid 2px #ffffff;
+    transition: all 0.2s;
+    border-color: #e7e2e2;
+    background: transparent !important;
+    z-index: 3;    
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    transform: translate(-5px, -5px);
     }
 
     &:hover, &:focus, &:active, &:active:focus {

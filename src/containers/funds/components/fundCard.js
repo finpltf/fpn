@@ -55,10 +55,10 @@ class fundCard extends PureComponent {
     const { t } = this.props;
 
     return (
-      <Col xs={12} sm={12} md={6} xl={4}>
+      <Col className='fund__card'>
         <Card>
           <CardBody>
-            <NavLink className='fund__card' to={'/fundPage'} onClick={this.props.onClick}>
+            <NavLink to={'/fund_page'} onClick={this.props.onClick}>
 
               <div className='card__title'>
                 <h3 className='semibold-text'>{t('ui_elements.funds.basic_heading')}</h3>
@@ -83,7 +83,7 @@ class fundCard extends PureComponent {
                 </Col>
 
                 <Col xs={6} sm={6} md={6} xl={4} className='text-right' >
-                  <h4 className='subhead'>Минимум</h4>
+                  <h4 className='subhead'>Мин. инвестиция</h4>
                   <h3 className='semibold-text'>10 000₽</h3>
                 </Col>
 

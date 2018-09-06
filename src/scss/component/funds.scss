@@ -1,4 +1,4 @@
-.fundsList, .fund__page {
+.fundsList, .fund__page, .uk__page, .dashboard {
 
     max-width: 1360px;
 
@@ -12,7 +12,7 @@
     max-width: 100%;
 }
 
-.funds__page, .fund__page {
+.funds__page, .fund__page, .uk__page, .dashboard{
 
        .subhead {
             line-height: 28px;
@@ -68,7 +68,6 @@
     min-width: 100%;
     margin: 10px 0 0 0;
     
-
 }
     table th, .th {
         font-weight:400;
@@ -110,36 +109,47 @@
     .yellow {
         color:$color-yellow !important;
     }
+
+
+    .fund__card {
+        min-width: 350px;
+    }
 }
-.funds__page {
+.funds__page .dashboard {
     
 
 
 
+.fund__card {
 
 
-    .card-body {
+        .card-body {
         padding: 20px;
-        box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.1);
         cursor: pointer;
-        transition: all 0.3s;                
+        transition: all 0.2s;                
         &:hover {
-          box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 10px 25px -5px rgba(0, 0, 0, 0.35);
             .graph {
                 opacity: 1;
             }        
         }
       }
-     .card__title {
+    .card__title {
             margin-bottom: 0px;
         }
     .graph {
         opacity: 0.4;
-    }        
+        transition: all 0.3s;       
+    }    
+
+}
+
+    
 
 }          
 
-.fund__page {
+.fund__page, .uk__page {
 
     .card-body {
         padding: 25px 20px 15px 20px;
@@ -159,6 +169,10 @@
 }
 h3 {
                     margin-bottom: 25px;    
+
+                        &.name {
+        margin-bottom:5px;
+    }
 }
         h4 {
     margin-bottom: 0px;
@@ -200,6 +214,7 @@ hr {
       }
     .page-title {
         font-size: 28px;
+        text-transform: uppercase
     }
 
 .list-deco {
@@ -243,4 +258,60 @@ hr {
 
 }
 
+
+.uk__page, .dashboard {
+
+    img {
+        width: auto;
+    }
+        .graph {
+        margin-bottom: 15px;
+    }    
+    .group {
+        padding: 0 5%;
+    }
+    .btn-group {
+        margin-bottom: 0;
+    }
+    .btn-toolbar:first-child {
+        margin: auto;
+        
+    }
+    .btn-toolbar { 
+    text-align: center;
+    width: 100%;
+
+    }
+    .btn-toolbar > * {
+    margin: 5px;
+    }
+
+.btn-toolbar:last-child {
+        margin: 0;
+        margin-top: 25px;
+}
+    .btn {
+    min-height: 25px;
+    font-size: 14px;
+    position: relative;
+    z-index: 0;
+    min-width: auto !important;
+        margin: 5px 10px;
+    &.red {
+
+        svg {
+            fill:$color-accent;
+        }
+    }
+    }
+    .job {
+        font-size: 85%;
+        margin-bottom: 10px;
+    }
+    .bottom_info {
+        margin-top: 100px;
+        font-size: 90%;
+        text-align: justify;
+    }
+}
 

@@ -18,8 +18,8 @@ import Timeline from '../containers/ui/timeline';
 import Tooltips from '../containers/ui/tooltips';
 
 import fundsList from '../containers/funds';
-import fundPage from '../containers/fundPage';
-
+import fund_page from '../containers/fund_page';
+import uk_page from '../containers/uk_page';
 
 import BasicTables from '../containers/tables/basic_tables';
 import DataTable from '../containers/tables/data_table';
@@ -121,8 +121,9 @@ const wrappedRoutes = () => (
       <Route path='/dashboard_e_commerce' component={Commerce} />
       <Route path='/dashboard_fitness' component={FitnessDashboard} />
       <Route path='/dashboard_crypto' component={Crypto} />
+      <Route path='/uk_page' component={uk_page} />
       <Route path='/funds' component={fundsList} />
-      <Route path='/fundPage' component={fundPage} />
+      <Route path='/fund_page' component={fund_page} />
       <Route path='/investor' component={InvestorProfile} />
       <Route path='/ui' component={UI} />
       <Route path='/mail' component={Mail} />

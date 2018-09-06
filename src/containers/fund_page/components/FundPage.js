@@ -31,23 +31,23 @@ export default class FundPage extends PureComponent {
 
               <h3>Доходность</h3>
               <Row className='margin-30'>
-                <Col >
+                <Col lg={2} >
                   <div className='subhead' id='scha' >3 мес.</div>
                   <h3 className='red'>-0.79%</h3>
                 </Col>
-                <Col>
+                <Col lg={2}>
                   <div className='subhead' id='rsp' >6 мес.</div>
                   <h3 className='green'>+7.22%</h3>
                 </Col>
-                <Col >
+                <Col lg={2}>
                   <div className='subhead' id='rsp' >12 мес.</div>
                   <h3 className='green'>+31%</h3>
                 </Col>
-                <Col  >
+                <Col lg={2}>
                   <div className='subhead' id='rsp' >36 мес.</div>
                   <h3 className='green'>+31.78%</h3>
                 </Col>
-                <Col className='text-center' >
+                <Col lg={4} md={4} className='text-center' >
                   <BuyButton />
                 </Col>
 
