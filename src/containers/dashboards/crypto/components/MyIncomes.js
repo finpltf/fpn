@@ -46,7 +46,7 @@ class MyIncomes extends PureComponent {
                 </linearGradient>
               </defs>
               <YAxis padding={{ top: 20, bottom: 20, left: 0, right: 10 }} hide={true} tickFormatter={value => `${value}₽`} axisLine={false} tickLine={false} domain={[dataMin => (Math.abs(dataMin) - 50), dataMax => (Math.abs(dataMax) - 100)]} />
-              <XAxis dataKey='name' padding={{ top: 20, bottom: 20, left: 10, right: 10 }} hide={false} minTickGap={1} tickFormatter={value => `${value}`} axisLine={true} tickLine={false} domain={[dataMin => (Math.abs(dataMin) - 50), dataMax => (Math.abs(dataMax) - 100)]} />
+              <XAxis dataKey='name' padding={{ top: 20, bottom: 20, left: 10, right: 10 }} hide={false} minTickGap={150} tickFormatter={value => `${value}`} axisLine={true} tickLine={false} domain={[dataMin => (Math.abs(dataMin) - 100), dataMax => (Math.abs(dataMax) + 100)]} />
               <Area name='Доходность' type='monotone' dataKey='nav' stroke='#4ce1b6' strokeWidth={3} fill='url(#colorUv)' fillOpacity={0.75} />
               <Tooltip className='dashboard__total-tooltip' />
             </AreaChart>

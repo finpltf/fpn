@@ -42,7 +42,7 @@ class CryptoDashboard extends PureComponent {
             <MyIncomes />
           </Col>
 
-          <Col lg={6}>
+          <Col lg={12}>
             <FundsNavChart />
           </Col>
 
