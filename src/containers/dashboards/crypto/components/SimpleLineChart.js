@@ -1,7 +1,7 @@
 
 import React, { PureComponent } from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { AreaChart, Area, YAxis, XAxis, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts';
 import { translate } from 'react-i18next';
 import Moment from 'react-moment';
 
@@ -27,16 +27,6 @@ class CustomTooltip extends PureComponent {
   }
 }
 
-const data = [
-  { name: '01.08.2018', uv: 1558 },
-  { name: '02.08.2018', uv: 1580 },
-  { name: '03.08.2018', uv: 1257 },
-  { name: '04.08.2018', uv: 1585 },
-  { name: '05.08.2018', uv: 1591 },
-  { name: '06.08.2018', uv: 1587 },
-  { name: '07.08.2018', uv: 1599 },
-  { name: '08.08.2018', uv: 1650 },
-];
 
 const nav = [
   {
@@ -168,19 +158,28 @@ class SimpleLineChart extends PureComponent {
     const { t } = this.props;
 
     return (
-      <Col xs={12} md={12} lg={12} xl={12}>
+      <div>
+
         <ResponsiveContainer height={80}>
-          <LineChart data={arr} margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
-          >
-            <Tooltip content={<CustomTooltip />} />
-            <Line type='monotone' dataKey='navOne' stroke='#ee1a2d' activeDot={{ r: 6 }} />
-            <YAxis minTickGap={50} hide={true} padding={{ top: 20, bottom: 20, left: 10, right: 10 }} domain={[dataMin => (Math.abs(dataMin)), dataMax => (Math.abs(dataMax))]} />
-            <XAxis hide={true} padding={{ top: 0, bottom: 0, left: 10, right: 10 }} dataKey='dataDate' />
-          </LineChart>
+          <AreaChart data={arr}
+            margin={{ top: 15, right: -10, left: -10, bottom: 0 }}>
+            <defs>
+              <linearGradient id='colorUv' x1='0' y1='0' x2='0' y2='1'>
+                <stop offset='0' stopColor='#4ce1b6' stopOpacity={0.4} />
+                <stop offset='100%' stopColor='#4ce1b6' stopOpacity={0.05} />
+              </linearGradient>
+            </defs>
+            <YAxis padding={{ top: 20, bottom: 0, left: 0, right: 10 }} hide={true} tickFormatter={value => `${value}₽`} axisLine={false} tickLine={false} domain={[dataMin => (Math.abs(dataMin)), dataMax => (Math.abs(dataMax))]} />
+            <XAxis dataKey='name' padding={{ top: 0, bottom: 0, left: 0, right: 0 }} hide={true} minTickGap={150} tickFormatter={value => `${value}`} axisLine={true} tickLine={false} domain={[dataMin => (Math.abs(dataMin)), dataMax => (Math.abs(dataMax))]} />
+            <Area name='Доходность' type='monotone' dataKey='navOne' stroke='#4ce1b6' strokeWidth={2} fill='url(#colorUv)' fillOpacity={0.75} />
+            <Tooltip className='dashboard__total-tooltip' />
+          </AreaChart>
         </ResponsiveContainer>
 
 
-      </Col>
+
+
+      </div>
     )
   }
 }

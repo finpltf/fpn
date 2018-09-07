@@ -48,8 +48,8 @@ class MyFundCard extends PureComponent {
     const { t } = this.props;
 
     return (
-      <Col className='fund__card'>
-        <Card>
+      <Col className='fund__card' lg={4}>
+        <Card className='no_padding'>
           <CardBody>
             <NavLink to={'/fund_page'} onClick={this.props.onClick}>
 
@@ -63,40 +63,32 @@ class MyFundCard extends PureComponent {
                 <SimpleLineChart />
               </div>
 
-              <Row>
-                <Col xs={6} sm={6} md={6} xl={4} >
+              <Row className='params'>
+                <Col xs={6} sm={6} md={6} xl={6} >
                   <h4 className='subhead'>Кол-во паёв</h4>
                   <h3 className='semibold-text'>16.85458</h3>
                 </Col>
 
-                <Col xs={6} sm={6} md={6} xl={4} className='text-center'>
-                  <h4 className='subhead'>Стоимость пая</h4>
-                  <h3 className='semibold-text'>1112.90₽</h3>
-                </Col>
-
-
-                <Col xs={6} sm={6} md={6} xl={4} className='text-right' >
+                <Col xs={6} sm={6} md={6} xl={6} className='text-right' >
                   <h4 className='subhead'>На сумму</h4>
                   <h3 className='semibold-text'>18752,37₽</h3>
                 </Col>
               </Row>
 
-              <div className="row text-left">
-                <ButtonToolbar>
-
-                  <ButtonGroup className='btn-group--justified'>
-                    <Button className='rounded' color='primary'><CheckboxMarkedCircleOutlineIcon /> Купить ещё</Button>
-                    <Button color='secondary' className='rounded'> <CircleEditOutlineIcon /> Обменять</Button>
-                    <Button color='secondary' className='rounded'><CloseBoxOutlineIcon /> Погасить</Button>
-                  </ButtonGroup>
-                </ButtonToolbar>
-
-              </div>
-
-
             </NavLink>
           </CardBody>
         </Card>
+        <div className="row text-left btns">
+          <ButtonToolbar>
+
+            <ButtonGroup className='btn-group--justified'>
+              <Button className='rounded' color='primary'><CheckboxMarkedCircleOutlineIcon /> Купить ещё</Button>
+              <Button color='secondary' className='rounded'> <CircleEditOutlineIcon /> Обменять</Button>
+              <Button color='secondary' className='rounded'><CloseBoxOutlineIcon /> Погасить</Button>
+            </ButtonGroup>
+          </ButtonToolbar>
+
+        </div>
       </Col>
     )
   }

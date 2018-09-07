@@ -18,14 +18,14 @@ class funds extends PureComponent {
 
         <div>
           <Breadcrumb>
-            <BreadcrumbItem active>Фонды</BreadcrumbItem>
+            <BreadcrumbItem active>Все фонды</BreadcrumbItem>
           </Breadcrumb>
         </div>
 
 
         <Row>
           <Col md={12}>
-            <h3 className='page-title'>{t('ui_elements.funds.title')}</h3>
+            <h3 className='page-title'>Все фонды</h3>
           </Col>
         </Row>
 

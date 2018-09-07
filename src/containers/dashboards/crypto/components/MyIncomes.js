@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { AreaChart, Area, YAxis, XAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
 import { translate } from 'react-i18next';
-import { Card, CardBody, Col } from 'reactstrap';
+import { Card, CardBody, Row, Col } from 'reactstrap';
 
 const data = [
   { name: 'Январь', nav: 4380, navp: 4.35 },
@@ -23,31 +23,33 @@ class MyIncomes extends PureComponent {
     const { t } = this.props;
 
     return (
-      <Card lg={12} xl={12} md={12} xs={12} >
+      <Card lg={12} xl={12} md={12} xs={12} className='no_padding'>
         <CardBody>
 
-          <div className='dashboard__weight-stats'>
-            <div className='dashboard__weight-stat'>
-              <p className='dashboard__weight-stat-title'>Инвестиции</p>
-              <p className='dashboard__weight-stat-value dashboard__weight-stat-value--control'>148 000₽</p>
-            </div>
-            <div className='dashboard__weight-stat'>
-              <p className='dashboard__weight-stat-title'>Доходность</p>
-              <p className='dashboard__weight-stat-value dashboard__weight-stat-value--total'>+11.85</p>
-            </div>
-          </div>
-          <ResponsiveContainer height={180}>
+
+          <Row className="my_incomes" >
+            <Col>
+              <h4 className='subhead'>Инвестиции</h4>
+              <h3 className='semibold-text'>148 565₽</h3>
+            </Col>
+            <Col className='text-right'>
+
+              <h4 className='subhead'>Доходность</h4>
+              <h3 className='semibold-text green'>+11,85%</h3>
+            </Col>
+          </Row>
+          <ResponsiveContainer height={150}>
             <AreaChart data={data}
-              margin={{ top: 0, right: 0, left: -5, bottom: 0 }}>
+              margin={{ top: 15, right: -10, left: -10, bottom: 0 }}>
               <defs>
                 <linearGradient id='colorUv' x1='0' y1='0' x2='0' y2='1'>
                   <stop offset='0' stopColor='#4ce1b6' stopOpacity={0.4} />
                   <stop offset='100%' stopColor='#4ce1b6' stopOpacity={0.05} />
                 </linearGradient>
               </defs>
-              <YAxis padding={{ top: 20, bottom: 20, left: 0, right: 10 }} hide={true} tickFormatter={value => `${value}₽`} axisLine={false} tickLine={false} domain={[dataMin => (Math.abs(dataMin) - 50), dataMax => (Math.abs(dataMax) - 100)]} />
-              <XAxis dataKey='name' padding={{ top: 20, bottom: 20, left: 10, right: 10 }} hide={false} minTickGap={150} tickFormatter={value => `${value}`} axisLine={true} tickLine={false} domain={[dataMin => (Math.abs(dataMin) - 100), dataMax => (Math.abs(dataMax) + 100)]} />
-              <Area name='Доходность' type='monotone' dataKey='nav' stroke='#4ce1b6' strokeWidth={3} fill='url(#colorUv)' fillOpacity={0.75} />
+              <YAxis padding={{ top: 20, bottom: 0, left: 0, right: 10 }} hide={true} tickFormatter={value => `${value}₽`} axisLine={false} tickLine={false} domain={[dataMin => (Math.abs(dataMin) - 50), dataMax => (Math.abs(dataMax) - 100)]} />
+              <XAxis dataKey='name' padding={{ top: 20, bottom: 20, left: 10, right: 10 }} hide={true} minTickGap={150} tickFormatter={value => `${value}`} axisLine={true} tickLine={false} domain={[dataMin => (Math.abs(dataMin) - 100), dataMax => (Math.abs(dataMax) + 100)]} />
+              <Area name='Доходность' type='monotone' dataKey='nav' stroke='#4ce1b6' strokeWidth={2} fill='url(#colorUv)' fillOpacity={0.75} />
               <Tooltip className='dashboard__total-tooltip' />
             </AreaChart>
           </ResponsiveContainer>

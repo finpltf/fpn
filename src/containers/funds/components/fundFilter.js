@@ -31,7 +31,7 @@ class fundFilter extends PureComponent {
 
       <form className='material-form' onSubmit={handleSubmit}>
         <Row>
-          <Col sd={4} lg={3} md={3}>
+          <Col>
             <div>
 
 
@@ -48,7 +48,7 @@ class fundFilter extends PureComponent {
               </Field>
             </div>
           </Col>
-          <Col sd={4} lg={3} md={3}>
+          <Col>
             <div>
               <Field
                 name='riskLevel'
@@ -62,7 +62,7 @@ class fundFilter extends PureComponent {
               </Field>
             </div>
           </Col>
-          <Col sd={4} lg={3} md={3}>
+          <Col>
             <div>
               <Field
                 name='minInvest'
@@ -78,19 +78,17 @@ class fundFilter extends PureComponent {
               </Field>
             </div>
           </Col>
-          <Col sd={4} lg={3} md={3}>
+          <Col>
             <div>
               <Field
                 name='fundSize'
                 component={renderTextField}
                 select
-                label='СЧА'
+                label='Сортировать по'
               >
-                <MenuItem className='material-form__option' value='one'>1 000₽</MenuItem>
-                <MenuItem className='material-form__option' value='two'>5 000₽</MenuItem>
-                <MenuItem className='material-form__option' value='two'>10 000₽</MenuItem>
-                <MenuItem className='material-form__option' value='two'>50 000₽</MenuItem>
-                <MenuItem className='material-form__option' value='two'>100 000₽</MenuItem>
+                <MenuItem className='material-form__option' value='one'>По алфавиту</MenuItem>                
+                <MenuItem className='material-form__option' value='two'>Доходность</MenuItem>
+                <MenuItem className='material-form__option' value='two'>СЧА</MenuItem>
               </Field>
             </div>
           </Col>

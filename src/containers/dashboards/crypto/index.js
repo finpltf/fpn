@@ -38,21 +38,15 @@ class CryptoDashboard extends PureComponent {
 
         <Row>
 
-          <Col lg={6}>
+          <Col lg={5}>
             <MyIncomes />
           </Col>
-
-          <Col lg={12}>
-            <FundsNavChart />
+          <Col lg={7}>
           </Col>
 
-
-
         </Row>
 
-        <Row>
 
-        </Row>
 
         <Row>
           <Col md={12}>
@@ -65,6 +59,11 @@ class CryptoDashboard extends PureComponent {
           <MyFundCard />
           <MyFundCard />
           <MyFundCard />
+          <MyFundCard />
+        </Row>
+
+        <Row>
+          <FundsNavChart />
         </Row>
       </Container>
     )
