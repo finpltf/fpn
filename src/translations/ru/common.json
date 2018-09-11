@@ -1,5 +1,5 @@
 {
-  "dashboard_default": {
+  "dashboard": {
     "page_title": "Дашборд",
     "visits": "Посетители",
     "total_page_views": "Просмотры",
@@ -152,7 +152,7 @@
     },
     "funds": {
       "title": "Витрина ПИФ",
-      "basic_heading": "ОПИФ «Алёнка – Капитал»",
+      "basic_heading": "ОПИФ «Солид - Индекс МосБиржи»",
       "heading_with_subheading": "Heading with subheading",
       "bold_heading": "Bold heading",
       "sample_text": "Sample text",

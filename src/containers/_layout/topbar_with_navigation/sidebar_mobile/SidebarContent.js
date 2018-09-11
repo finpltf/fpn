@@ -23,7 +23,7 @@ class SidebarContent extends PureComponent {
     return (
       <div className='sidebar__content'>
         <ul className='sidebar__block'>
-          <SidebarLink title='Рабочий стол' icon='home' route='/dashboard_crypto' onClick={this.hideSidebar}/>
+          <SidebarLink title='Рабочий стол' icon='home' route='/dashboard' onClick={this.hideSidebar}/>
 
                 <SidebarCategory title='UI Elements' icon='diamond'>
                     <SidebarLink title='Alerts' route='/ui/alerts' onClick={this.hideSidebar}/>

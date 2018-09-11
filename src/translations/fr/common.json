@@ -1,5 +1,5 @@
 {
-  "dashboard_default": {
+  "dashboard": {
     "page_title": "Dashboard Default",
     "visits": "visites",
     "total_page_views": "Nombre total de pages vues",

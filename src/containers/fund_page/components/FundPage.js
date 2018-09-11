@@ -8,10 +8,20 @@ import ShieldIcon from 'mdi-react/ShieldIcon';
 import ShieldOutlineIcon from 'mdi-react/ShieldOutlineIcon';
 import InformationVariantIcon from 'mdi-react/InformationVariantIcon';
 import BuyButton from './BuyButton';
+
+import DateRangePicker from './DateRangePicker';
 import SimpleLineChart from './SimpleLineChart';
+
+import showResults from './Show';
+
 
 export default class FundPage extends PureComponent {
   render() {
+    const {
+      handleSubmit,
+      // reset,
+      t
+    } = this.props;
     return (
       <Col md={12} lg={12} xl={12}>
         <Card>
@@ -31,30 +41,39 @@ export default class FundPage extends PureComponent {
 
               <h3>Доходность</h3>
               <Row className='margin-30'>
-                <Col lg={2} >
+                <Col xl={2} lg={3} md={6}>
                   <div className='subhead' id='scha' >3 мес.</div>
                   <h3 className='red'>-0.79%</h3>
                 </Col>
-                <Col lg={2}>
+                <Col xl={2} lg={3} md={6}>
                   <div className='subhead' id='rsp' >6 мес.</div>
                   <h3 className='green'>+7.22%</h3>
                 </Col>
-                <Col lg={2}>
+                <Col xl={2} lg={3} md={6}>
                   <div className='subhead' id='rsp' >12 мес.</div>
                   <h3 className='green'>+31%</h3>
                 </Col>
-                <Col lg={2}>
+                <Col xl={2} lg={3} md={6}>
                   <div className='subhead' id='rsp' >36 мес.</div>
                   <h3 className='green'>+31.78%</h3>
                 </Col>
-                <Col lg={4} md={4} className='text-center' >
+                <Col xl={4} lg={12} md={12} className='text-center' >
                   <BuyButton />
                 </Col>
 
               </Row>
 
-
+<Row>
+<Col xl={8}>
               <h3>ДИНАМИКА ИЗМЕНЕНИЯ СТОИМОСТИ ПАЯ И СЧА</h3>
+</Col>
+
+<Col xl={4}>
+                  <DateRangePicker onSubmit={showResults} />
+</Col>
+</Row>
+
+
               <SimpleLineChart />
 
 
@@ -197,3 +216,4 @@ export default class FundPage extends PureComponent {
     )
   }
 }
+

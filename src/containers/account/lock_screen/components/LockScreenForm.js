@@ -99,7 +99,7 @@ class AccountForm extends PureComponent {
           </Col>
         </Row>
         <br></br>
-        <Link className='btn btn-primary account__btn' to='/dashboard_default'>Сохранить</Link>
+        <Link className='btn btn-primary account__btn' to='/dashboard'>Сохранить</Link>
         
     
 

@@ -81,7 +81,7 @@ $color-yellow-hover: darken($color-yellow, 10%);
 $color-violet: #c88ffa;
 
 $color-red: #ee1a2d;
-$color-red-hover: darken($color-red, 10%);
+$color-red-hover: lighten($color-red, 10%);
 
 $color-blue: #70bbfd;
 $color-blue-hover: darken($color-red, 10%);

@@ -48,7 +48,7 @@ class MyFundCard extends PureComponent {
     const { t } = this.props;
 
     return (
-      <Col className='fund__card' lg={4}>
+      <Col className='fund__card' >
         <Card className='no_padding'>
           <CardBody>
             <NavLink to={'/fund_page'} onClick={this.props.onClick}>
@@ -71,24 +71,25 @@ class MyFundCard extends PureComponent {
 
                 <Col xs={6} sm={6} md={6} xl={6} className='text-right' >
                   <h4 className='subhead'>На сумму</h4>
-                  <h3 className='semibold-text'>18752,37₽</h3>
+                  <h3 className='semibold-text'>18752.37₽</h3>
                 </Col>
               </Row>
 
             </NavLink>
+            <div className="row text-left btns">
+              <ButtonToolbar>
+
+                <ButtonGroup className='btn-group--justified'>
+                  <Button className='rounded' color='primary'><CheckboxMarkedCircleOutlineIcon /> Купить ещё</Button>
+                  <Button color='secondary' className='rounded'> <CircleEditOutlineIcon /> Обменять</Button>
+                  <Button color='secondary' className='rounded'><CloseBoxOutlineIcon /> Погасить</Button>
+                </ButtonGroup>
+              </ButtonToolbar>
+
+            </div>
           </CardBody>
         </Card>
-        <div className="row text-left btns">
-          <ButtonToolbar>
 
-            <ButtonGroup className='btn-group--justified'>
-              <Button className='rounded' color='primary'><CheckboxMarkedCircleOutlineIcon /> Купить ещё</Button>
-              <Button color='secondary' className='rounded'> <CircleEditOutlineIcon /> Обменять</Button>
-              <Button color='secondary' className='rounded'><CloseBoxOutlineIcon /> Погасить</Button>
-            </ButtonGroup>
-          </ButtonToolbar>
-
-        </div>
       </Col>
     )
   }

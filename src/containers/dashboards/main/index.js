@@ -22,7 +22,7 @@ import MyFundCard from './components/MyFundCard';
 
 import { translate } from 'react-i18next';
 
-class CryptoDashboard extends PureComponent {
+class Dashboard extends PureComponent {
   render() {
     const { t } = this.props;
 
@@ -47,7 +47,7 @@ class CryptoDashboard extends PureComponent {
         </Row>
 
 
-
+        <hr />
         <Row>
           <Col md={12}>
             <h3 className='page-title'>Ваш портфель</h3>
@@ -63,11 +63,10 @@ class CryptoDashboard extends PureComponent {
         </Row>
 
         <Row>
-          <FundsNavChart />
         </Row>
       </Container>
     )
   }
 }
 
-export default translate('common')(CryptoDashboard);
+export default translate('common')(Dashboard);

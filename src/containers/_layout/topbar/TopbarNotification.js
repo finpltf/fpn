@@ -59,7 +59,7 @@ export default class TopbarNotification extends PureComponent {
               <p className='topbar__collapse-date'>{notification.date}</p>
             </div>
           ))}
-          <Link className='topbar__collapse-link' to='/dashboard_default'>
+          <Link className='topbar__collapse-link' to='/dashboard'>
             Смотреть все уведомления
           </Link>
         </Collapse>

@@ -47,8 +47,10 @@
     box-shadow: none !important;
 
     &:before {
-      height: 500%;
-      width: 225%;
+    
+    width: calc(100% + 16px);
+    height: calc(100% + 16px);
+    transform: translate(-8px, -8px);    
     }
   }
 
@@ -194,11 +196,12 @@
     border-color: $color-red;
 
     &:before {
-      background-color: $color-red-hover;
+      background-color: $color-red;
     }
 
     &:hover, &:focus, &:active, &:active:focus {
       border-color: $color-red-hover;
+      background: red;
     }
   }
 
@@ -455,13 +458,4 @@
 
 button:focus, button:active {
   outline: none;
-}
-
-.open > .dropdown-toggle.btn-default,
-.btn-default:active:focus, .btn-default:active:focus,
-.btn-default.focus, .btn-default:focus {
-
-  @include themify($themes) {
-    background-color: themed('colorBackground');
-  }
 }

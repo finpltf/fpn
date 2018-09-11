@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import DatePicker from 'react-datepicker';
 import MinusIcon from 'mdi-react/MinusIcon';
 import PropTypes from 'prop-types';
@@ -12,23 +12,23 @@ class IntervalDatePickerField extends PureComponent {
     };
     this.handleChange = this.handleChange.bind(this);
   }
-  
-  handleChange({startDate, endDate}) {
+
+  handleChange({ startDate, endDate }) {
     startDate = startDate || this.state.startDate;
     endDate = endDate || this.state.endDate;
-    
+
     if (startDate.isAfter(endDate)) {
       endDate = startDate
     }
-    
-    this.setState({startDate, endDate});
-    this.props.onChange({start: startDate, end: endDate});
+
+    this.setState({ startDate, endDate });
+    this.props.onChange({ start: startDate, end: endDate });
   }
-  
-  handleChangeStart = (startDate) => this.handleChange({startDate});
-  
-  handleChangeEnd = (endDate) => this.handleChange({endDate});
-  
+
+  handleChangeStart = (startDate) => this.handleChange({ startDate });
+
+  handleChangeEnd = (endDate) => this.handleChange({ endDate });
+
   render() {
     return (
       <div className='date-picker date-picker--interval'>
@@ -38,18 +38,18 @@ class IntervalDatePickerField extends PureComponent {
           startDate={this.state.startDate}
           endDate={this.state.endDate}
           onChange={this.handleChangeStart}
-          dateFormat='LL'
-          placeholderText='From'
+          dateFormat='L'
+          placeholderText='C'
         />
-        <MinusIcon className='date-picker__svg'/>
+        <MinusIcon className='date-picker__svg' />
         <DatePicker
           selected={this.state.endDate}
           selectsEnd
           startDate={this.state.startDate}
           endDate={this.state.endDate}
           onChange={this.handleChangeEnd}
-          dateFormat='LL'
-          placeholderText='To'
+          dateFormat='L'
+          placeholderText='По'
         />
       </div>
     )

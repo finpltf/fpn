@@ -25,7 +25,7 @@ class SidebarContent extends PureComponent {
         <ul className='sidebar__block'>
 
 
-          <SidebarLink title='Главная' icon='home' route='/dashboard_crypto' onClick={this.hideSidebar} />
+          <SidebarLink title='Главная' icon='home' route='/dashboard' onClick={this.hideSidebar} />
           <SidebarLink title='Все фонды' icon='cart' route='/funds' onClick={this.hideSidebar} />
           <SidebarLink title='Портфель' icon='briefcase' route='/funds' onClick={this.hideSidebar} />
           <SidebarCategory title='Заявки' icon='list'>
@@ -45,7 +45,7 @@ class SidebarContent extends PureComponent {
           <SidebarLink title='Помощь' icon='text-align-justify' route='/default_pages/faq' onClick={this.hideSidebar} />
 
           <SidebarCategory title='Личный кабинет' icon='home'>
-            <SidebarLink title='Рабочий стол' route='/dashboard_crypto' onClick={this.hideSidebar} />
+            <SidebarLink title='Рабочий стол' route='/dashboard' onClick={this.hideSidebar} />
             <SidebarLink title='Лента новостей' route='/news' onClick={this.hideSidebar} />
           </SidebarCategory>
 

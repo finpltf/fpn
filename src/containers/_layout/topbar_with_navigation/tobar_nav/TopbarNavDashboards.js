@@ -13,7 +13,7 @@ export default class TopbarNavDashboards extends PureComponent {
         </DropdownToggle>
         <DropdownMenu className='topbar__nav-dropdown-menu dropdown__menu'>
           <DropdownItem>
-            <TopbarNavLink title='Dashboard Default' icon='home' route='/dashboard_default'/>
+            <TopbarNavLink title='Dashboard Default' icon='home' route='/dashboard'/>
           </DropdownItem>
           <DropdownItem>
             <TopbarNavLink title='Dashboard E-commerce' icon='store' route='/dashboard_e_commerce'/>

@@ -165,14 +165,14 @@ class SimpleLineChart extends PureComponent {
             margin={{ top: 15, right: -10, left: -10, bottom: 0 }}>
             <defs>
               <linearGradient id='colorUv' x1='0' y1='0' x2='0' y2='1'>
-                <stop offset='0' stopColor='#4ce1b6' stopOpacity={0.4} />
-                <stop offset='100%' stopColor='#4ce1b6' stopOpacity={0.05} />
+                <stop offset='0' stopColor='#00f4b0' stopOpacity={0.5} />
+                <stop offset='100%' stopColor='#00f4b0' stopOpacity={0} />
               </linearGradient>
             </defs>
-            <YAxis padding={{ top: 20, bottom: 0, left: 0, right: 10 }} hide={true} tickFormatter={value => `${value}₽`} axisLine={false} tickLine={false} domain={[dataMin => (Math.abs(dataMin)), dataMax => (Math.abs(dataMax))]} />
+            <YAxis padding={{ top: 20, bottom: 10, left: 0, right: 10 }} hide={true} tickFormatter={value => `${value}₽`} axisLine={false} tickLine={false} domain={[dataMin => (Math.abs(dataMin)), dataMax => (Math.abs(dataMax))]} />
             <XAxis dataKey='name' padding={{ top: 0, bottom: 0, left: 0, right: 0 }} hide={true} minTickGap={150} tickFormatter={value => `${value}`} axisLine={true} tickLine={false} domain={[dataMin => (Math.abs(dataMin)), dataMax => (Math.abs(dataMax))]} />
-            <Area name='Доходность' type='monotone' dataKey='navOne' stroke='#4ce1b6' strokeWidth={2} fill='url(#colorUv)' fillOpacity={0.75} />
-            <Tooltip className='dashboard__total-tooltip' />
+            <Area name='Доходность' type='monotone' dataKey='navOne' stroke='#00f4b0' strokeWidth={2} fill='url(#colorUv)' fillOpacity={0.75} />
+            <Tooltip content={<CustomTooltip />} className='dashboard__total-tooltip' />
           </AreaChart>
         </ResponsiveContainer>
 

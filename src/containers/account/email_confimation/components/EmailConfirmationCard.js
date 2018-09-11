@@ -19,7 +19,7 @@ export default class EmailConfirmationCard extends PureComponent {
               <h3 className='email-confirmation__title'>Ваш e-mail подтверждён</h3>
               <p className='email-confirmation__sub'>Мы рады что вы выбрали Финансовую платформу</p>
               <ButtonToolbar className='email-confirmation__buttons'>
-                <Link className='btn btn-primary' to='/dashboard_default'>Продолжить регистрацию</Link>
+                <Link className='btn btn-primary' to='/dashboard'>Продолжить регистрацию</Link>
 
               </ButtonToolbar>
             </div>

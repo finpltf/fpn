@@ -13,7 +13,7 @@ class Topbar extends PureComponent {
         <div className='topbar__wrapper'>
           <div className='topbar__left'>
             <TopbarSidebarButton/>
-            <Link className='topbar__logo' to='/dashboard_default'/>
+            <Link className='topbar__logo' to='/dashboard'/>
           </div>
           <div className='topbar__right'>            
             <TopbarNotification/>

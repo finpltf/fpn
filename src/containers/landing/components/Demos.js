@@ -53,7 +53,7 @@ class Demos extends PureComponent {
               </Link>
             </Col>
             <Col md={6} sm={12} xs={12}>
-              <Link className='landing__demo' to='/dashboard_default'>
+              <Link className='landing__demo' to='/dashboard'>
                 <div className='landing__demo-img-wrap'>
                   <img src={this.props.theme.className === 'theme-dark' ? analytics_dark : analytics} alt=''/>
                 </div>

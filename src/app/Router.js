@@ -37,12 +37,6 @@ import PricingCards from '../containers/default_page/pricing_cards';
 import TextEditor from '../containers/default_page/text_editor';
 import InvoiceTemplate from '../containers/default_page/invoice_template';
 import SearchResults from '../containers/default_page/search_results';
-
-
-
-import Catalog from '../containers/e-commerce/catalog';
-import ProductPage from '../containers/e-commerce/product_page';
-
 import Profile from '../containers/account/profile';
 import EmailConfirmation from '../containers/account/email_confimation';
 import LockScreen from '../containers/account/lock_screen';
@@ -63,20 +57,11 @@ import MaterialForm from '../containers/form/material_form';
 import InvestorProfile from '../containers/investor';
 import FormPicker from '../containers/form/form_picker';
 
-import Cart from '../containers/e-commerce/cart';
-import OrdersList from '../containers/e-commerce/orders_list';
-import Payment from '../containers/e-commerce/payment';
-import ProductEdit from '../containers/e-commerce/product_edit';
-import ProductsList from '../containers/e-commerce/products_list';
-
 import ChartsJS from '../containers/charts/chart_js';
 import ReactVis from '../containers/charts/react-vis';
 import Recharts from '../containers/charts/recharts';
 
-import FitnessDashboard from '../containers/dashboards/fitness';
-import DefaultDashboard from '../containers/dashboards/default';
-import ECommerceDashboard from '../containers/dashboards/e-commerce';
-import CryptoDashboard from '../containers/dashboards/crypto';
+
 
 import Mail from '../containers/mail';
 
@@ -90,9 +75,8 @@ import NavigationItem from '../containers/documentation/07_new_navigation_item';
 import Resources from '../containers/documentation/08_resources';
 import Changelog from '../containers/documentation/09_changelog';
 
-
-import CryptoDashboardEdit from '../containers/dashboards/crypto_table_edit';
-import ECommerceDashboardEdit from '../containers/dashboards/e-commerce_table_edit';
+import Dashboard from '../containers/dashboards/main';
+import DashboardEdit from '../containers/dashboards/crypto_table_edit';
 
 import Landing from '../containers/landing';
 
@@ -117,10 +101,7 @@ const wrappedRoutes = () => (
   <div>
     <Layout />
     <div className='container__wrap'>
-      <Route path='/dashboard_default' component={DefaultDashboard} />
-      <Route path='/dashboard_e_commerce' component={Commerce} />
-      <Route path='/dashboard_fitness' component={FitnessDashboard} />
-      <Route path='/dashboard_crypto' component={Crypto} />
+      <Route path='/dashboard' component={Dashboard} />
       <Route path='/uk_page' component={uk_page} />
       <Route path='/funds' component={fundsList} />
       <Route path='/fund_page' component={fund_page} />
@@ -133,7 +114,6 @@ const wrappedRoutes = () => (
       <Route path='/charts' component={Charts} />
       <Route path='/maps' component={Maps} />
       <Route path='/account' component={Account} />
-      <Route path='/e-commerce' component={ECommerce} />
       <Route path='/default_pages' component={DefaultPages} />
       <Route path='/documentation' component={Documentation} />
     </div>
@@ -204,18 +184,6 @@ const Account = () => (
   </Switch>
 );
 
-const ECommerce = () => (
-  <Switch>
-    <Route path='/e-commerce/cart' component={Cart} />
-    <Route path='/e-commerce/catalog' component={Catalog} />
-    <Route path='/e-commerce/orders_list' component={OrdersList} />
-    <Route path='/e-commerce/payment' component={Payment} />
-    <Route path='/e-commerce/product_edit' component={ProductEdit} />
-    <Route path='/e-commerce/product_page' component={ProductPage} />
-    <Route path='/e-commerce/products_list' component={ProductsList} />
-  </Switch>
-);
-
 const DefaultPages = () => (
   <Switch>
     <Route path='/default_pages/calendar' component={Calendar} />
@@ -242,21 +210,13 @@ const Documentation = () => (
   </Switch>
 );
 
-const Crypto = () => (
+const Dashboards = () => (
   <Switch>
-    <Route exact path='/dashboard_crypto' component={CryptoDashboard} />
-    <Route path='/dashboard_crypto/edit/:index' component={CryptoDashboardEdit} />
+    <Route exact path='/dashboard' component={Dashboard} />
+    <Route path='/dashboard/edit/:index' component={DashboardEdit} />
     <Route exact path='/funds' component={fundsList} />
-
-
   </Switch>
 );
 
-const Commerce = () => (
-  <Switch>
-    <Route exact path='/dashboard_e_commerce' component={ECommerceDashboard} />
-    <Route path='/dashboard_e_commerce/edit/:index' component={ECommerceDashboardEdit} />
-  </Switch>
-);
 
 export default Router;

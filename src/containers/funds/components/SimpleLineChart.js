@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
-import { Card, CardBody, Col } from 'reactstrap';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { Card, CardBody } from 'reactstrap';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { translate } from 'react-i18next';
 import Moment from 'react-moment';
 
@@ -167,19 +167,21 @@ class SimpleLineChart extends PureComponent {
     const { t } = this.props;
 
     return (
-      <Col xs={12} md={12} lg={12} xl={12}>
         <ResponsiveContainer height={80}>
-          <LineChart data={arr} margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
-          >
-            <Tooltip content={<CustomTooltip />} />
-            <Line type='monotone' dataKey='navOne' stroke='#ee1a2d' activeDot={{ r: 6 }} />
-            <YAxis minTickGap={50} hide={true} padding={{ top: 20, bottom: 20, left: 10, right: 10 }} domain={[dataMin => (Math.abs(dataMin)), dataMax => (Math.abs(dataMax))]} />
-            <XAxis hide={true} padding={{ top: 0, bottom: 0, left: 10, right: 10 }} dataKey='dataDate' />
-          </LineChart>
+          <AreaChart data={arr}
+            margin={{ top: 15, right: -10, left: -10, bottom: 0 }}>
+            <defs>
+              <linearGradient id='colorUv' x1='0' y1='0' x2='0' y2='1'>
+                <stop offset='0' stopColor='#00f4b0' stopOpacity={0.5} />
+                <stop offset='100%' stopColor='#00f4b0' stopOpacity={0} />
+              </linearGradient>
+            </defs>
+            <YAxis padding={{ top: 20, bottom: 10, left: 0, right: 10 }} hide={true} tickFormatter={value => `${value}₽`} axisLine={false} tickLine={false} domain={[dataMin => (Math.abs(dataMin)), dataMax => (Math.abs(dataMax))]} />
+            <XAxis dataKey='name' padding={{ top: 0, bottom: 0, left: 0, right: 0 }} hide={true} minTickGap={150} tickFormatter={value => `${value}`} axisLine={true} tickLine={false} domain={[dataMin => (Math.abs(dataMin)), dataMax => (Math.abs(dataMax))]} />
+            <Area name='Доходность' type='monotone' dataKey='navOne' stroke='#00f4b0' strokeWidth={2} fill='url(#colorUv)' fillOpacity={0.75} />
+            <Tooltip content={<CustomTooltip />} className='dashboard__total-tooltip' />
+          </AreaChart>
         </ResponsiveContainer>
-
-
-      </Col>
     )
   }
 }

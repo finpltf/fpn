@@ -22,9 +22,9 @@ export default class LogInPhoto extends PureComponent {
             </div>
             <div className='account__social'>
               <Link className='account__social-btn account__social-btn--facebook'
-                    to='/dashboard_default'><FacebookIcon/></Link>
+                    to='/dashboard'><FacebookIcon/></Link>
               <Link className='account__social-btn account__social-btn--google'
-                    to='/dashboard_default'><GooglePlusIcon/></Link>
+                    to='/dashboard'><GooglePlusIcon/></Link>
             </div>
           </div>
         </div>
