@@ -400,7 +400,7 @@
       "task_statistic": "statistique de tâche",
       "project_team": "Équipe du projet"
     },
-    "search_results": {
+    "funds_list": {
       "title": "Résultats de la recherche",
       "search_here": "Rechercher ici"
     },
@@ -427,6 +427,3 @@
     "log_out": "Déconnexion"
   }
 }
-
-
-

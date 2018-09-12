@@ -1,7 +1,7 @@
-import React, {PureComponent} from 'react';
-import {Link} from 'react-router-dom';
-import {Collapse} from 'reactstrap';
-import MailIcon from 'mdi-react/MailIcon'
+import React, { PureComponent } from 'react';
+import { Link } from 'react-router-dom';
+import { Collapse } from 'reactstrap';
+import NotificationsIcon from 'mdi-react/NotificationsIcon'
 
 const notifications = [
   {
@@ -32,31 +32,30 @@ export default class TopbarMail extends PureComponent {
   }
 
   toggle() {
-    this.setState({collapse: !this.state.collapse});
+    this.setState({ collapse: !this.state.collapse });
   }
 
   render() {
     return (
       <div className='topbar__collapse'>
         <button className='topbar__btn topbar__btn--mail topbar__btn--new' onClick={this.toggle}>
-          <MailIcon/>
+          <NotificationsIcon />
           <div className='topbar__btn-new-label'>
-            <div/>
+            <div />
           </div>
         </button>
-        {this.state.collapse && <div className='topbar__back' onClick={this.toggle}/>}
+        {this.state.collapse && <div className='topbar__back' onClick={this.toggle} />}
         <Collapse
           isOpen={this.state.collapse}
           className='topbar__collapse-content'
         >
           <div className='topbar__collapse-title-wrap'>
-            <p className='topbar__collapse-title'>Новые сообщения</p>
             <button className='topbar__collapse-button'>Пометить все как прочитанные</button>
           </div>
           {notifications.map((notification, index) => (
             <div className='topbar__collapse-item' key={index}>
               <div className='topbar__collapse-img-wrap'>
-                <img className='topbar__collapse-img' src={notification.ava} alt=''/>
+                <img className='topbar__collapse-img' src={notification.ava} alt='' />
               </div>
               <p className='topbar__collapse-name'>{notification.name}</p>
               <p className='topbar__collapse-message topbar__collapse-message--mail'>{notification.message}</p>
@@ -64,7 +63,7 @@ export default class TopbarMail extends PureComponent {
             </div>
           ))}
           <Link className='topbar__collapse-link' to='/mail'>
-            See all messages
+           Смотреть все
           </Link>
         </Collapse>
       </div>

@@ -1,17 +1,17 @@
 {
   "dashboard": {
     "page_title": "Dashboard Default",
-    "visits":  "Visits",
-    "total_page_views":  "Total page views",
-    "new_users":  "New users",
-    "bounce_rate":  "Bounce rate",
-    "ab_testing":  "A/B testing analytics",
-    "visitors_sessions":  "Visitor sessions",
-    "sales_statistic":  "Sales statistic",
-    "budget_statistic":  "Budget statistic",
-    "audience_by_country":  "Audience by country",
-    "best_selling":  "Best selling regions",
-    "goals_completion":  "Goal completion"
+    "visits": "Visits",
+    "total_page_views": "Total page views",
+    "new_users": "New users",
+    "bounce_rate": "Bounce rate",
+    "ab_testing": "A/B testing analytics",
+    "visitors_sessions": "Visitor sessions",
+    "sales_statistic": "Sales statistic",
+    "budget_statistic": "Budget statistic",
+    "audience_by_country": "Audience by country",
+    "best_selling": "Best selling regions",
+    "goals_completion": "Goal completion"
   },
   "dashboard_commerce": {
     "page_title": "Dashboard E-commerce",
@@ -400,7 +400,7 @@
       "task_statistic": "Task statistic",
       "project_team": "Project team"
     },
-    "search_results": {
+    "funds_list": {
       "title": "Search Results",
       "search_here": "Search here"
     },

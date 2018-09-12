@@ -25,10 +25,26 @@ class SidebarContent extends PureComponent {
         <ul className='sidebar__block'>
 
 
-          <SidebarLink title='Главная' icon='home' route='/dashboard' onClick={this.hideSidebar} />
-          <SidebarLink title='Все фонды' icon='cart' route='/funds' onClick={this.hideSidebar} />
-          <SidebarLink title='Портфель' icon='briefcase' route='/funds' onClick={this.hideSidebar} />
-          <SidebarCategory title='Заявки' icon='list'>
+          <SidebarLink title='Каталог фондов' icon='store' route='/funds' onClick={this.hideSidebar} />
+          <SidebarLink title='Компании' icon='apartment' route='/companies' onClick={this.hideSidebar} />
+          <SidebarLink title='Пользователи' icon='users' route='/people' onClick={this.hideSidebar} />
+
+
+
+
+
+
+
+
+        </ul>
+
+
+
+
+
+        <ul className='sidebar__block'>
+          <SidebarLink title='Ваш портфель' icon='briefcase' route='/dashboard' onClick={this.hideSidebar} />
+          <SidebarCategory title='Документы' icon='layers'>
             <SidebarLink title='Приобретение' route='/tables/basic_tables' onClick={this.hideSidebar} />
             <SidebarLink title='Погашение' route='/tables/data_table' onClick={this.hideSidebar} />
             <SidebarLink title='Обмен' route='/tables/data_table' onClick={this.hideSidebar} />
@@ -37,51 +53,27 @@ class SidebarContent extends PureComponent {
         </ul>
 
 
+
         <ul className='sidebar__block'>
-          <SidebarLink title='Сообщения' route='/chat' icon='cart' onClick={this.hideSidebar} />
-
-       
-
-          <SidebarLink title='Помощь' icon='text-align-justify' route='/default_pages/faq' onClick={this.hideSidebar} />
-
-          <SidebarCategory title='Личный кабинет' icon='home'>
-            <SidebarLink title='Рабочий стол' route='/dashboard' onClick={this.hideSidebar} />
-            <SidebarLink title='Лента новостей' route='/news' onClick={this.hideSidebar} />
-          </SidebarCategory>
-
-
-          <SidebarCategory title='Аккаунт' icon='user'>
-            <SidebarLink title='Анкета инвестора' route='/investor' onClick={this.hideSidebar} />
-            <SidebarLink title='Настройки' route='/mail' onClick={this.hideSidebar} />
-
-
-          </SidebarCategory>
-
+          <SidebarLink title='Сообщения' route='/chat' icon='envelope' onClick={this.hideSidebar} />
         </ul>
 
         <ul className='sidebar__block'>
-          <SidebarLink title='Выход' icon='exit' route='/log_in' />
+          <SidebarLink title='Помощь' icon='heart' route='/default_pages/faq' onClick={this.hideSidebar} />
         </ul>
 
-        
-          <SidebarCategory title='Мой портфель' icon='briefcase'>
 
-            <SidebarLink title='Мои фонды' route='/tables/basic_tables' onClick={this.hideSidebar} />
-            <SidebarLink title='Личные финансы' route='/funds' onClick={this.hideSidebar} />
-            <SidebarLink title='Избранное' route='/tables/data_table' onClick={this.hideSidebar} />
-          </SidebarCategory>
+        <ul className='sidebar__block'>
 
-
+          <SidebarLink title='Анкета инвестора' route='/investor' icon='user' onClick={this.hideSidebar} />
+          <SidebarLink title='Настройки' route='/mail' icon='cog' onClick={this.hideSidebar} />
+          <SidebarLink title='Выход' route='/logout' icon='exit' onClick={this.hideSidebar} />
+        </ul>
 
 
-          <SidebarCategory title='Помощь' icon='text-align-justify'>
-
-            <SidebarLink title='Справка' route='/documentation/introduction' onClick={this.hideSidebar} />
-            <SidebarLink title='Служба поддержки' route='/documentation/introduction' onClick={this.hideSidebar} />
-          </SidebarCategory>
 
 
- 
+
 
       </div>
     )

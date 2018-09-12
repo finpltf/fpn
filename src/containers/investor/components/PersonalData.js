@@ -23,23 +23,39 @@ const renderTextField = ({ input, label, meta: { touched, error }, children, sel
     }}
   />
 );
+const renderTextFieldMask = ({ input, label, meta: { touched, error }, children, select, mask }) => (
+  <MaskedInput {...input}
+    className='material-form__field'
+    label={label}
+    error={touched && error}
+    value={input.value}
+    mask={mask}
+    children={children}
+    select={select}
+    onChange={(e) => {
+      e.preventDefault();
+      input.onChange(e.target.value);
+    }}
+  />
+);
 
-const renderField = ({ input, label, placeholder, type, meta: { touched, error }, mask }) => (
-  <MaskedInput {...input} placeholder={placeholder} type={type} mask={mask} />
+const renderField = ({ input, label, placeholder, type, meta: { touched, error }, children, mask }) => (
+  <MaskedInput {...input} placeholder={placeholder} type={type} mask={mask} className='material-form__field' error={touched && error}
+    value={input.value} children={children} mask={mask} label={label} />
 );
 
 const all = /[A-Za-z0-9]/;
 
 class PersonalData extends PureComponent {
   render() {
-    const { handleSubmit, reset, t } = this.props;
+    const { handleSubmit } = this.props;
     return (
       <Col md={12} lg={12}>
         <Card>
           <CardBody>
             <div className='card__title'>
               <h3>Паспортные данные</h3>
-              <h5 className='subhead'>Введите свои данные в точности, как в паспорте, чтобы не пришлось заполнять анкету повторно.
+              <h5 className='subhead'>Введите свои данные в точности, как в паспорте, чтобы не пришлось заполнять анкету повторно и вам не надавали по щщам.
 Обратите внимание на заглавные и строчные буквы, сокращения (гор. Москва или г. Москва), точки и букву ё.</h5>
             </div>
             <form className='material-form' onSubmit={handleSubmit}>
@@ -48,8 +64,9 @@ class PersonalData extends PureComponent {
                 <Field
                   name='name'
                   component={renderTextField}
-                  placeholder='Имя'
+                  placeholder='Константин'
                   label='Имя'
+                  value='Константин'
                 />
               </div>
               <div>
@@ -58,6 +75,7 @@ class PersonalData extends PureComponent {
                   component={renderTextField}
                   placeholder='Фамилия'
                   label='Фамилия'
+                  value='Константинопольский'
                 />
               </div>
               <div>
@@ -69,9 +87,10 @@ class PersonalData extends PureComponent {
                 />
               </div>
               <div>
+                <label>Дата рождения</label>
                 <Field
                   name='bday'
-                  component={renderTextField}
+                  component={renderTextFieldMask}
                   placeholder='Дата рождения'
                   label='Дата рождения'
                   type='text'
@@ -86,6 +105,7 @@ class PersonalData extends PureComponent {
                       name='pass_seria'
                       component={renderTextField}
                       placeholder='Серия'
+                      mask={[/\d/, /\d/, '.', /\d/, /\d/, '.', /\d/, /\d/, /\d/, /\d/]}
                       label='Серия'
                     />
                   </div>
@@ -128,11 +148,14 @@ class PersonalData extends PureComponent {
                 <Col xs={6}>
 
                   <div>
+                    <label>Код подразделения</label>
                     <Field
                       name='pass_code'
-                      component={renderTextField}
+                      component={renderTextFieldMask}
                       placeholder='Код подразделения'
-                      label='Код подразделения '
+                      mask={[/\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/]}
+                      label='Код подразделения'
+                      value='125-384'
                     />
                   </div>
 

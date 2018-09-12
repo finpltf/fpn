@@ -17,16 +17,10 @@ import Tabs from '../containers/ui/tabs';
 import Timeline from '../containers/ui/timeline';
 import Tooltips from '../containers/ui/tooltips';
 
-import fundsList from '../containers/funds';
-import fund_page from '../containers/fund_page';
+import FundsList from '../containers/funds_list';
+import FundPage from '../containers/fund_page';
 import uk_page from '../containers/uk_page';
 
-import BasicTables from '../containers/tables/basic_tables';
-import DataTable from '../containers/tables/data_table';
-import EditableTable from '../containers/tables/editable_table';
-
-import GoogleMap from '../containers/maps/google_map';
-import VectorMap from '../containers/maps/vector_map';
 
 import NotFound404 from '../containers/default_page/404';
 import Calendar from '../containers/default_page/calendar';
@@ -36,7 +30,7 @@ import Chat from '../containers/chat';
 import PricingCards from '../containers/default_page/pricing_cards';
 import TextEditor from '../containers/default_page/text_editor';
 import InvoiceTemplate from '../containers/default_page/invoice_template';
-import SearchResults from '../containers/default_page/search_results';
+
 import Profile from '../containers/account/profile';
 import EmailConfirmation from '../containers/account/email_confimation';
 import LockScreen from '../containers/account/lock_screen';
@@ -57,8 +51,6 @@ import MaterialForm from '../containers/form/material_form';
 import InvestorProfile from '../containers/investor';
 import FormPicker from '../containers/form/form_picker';
 
-import ChartsJS from '../containers/charts/chart_js';
-import ReactVis from '../containers/charts/react-vis';
 import Recharts from '../containers/charts/recharts';
 
 
@@ -103,16 +95,12 @@ const wrappedRoutes = () => (
     <div className='container__wrap'>
       <Route path='/dashboard' component={Dashboard} />
       <Route path='/uk_page' component={uk_page} />
-      <Route path='/funds' component={fundsList} />
-      <Route path='/fund_page' component={fund_page} />
+      <Route path='/funds' component={Funds} />
       <Route path='/investor' component={InvestorProfile} />
       <Route path='/ui' component={UI} />
       <Route path='/mail' component={Mail} />
       <Route path='/chat' component={Chat} />
       <Route path='/forms' component={Forms} />
-      <Route path='/tables' component={Tables} />
-      <Route path='/charts' component={Charts} />
-      <Route path='/maps' component={Maps} />
       <Route path='/account' component={Account} />
       <Route path='/default_pages' component={DefaultPages} />
       <Route path='/documentation' component={Documentation} />
@@ -120,6 +108,12 @@ const wrappedRoutes = () => (
   </div>
 );
 
+const Funds = () => (
+  <Switch>
+    <Route exact path='/funds' component={FundsList} />
+    <Route path='/funds/fund_page' component={FundPage} />
+  </Switch>
+);
 const UI = () => (
   <Switch>
     <Route path='/ui/alerts' component={Alerts} />
@@ -154,28 +148,9 @@ const Forms = () => (
   </Switch>
 );
 
-const Tables = () => (
-  <Switch>
-    <Route path='/tables/basic_tables' component={BasicTables} />
-    <Route path='/tables/data_table' component={DataTable} />
-    <Route path='/tables/editable_table' component={EditableTable} />
-  </Switch>
-);
 
-const Charts = () => (
-  <Switch>
-    <Route path='/charts/charts_js' component={ChartsJS} />
-    <Route path='/charts/react_vis' component={ReactVis} />
-    <Route path='/charts/recharts' component={Recharts} />
-  </Switch>
-);
 
-const Maps = () => (
-  <Switch>
-    <Route path='/maps/google_map' component={GoogleMap} />
-    <Route path='/maps/vector_map' component={VectorMap} />
-  </Switch>
-);
+
 
 const Account = () => (
   <Switch>
@@ -191,7 +166,7 @@ const DefaultPages = () => (
     <Route path='/default_pages/gallery' component={Gallery} />
     <Route path='/default_pages/invoice_template' component={InvoiceTemplate} />
     <Route path='/default_pages/pricing_cards' component={PricingCards} />
-    <Route path='/default_pages/search_results' component={SearchResults} />
+
     <Route path='/default_pages/text_editor' component={TextEditor} />
   </Switch>
 );
@@ -214,7 +189,6 @@ const Dashboards = () => (
   <Switch>
     <Route exact path='/dashboard' component={Dashboard} />
     <Route path='/dashboard/edit/:index' component={DashboardEdit} />
-    <Route exact path='/funds' component={fundsList} />
   </Switch>
 );
 

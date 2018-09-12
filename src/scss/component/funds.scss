@@ -11,7 +11,92 @@
     width: 100%;
     max-width: 100%;
 }
+.material-form {
+    position: relative;
+    z-index: 10;
+}
 
+.searchFund {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05), 0 8px 10px 0 rgba(94, 94, 94, 0.05);
+    width: 100%;
+    border:0;
+    padding: 15px 10px;
+    border-radius: 0px;
+    margin: 5px 0;
+
+    &:focus {
+    outline: 0px solid #c9c9c9;
+    box-shadow: 0px 0px 0px 4px #00f4b0;
+
+      @include themify($themes) {
+        border-bottom-color: themed('color-cian');
+      }
+
+}
+
+    &:before {
+      border-bottom: 1px solid !important;
+    }
+
+}
+
+.Select-input>input {
+    padding: 13px 0 15px;
+}
+.funds__filter {
+
+    margin-top: 5px;
+    margin-bottom: 50px;
+    height: 46px;
+    border: 1px solid rgba(0,0,0,.05);    
+    background: #fff;
+   box-shadow: 0px 6px 10px -5px rgba(0, 0, 0, 0.1);
+
+    .col {
+        padding: 0px;
+        &:first-child  {
+            padding-left: 0;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+    .MuiInputLabel-animated-9 {
+        transform: translate(0, 16px) scale(1);
+    }
+    .MuiInput-underline-24:before {
+        display: none;
+    }
+    .Select-control {
+
+        height: 45px;
+        border: 0;
+    }
+    .Select--single>.Select-control .Select-value, .Select-placeholder {
+        line-height: 45px;
+    }
+    .Select--multi .Select-value-icon {
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 1px 5px 0px;
+    }
+    .Select--multi .Select-value {
+    background-color: #ececec;
+    border-radius: 0px;
+    border: 1px solid rgba(0,0,0,.05);
+    color: #333333;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 26px;
+    margin-left: 5px;
+    margin-top: 6px;
+    vertical-align: top;
+}
+    .Select-menu-outer {
+        border:0;
+    }
+
+}
 .funds__page, .fund__page, .uk__page, .dashboard {
 
        .subhead {
@@ -58,12 +143,12 @@
         .widget_income {
             
             .card-body {
-                box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+                box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
             }
             &:hover {
 
                 .card-body {
-                    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+                    box-shadow: 0px 10px 20px -5px rgba(149, 149, 149, 0.8);
                 }
                 .graph {
                 opacity: 1;
@@ -90,7 +175,7 @@
             }
 
             .params  {
-                padding: 0px 3% 3% 3%;
+                padding: 0px 5% 5% 5%;
                 z-index: 10;
                 white-space: nowrap;
                 text-overflow: ellipsis;
@@ -115,10 +200,13 @@
 }
 
     .graph {
-        opacity: 0.5;
+        opacity: 0.3;
         transition: all 0.3s;       
-        z-index: 20;
-        position: relative
+        position: absolute;
+        z-index: 2;
+        top: 40px;
+        width: 100%;
+        display: block;
     }    
 
 .side {
@@ -175,6 +263,14 @@
     .fund__card {
         min-width: 350px;
         max-width: 453px;
+
+          @media screen and (max-width: 768px) {
+                max-width: 100%;    
+            }
+
+        @media screen and (max-width: 576px) {
+                max-width: 100%;    
+        }
     }
 }
 .funds__page, .dashboard {
@@ -187,7 +283,7 @@
     position: relative;
     z-index: 5;
     margin: 0 0 35px 0;
-    overflow: hidden;
+    overflow: visible;
                .btns {
                 padding: 0% 6% 3% 7%;
                 background: #FFF;
@@ -213,6 +309,7 @@
       }
     .card__title {
             margin-bottom: 0px;
+            min-height: 140px;
         }
 
 
@@ -231,11 +328,11 @@
 
             .card-body {
 
-               box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+               box-shadow: 0px 10px 20px -5px rgba(149, 149, 149, 0.8);
             
             }
             .graph {
-                 opacity: 1;
+                 opacity: 0.7;
             }      
 
             .btns {

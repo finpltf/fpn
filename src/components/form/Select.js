@@ -35,6 +35,7 @@ const renderSelectField = (props) => (
     <SelectField
       {...props.input}
       options={props.options}
+      placeholder={props.placeholder}
     />
     {props.meta.touched && props.meta.error && <span className='form__form-group-error'>{props.meta.error}</span>}
   </div>

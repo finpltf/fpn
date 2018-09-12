@@ -40,6 +40,7 @@ const renderMultiSelectField = (props) => (
     <MultiSelectField
       {...props.input}
       options={props.options}
+      placeholder={props.placeholder}
     />
     {props.meta.touched && props.meta.error && <span className='form__form-group-error'>{props.meta.error}</span>}
   </div>

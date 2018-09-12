@@ -18,6 +18,7 @@ import NavYear from './components/NavYear';
 import NavTotal from './components/NavTotal';
 import FundsNavChart from './components/FundsNavChart';
 import MyFundCard from './components/MyFundCard';
+import AddFundCard from './components/AddFundCard';
 
 
 import { translate } from 'react-i18next';
@@ -60,6 +61,7 @@ class Dashboard extends PureComponent {
           <MyFundCard />
           <MyFundCard />
           <MyFundCard />
+          <AddFundCard />
         </Row>
 
         <Row>

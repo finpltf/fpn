@@ -16,7 +16,6 @@ class Topbar extends PureComponent {
             <Link className='topbar__logo' to='/dashboard'/>
           </div>
           <div className='topbar__right'>            
-            <TopbarNotification/>
             <TopbarMail new/>
             <TopbarProfile/>            
           </div>

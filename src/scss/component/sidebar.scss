@@ -4,7 +4,7 @@
   left: 0;
   z-index: 99;
   height: 100vh;
-  width: 240px;
+  width: 200px;
   box-shadow: 0 1px 30px 1px rgba(0, 0, 0, 0.11);
   padding-top: 60px;
   transition: transform 0.3s, width 0.3s;
@@ -44,7 +44,6 @@
   }
 
   .sidebar__scroll {
-    width: 240px;
 
     & > div {
       height: calc(100vh - 60px);
@@ -96,8 +95,7 @@
   }
 
   .sidebar__link {
-    height: 36px;
-    width: 240px;
+    height: 55px;
     transition: all 0.3s;
     position: relative;
     cursor: pointer;
@@ -123,14 +121,14 @@
 
     p {
       position: absolute;
-      left: 43px;
-      width: 160px;
+      left:55px;
       transition: left 0.3s;
     }
 
     &:hover {
       text-decoration: none;
-
+      box-shadow: 0 0 25px -5px rgba(51, 51, 51, 0.4);
+      
       @include themify($themes) {
         background-color: themed('colorHover');
       }
@@ -144,15 +142,17 @@
   .sidebar__link-title {
     margin: 0;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 35px;
     position: relative;
     display: flex;
   }
 
   .sidebar__link-icon {
     margin-right: 10px;
-    font-size: 13px;
-    line-height: 13px;
+    font-size: 16px;
+    line-height: 35px;
+    margin-left: 9px;
+    transition: transform 0.3s, font-size 0.3s;
 
     @include themify($themes) {
       color: themed('colorIcon');
@@ -172,7 +172,7 @@
         padding-left: 53px;
 
         p {
-          left: 53px;
+          left: 65px;
         }
       }
     }
@@ -182,7 +182,7 @@
     }
 
     .sidebar__link {
-      padding-left: 43px;
+      padding-left: 65px;
 
       &:hover {
         @include themify($themes) {
@@ -269,11 +269,11 @@
     }
 
     &.sidebar--collapse {
-      width: 55px;
+          width: 79px;
       overflow: visible;
 
       .sidebar__scroll, .sidebar__content {
-        width: 55px;
+            width: 79px;
         overflow: visible !important;
         transition: width 0.3s;
       }
@@ -350,6 +350,11 @@
           @include themify($themes) {
             background: themed('colorHover');
           }
+        }
+
+        .sidebar__link-icon {
+          font-size: 28px;
+          margin-left: 5px;
         }
       }
 

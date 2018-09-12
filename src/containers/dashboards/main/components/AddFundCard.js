@@ -43,7 +43,7 @@ class CustomTooltip extends PureComponent {
 
 
 
-class MyFundCard extends PureComponent {
+class AddFundCard extends PureComponent {
   render() {
     const { t } = this.props;
 
@@ -51,42 +51,14 @@ class MyFundCard extends PureComponent {
       <Col className='fund__card' >
         <Card className='no_padding'>
           <CardBody>
-            <NavLink to={'/funds/fund_page'} onClick={this.props.onClick}>
+            <NavLink to={'/fund_page'} onClick={this.props.onClick}>
 
               <div className='card__title'>
-                <h3 className='semibold-text'>{t('ui_elements.funds.basic_heading')}</h3>
-                <h4 className='subhead'>ООО УК «ИНВЕСТ МЕНЕДЖМЕНТ ЦЕНТР»
-
-                </h4>
-              </div>
-              <div className='graph'>
-                <SimpleLineChart />
+                <h3 className='semibold-text'>Добавить фонд</h3>
               </div>
 
-              <Row className='params'>
-                <Col xs={6} sm={6} md={6} xl={6} >
-                  <h4 className='subhead'>Кол-во паёв</h4>
-                  <h3 className='semibold-text'>16.85458</h3>
-                </Col>
-
-                <Col xs={6} sm={6} md={6} xl={6} className='text-right' >
-                  <h4 className='subhead'>На сумму</h4>
-                  <h3 className='semibold-text'>18752.37₽</h3>
-                </Col>
-              </Row>
 
             </NavLink>
-            <div className="row text-left btns">
-              <ButtonToolbar>
-
-                <ButtonGroup className='btn-group--justified'>
-                  <Button className='rounded' color='primary'><CheckboxMarkedCircleOutlineIcon /> Купить ещё</Button>
-                  <Button color='secondary' className='rounded'> <CircleEditOutlineIcon /> Обменять</Button>
-                  <Button color='secondary' className='rounded'><CloseBoxOutlineIcon /> Погасить</Button>
-                </ButtonGroup>
-              </ButtonToolbar>
-
-            </div>
           </CardBody>
         </Card>
 
@@ -95,4 +67,4 @@ class MyFundCard extends PureComponent {
   }
 }
 
-export default translate('common')(MyFundCard);
+export default translate('common')(AddFundCard);

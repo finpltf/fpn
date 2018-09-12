@@ -4,7 +4,7 @@ import { NavLink, withRouter } from 'react-router-dom';
 import UkInfo from './components/UkInfo';
 import UkOffices from './components/UkOffices';
 import UkMap from './components/UkMap';
-import FundCard from '../funds/components/fundCard';
+import GetFundsList from '../funds_list/components/FundsList';
 import UkInfo2 from './components/UkInfo2';
 import Manager from './components/Manager';
 
@@ -48,8 +48,7 @@ export default class uk_page extends PureComponent {
 
 
                 <Row>
-                    <FundCard />
-                    <FundCard />
+                    <GetFundsList />
 
                 </Row>
                 <Row>

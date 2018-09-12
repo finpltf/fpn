@@ -1,7 +1,8 @@
 $themes: (
   light: (
     colorBackground: white,
-    colorBackgroundBody: #f2f4f7,
+    colorBackgroundBody: #ececec,
+    colorBackgroundPanel:rgba(255, 255, 255, 0.3),
     colorText: #333333,
     colorTextAdditional: #777777,
     logoImg: url(../img/logo/logo_light.svg),
@@ -10,7 +11,12 @@ $themes: (
     colorIcon: #999999,
     imgInvert: invert(0%),
     colorFieldsBorder: #f2f4f7,
-    colorBubble: rgba(242, 244, 247, 0.65),
+    color-accent: #ee1a2d,
+    color-cian: #00f4b0,
+    color-green: #4caf50,
+    color-cian-hover:#00ffb8,
+    color-additional: #999999,
+    colorBubble: rgba(242, 244, 247, 0.65),   
     colorBubbleActive: rgba(234, 238, 255, 0.6),
     colorBackgroundInverse: #232329,
     colorBackgroundBodyInverse: #2a2a31,

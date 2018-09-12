@@ -1,6 +1,6 @@
-import React, {PureComponent} from 'react';
-import {Collapse} from 'reactstrap';
-import {Link} from 'react-router-dom';
+import React, { PureComponent } from 'react';
+import { Collapse } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import NotificationsIcon from 'mdi-react/NotificationsIcon';
 
 const notifications = [
@@ -32,16 +32,19 @@ export default class TopbarNotification extends PureComponent {
   }
 
   toggle() {
-    this.setState({collapse: !this.state.collapse});
+    this.setState({ collapse: !this.state.collapse });
   }
 
   render() {
     return (
       <div className='topbar__collapse'>
         <button className='topbar__btn' onClick={this.toggle}>
-          <NotificationsIcon/>
+          <NotificationsIcon />
+          <div className='topbar__btn-new-label'>
+            <div> 1</div>
+          </div>
         </button>
-        {this.state.collapse && <div className='topbar__back' onClick={this.toggle}/>}
+        {this.state.collapse && <div className='topbar__back' onClick={this.toggle} />}
         <Collapse
           isOpen={this.state.collapse}
           className='topbar__collapse-content'
@@ -51,11 +54,11 @@ export default class TopbarNotification extends PureComponent {
           </div>
           {notifications.map((notification, index) => (
             <div className='topbar__collapse-item' key={index}>
-  
+
               <p className='topbar__collapse-message'>
                 <span className='topbar__collapse-name'>{notification.name}</span>
                 {notification.message}
-                </p>
+              </p>
               <p className='topbar__collapse-date'>{notification.date}</p>
             </div>
           ))}

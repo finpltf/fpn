@@ -1,11 +1,11 @@
-import React, {PureComponent} from 'react';
-import {Col, Container, Row} from 'reactstrap';
+import React, { PureComponent } from 'react';
+import { Col, Container, Row } from 'reactstrap';
 import FAQs from './components/FAQs';
 
 export default class FAQ extends PureComponent {
   render() {
     return (
-      <Container>
+      <Container className='fundsList'>
         <Row>
           <Col md={12}>
             <h1 className='page-title'>FAQ</h1>
@@ -13,7 +13,7 @@ export default class FAQ extends PureComponent {
           </Col>
         </Row>
         <Row>
-          <FAQs/>
+          <FAQs />
         </Row>
       </Container>
     )
