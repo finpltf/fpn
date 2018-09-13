@@ -19,7 +19,8 @@ import Tooltips from '../containers/ui/tooltips';
 
 import FundsList from '../containers/funds_list';
 import FundPage from '../containers/fund_page';
-import uk_page from '../containers/uk_page';
+import UkList from '../containers/uk_list';
+import UkPage from '../containers/uk_page';
 
 
 import NotFound404 from '../containers/default_page/404';
@@ -51,7 +52,6 @@ import MaterialForm from '../containers/form/material_form';
 import InvestorProfile from '../containers/investor';
 import FormPicker from '../containers/form/form_picker';
 
-import Recharts from '../containers/charts/recharts';
 
 
 
@@ -94,7 +94,7 @@ const wrappedRoutes = () => (
     <Layout />
     <div className='container__wrap'>
       <Route path='/dashboard' component={Dashboard} />
-      <Route path='/uk_page' component={uk_page} />
+      <Route path='/uk' component={Uk} />
       <Route path='/funds' component={Funds} />
       <Route path='/investor' component={InvestorProfile} />
       <Route path='/ui' component={UI} />
@@ -108,6 +108,12 @@ const wrappedRoutes = () => (
   </div>
 );
 
+const Uk = () => (
+  <Switch>
+    <Route exact path='/uk' component={UkList} />
+    <Route path='/uk/uk_page' component={UkPage} />
+  </Switch>
+);
 const Funds = () => (
   <Switch>
     <Route exact path='/funds' component={FundsList} />
