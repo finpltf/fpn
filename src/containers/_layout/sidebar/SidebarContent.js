@@ -26,7 +26,7 @@ class SidebarContent extends PureComponent {
 
 
           <SidebarLink title='Каталог фондов' icon='store' route='/funds' onClick={this.hideSidebar} />
-          <SidebarLink title='Компании' icon='apartment' route='/companies' onClick={this.hideSidebar} />
+          <SidebarLink title='Компании' icon='apartment' route='/uk' onClick={this.hideSidebar} />
           <SidebarLink title='Пользователи' icon='users' route='/people' onClick={this.hideSidebar} />
 
 

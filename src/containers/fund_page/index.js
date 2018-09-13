@@ -11,9 +11,8 @@ export default class fundPage extends PureComponent {
 
         <div>
           <Breadcrumb>
-
             <BreadcrumbItem> <NavLink className='fund__card' to={'/funds'} onClick={this.props.onClick}>Фонды</NavLink></BreadcrumbItem>
-            <BreadcrumbItem><NavLink className='fund__card' to={'/uk_page'} onClick={this.props.onClick}>ООО УК «ИНВЕСТ МЕНЕДЖМЕНТ ЦЕНТР»</NavLink></BreadcrumbItem>
+            <BreadcrumbItem><NavLink className='fund__card' to={'/uk/uk_page'} onClick={this.props.onClick}>ООО УК «ИНВЕСТ МЕНЕДЖМЕНТ ЦЕНТР»</NavLink></BreadcrumbItem>
             <BreadcrumbItem active>ОПИФ РФИ «ТФГ - Валютные Еврооблигации»</BreadcrumbItem>
           </Breadcrumb>
         </div>
