@@ -272,6 +272,42 @@
                 max-width: 100%;    
         }
     }
+
+    .date-range-selector {
+            float: left;
+    margin-left: 15px;
+    }
+
+    .period-selector {
+margin: 0 !important;
+
+        .btn-group {
+            margin: 0 auto;
+        }
+
+        .btn {
+           max-height: 30px;
+    min-height: 30px;
+    line-height: 10px;
+    float: left;
+    display: inline-block;
+    padding: 0 15px;
+    font-size: 14px;
+    min-width: auto;
+    background: #eee;
+    margin: 0;
+
+    &::before {
+        border-color: transparent;
+    }
+
+    &.selected {
+        background: $color-accent;
+        color:#FFF;
+        border-color: $color-accent;
+    }
+        }
+    }
 }
 .funds__page, .dashboard {
     

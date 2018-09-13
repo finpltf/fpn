@@ -178,7 +178,7 @@ class SimpleLineChart extends PureComponent {
           </defs>
           <YAxis padding={{ top: 20, bottom: 10, left: 0, right: 10 }} hide={true} tickFormatter={value => `${value}₽`} axisLine={false} tickLine={false} domain={[dataMin => (Math.abs(dataMin)), dataMax => (Math.abs(dataMax))]} />
           <XAxis dataKey='name' padding={{ top: 0, bottom: 0, left: 0, right: 0 }} hide={true} minTickGap={150} tickFormatter={value => `${value}`} axisLine={true} tickLine={false} domain={[dataMin => (Math.abs(dataMin)), dataMax => (Math.abs(dataMax))]} />
-          <Area name='Доходность' type='monotone' dataKey='navOne' stroke='#00f4b0' strokeWidth={2} fill='url(#colorUv)' fillOpacity={0.75} />
+          <Area name='Доходность' type='monotone' dataKey='navOne' stroke='#999' strokeWidth={1} fill='url(#colorUv)' fillOpacity={0.75} />
           <Tooltip content={<CustomTooltip />} className='dashboard__total-tooltip' />
         </AreaChart>
       </ResponsiveContainer>

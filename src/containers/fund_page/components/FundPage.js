@@ -63,15 +63,12 @@ export default class FundPage extends PureComponent {
 
               </Row>
 
-<Row>
-<Col xl={8}>
-              <h3>ДИНАМИКА ИЗМЕНЕНИЯ СТОИМОСТИ ПАЯ И СЧА</h3>
-</Col>
+              <Row>
+                <Col xl={12}>
+                  <h3>ДИНАМИКА ИЗМЕНЕНИЯ СТОИМОСТИ ПАЯ И СЧА</h3>
+                </Col>
 
-<Col xl={4}>
-                  <DateRangePicker onSubmit={showResults} />
-</Col>
-</Row>
+              </Row>
 
 
               <SimpleLineChart />

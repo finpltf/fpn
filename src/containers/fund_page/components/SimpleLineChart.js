@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { translate } from 'react-i18next';
 import Moment from 'react-moment';
-
+import PeriodSelector from './PeriodSelector';
 class CustomTooltip extends PureComponent {
   render() {
     const { active } = this.props;
@@ -160,6 +160,22 @@ const nav = [
   }
 ];
 
+const gradientOffset = () => {
+  const dataMax = Math.max(...data.map((i) => i.navOne));
+  const dataMin = Math.min(...data.map((i) => i.navOne));
+
+  if (dataMax <= 0) {
+    return 0
+  }
+  else if (dataMin >= 0) {
+    return 1
+  }
+  else {
+    return dataMax / (dataMax - dataMin);
+  }
+}
+
+const off = gradientOffset();
 
 class SimpleLineChart extends PureComponent {
   render() {
@@ -168,17 +184,33 @@ class SimpleLineChart extends PureComponent {
     return (
       <Col xs={12} md={12} lg={12} xl={12}>
         <ResponsiveContainer height={250}>
-          <LineChart data={nav} margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
-            syncId="chart">
+          <AreaChart
+            height={250}
+            data={nav}
+            margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
+          >
+            <defs>
+              <linearGradient id='colorUv' x1='0' y1='0' x2='0' y2='1'>
+                <stop offset='0' stopColor='#00f4b0' stopOpacity={0.5} />
+                <stop offset='100%' stopColor='#00f4b0' stopOpacity={0} />
+              </linearGradient>
+            </defs>
             <Tooltip content={<CustomTooltip />} />
-            <CartesianGrid strokeDasharray='2 2' />
-            <Line type='monotone' dataKey='navOne' stroke='#ee1a2d' activeDot={{ r: 5 }} />
-            <YAxis minTickGap={50} hide={true} padding={{ top: 20, bottom: 20, left: 10, right: 10 }} domain={[dataMin => (Math.abs(dataMin)), dataMax => (Math.abs(dataMax))]} />
+            <YAxis minTickGap={50} hide={true} padding={{ top: 0, bottom: 20, left: -20, right: -20 }} domain={[dataMin => (Math.abs(dataMin)), dataMax => (Math.abs(dataMax))]} />
             <XAxis hide={true} padding={{ top: 0, bottom: 0, left: 10, right: 10 }} dataKey='dataDate' />
-          </LineChart>
+            <defs>
+              <linearGradient id="splitColor" x1="20" y1="0" x2="0" y2="2">
+                <stop offset={off} stopColor="#ee1a2d" stopOpacity={0.5} />
+                <stop offset={off} stopColor="#00f4b0" stopOpacity={0.5} />
+              </linearGradient>
+            </defs>
+            <Area type="monotone" name='Доходность' dataKey="navOne" stroke="#ccc" fill="url(#colorUv)" />
+          </AreaChart>
+
+
+
         </ResponsiveContainer>
-
-
+        <PeriodSelector />
       </Col>
     )
   }
