@@ -13,22 +13,17 @@
     "best_selling": "Лидеры по продажам",
     "goals_completion": "Достижение цели"
   },
-  "dashboard_commerce": {
-    "page_title": "Dashboard E-commerce",
-    "total_products": "Total products",
-    "total_profit": "Total profit",
-    "orders_today": "Orders today",
-    "subscriptions": "Subscriptions",
-    "product_sales": "Product sales",
-    "new_orders": "New orders",
-    "my_todos": "My todos",
-    "sales_statistic": "Sales statistic",
-    "sales_report": "Sales report",
-    "emails": "Emails",
-    "short_reminders": "Short reminders",
-    "top_selling_products": "Top selling products",
-    "basic_card": "Basic card",
-    "recent_orders": "Recent orders"
+  "settings": {
+    "page_title": "Настройки",
+    "email": "Адрес электронной почты",
+    "phone": "Телефон",
+    "old_password": "Текущий пароль",
+    "new_password": "Новый пароль",
+    "secret_word": "Кодовое слово",
+    "newsletter": "Получать новости и рассылки",
+    "docs_in": "Получать исходящие документы на почту",
+    "docs_out": "Получать входящие документы на почту",
+    "save": "Сохранить"
   },
   "dashboard_fitness": {
     "page_title": "Dashboard Fitness",

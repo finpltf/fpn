@@ -22,6 +22,9 @@ import FundPage from '../containers/fund_page';
 import UkList from '../containers/uk_list';
 import UkPage from '../containers/uk_page';
 
+import InvestorProfile from '../containers/investor';
+import Settings from '../containers/settings';
+
 
 import NotFound404 from '../containers/default_page/404';
 import Calendar from '../containers/default_page/calendar';
@@ -49,7 +52,7 @@ import FormValidation from '../containers/form/form_validation';
 import MaskForm from '../containers/form/mask_form';
 import WizardForm from '../containers/form/wizard_form';
 import MaterialForm from '../containers/form/material_form';
-import InvestorProfile from '../containers/investor';
+
 import FormPicker from '../containers/form/form_picker';
 
 
@@ -97,6 +100,7 @@ const wrappedRoutes = () => (
       <Route path='/uk' component={Uk} />
       <Route path='/funds' component={Funds} />
       <Route path='/investor' component={InvestorProfile} />
+      <Route path='/settings' component={Settings} />
       <Route path='/ui' component={UI} />
       <Route path='/mail' component={Mail} />
       <Route path='/chat' component={Chat} />

@@ -60,7 +60,7 @@ class MyIncomes extends PureComponent {
             </Col>
           </Row>
           <div className='graph'>
-            <ResponsiveContainer height={150}>
+            <ResponsiveContainer height={100}>
               <AreaChart data={data}
                 margin={{ top: 15, right: -10, left: -10, bottom: 0 }}>
                 <defs>

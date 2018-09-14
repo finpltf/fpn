@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Card, CardBody, Col } from 'reactstrap';
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import { translate } from 'react-i18next';
 import Moment from 'react-moment';
 import PeriodSelector from './PeriodSelector';
@@ -182,7 +181,7 @@ class SimpleLineChart extends PureComponent {
     const { t } = this.props;
 
     return (
-      <Col xs={12} md={12} lg={12} xl={12}>
+      <div className='chart'>
         <ResponsiveContainer height={250}>
           <AreaChart
             height={250}
@@ -211,7 +210,7 @@ class SimpleLineChart extends PureComponent {
 
         </ResponsiveContainer>
         <PeriodSelector />
-      </Col>
+      </div>
     )
   }
 }

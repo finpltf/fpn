@@ -19,7 +19,6 @@ class UkInfo extends PureComponent {
     const { t } = this.props;
 
     return (
-      <Col xs={12} sm={12} md={6} xl={12}>
         <Card>
           <CardBody>
   
@@ -39,16 +38,24 @@ class UkInfo extends PureComponent {
 
                 <Col xs={6} sm={6} md={6} xl={4} className=''>
                   <h4 className='subhead'>Стоимость чистых активов</h4>
-                <h2 className=' '>0.12МЛРД ₽</h2>
+                <h3 className=' '>0.12МЛРД ₽</h3>
+              <h4 className='subhead'>Фондов под управлением</h4>
+              <h3 className=' '>5</h3>
                 </Col>
 
-                <Col xs={6} sm={6} md={6} xl={4} className='text-center' >
+                <Col xs={6} sm={6} md={6} xl={4} className=' ' >
                 <h4 className='subhead'>Дата выдачи лицензии УК</h4>
-                  <h2 className=' '>14.05.2013</h2>
+                  <h3 className=' '>14.05.2013</h3>
+                  <h4 className='subhead'>Дата выдачи</h4>
+                  <h3>11.02.2005</h3>
                 </Col>  
-              <Col xs={6} sm={6} md={6} xl={4} className='text-right' >
-                <h4 className='subhead'>Номер лицензии</h4>
-                <h2 className=' '>21-000-1-00955</h2>
+              
+              <Col xs={6} sm={6} md={6} xl={4} className=' ' >
+                <h4 className='subhead'>Номер лицензии ДУ</h4>
+                <h3 className=' '>21-000-1-00955</h3>
+                <h4 className='subhead'>Дата выдачи</h4>
+              <h3>11.02.2005</h3>
+
               </Col>
               </div>
 
@@ -56,7 +63,6 @@ class UkInfo extends PureComponent {
           
           </CardBody>
         </Card>
-      </Col>
     )
   }
 }

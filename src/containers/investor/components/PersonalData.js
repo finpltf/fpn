@@ -87,14 +87,12 @@ class PersonalData extends PureComponent {
                 />
               </div>
               <div>
-                <label>Дата рождения</label>
                 <Field
                   name='bday'
-                  component={renderTextFieldMask}
+                  component={renderTextField}
                   placeholder='Дата рождения'
                   label='Дата рождения'
                   type='text'
-                  mask={[/\d/, /\d/, '.', /\d/, /\d/, '.', /\d/, /\d/, /\d/, /\d/]}
                 />
               </div>
 
@@ -105,7 +103,6 @@ class PersonalData extends PureComponent {
                       name='pass_seria'
                       component={renderTextField}
                       placeholder='Серия'
-                      mask={[/\d/, /\d/, '.', /\d/, /\d/, '.', /\d/, /\d/, /\d/, /\d/]}
                       label='Серия'
                     />
                   </div>
@@ -148,12 +145,10 @@ class PersonalData extends PureComponent {
                 <Col xs={6}>
 
                   <div>
-                    <label>Код подразделения</label>
                     <Field
                       name='pass_code'
-                      component={renderTextFieldMask}
+                      component={renderTextField}
                       placeholder='Код подразделения'
-                      mask={[/\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/]}
                       label='Код подразделения'
                       value='125-384'
                     />

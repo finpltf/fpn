@@ -3,7 +3,10 @@ import { Col, Container, Row, Badge, UncontrolledTooltip, Breadcrumb, Breadcrumb
 import { NavLink, withRouter } from 'react-router-dom';
 import UkInfo from './components/UkInfo';
 import UkOffices from './components/UkOffices';
-import UkMap from './components/UkMap';
+import NavAll from './components/NavAll';
+import DuLicence from './components/DuLicence';
+import UkLicence from './components/UkLicence';
+
 import GetFundsList from '../funds_list/components/FundsList';
 import UkInfo2 from './components/UkInfo2';
 import Manager from './components/Manager';
@@ -30,27 +33,33 @@ export default class uk_page extends PureComponent {
 
                 </Row>
                 <Row>
-
-                    <UkInfo />
-
-
-
+                    <Col xl={12}>
+                        <UkInfo />
+                    </Col>
                 </Row>
-
 
 
                 <Row>
                     <Col md={12}>
-                        <h1 className='page-title'>Фонды под управлением</h1>
+                        <h2 className='page-title'>Фонды под управлением</h2>
                     </Col>
 
                 </Row>
 
 
                 <Row>
-                    <GetFundsList />
+                    <Col>
+                        <GetFundsList />
+                    </Col>
+                </Row>
+
+                <Row>
+                    <Col md={12}>
+                        <h2 className='page-title'>Управляющие фондами</h2>
+                    </Col>
 
                 </Row>
+
                 <Row>
                     <Col lg={6}>
                         <Manager />

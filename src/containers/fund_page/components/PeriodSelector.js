@@ -13,8 +13,6 @@ class PeriodSelector extends PureComponent {
           <Button>6 мес.</Button>
           <Button className='selected'>1 год</Button>
           <Button>3 года</Button>
-          <Button>С начала года</Button>
-          <Button>С момента запуска</Button>
         </ButtonGroup>
       </ButtonToolbar>
     )

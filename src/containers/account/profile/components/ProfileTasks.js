@@ -3,7 +3,7 @@ import {Card, CardBody, Col, Badge} from 'reactstrap';
 import CheckIcon from 'mdi-react/CheckIcon';
 import PropTypes from 'prop-types';
 
-// import CheckBox from '../../../../components/form/CheckBox';
+
 
 class CheckBox extends PureComponent {
   static propTypes = {
