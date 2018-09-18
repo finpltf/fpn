@@ -7,20 +7,17 @@ image: node:slim
 
 pipelines:
   default:
-    - step:          # non-parallel step
-        name: Install npm modules
-        script:
-          - npm install
     - parallel:      # these 2 steps will run in parallel
         - step:
-            name: Install surge.sh
+            name: install npm modules & build application
             script:
-              - npm install -g surge
-        - step:
-            name: build application
-            script:
+              - npm install
               - npm run build
+        - step:
+            name: install surge.sh
+            script:
+              - npm install -g surge              
     - step:          # non-parallel step
         name: Deploy to Surge
         script:         
-          - surge --project ./build --domain fpn.surge.sh          
+          - surge --project ./build --domain fpn.surge.sh                    
