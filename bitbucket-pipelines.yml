@@ -12,6 +12,7 @@ pipelines:
             name: install npm modules & build application
             script:
               - npm install
+              - unset CI
               - npm run build
         - step:
             name: install surge.sh
