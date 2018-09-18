@@ -5,11 +5,10 @@ import FAQs from './components/FAQs';
 export default class FAQ extends PureComponent {
   render() {
     return (
-      <Container className='fundsList'>
+      <Container className='faqList'>
         <Row>
           <Col md={12}>
-            <h1 className='page-title'>FAQ</h1>
-            <h3 className='page-subhead subhead'>Ответы на часто задаваемые вопросы.</h3>
+            <h1 className='page-title'>Вопросы и ответы</h1>
           </Col>
         </Row>
         <Row>
