@@ -7,16 +7,20 @@ image: node:slim
 
 pipelines:
   default:
-  - step:    
-      name: Deploy to Surge
-      deployment: production   # set to test, staging or production
-      script:
-            - npm install -g surge
-            - npm install
-            - npm run build
-            - surge --project ./build --domain fpn.surge.sh
-      caches:
-            - node
-            
-
-
+    - step:          # non-parallel step
+        name: Install npm modules
+        script:
+          - npm install
+    - parallel:      # these 2 steps will run in parallel
+        - step:
+            name: Install surge.sh
+            script:
+              - npm install -g surge
+        - step:
+            name: build application
+            script:
+              - npm run build
+    - step:          # non-parallel step
+        name: Deploy to Surge
+        script:         
+          - surge --project ./build --domain fpn.surge.sh          
