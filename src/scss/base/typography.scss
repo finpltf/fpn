@@ -157,9 +157,13 @@ hr {
   &.invis {
     border: 0;
     height: 35px;
-
+    display: block;
+    width: 100%;
     &.h15 {
       height: 15px;
+    }
+    &.h30 {
+      height: 30px;
     }
   }
 }
