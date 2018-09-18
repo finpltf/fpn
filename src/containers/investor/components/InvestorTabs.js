@@ -33,84 +33,84 @@ export default class InvestorTabs extends PureComponent {
 
   render() {
     return (
-      <Col md={12} lg={12} xl={12}>
-        <Card>
-          <Row className='profile__card tabs tabs--bordered-bottom'>
-            <Col xl={3}>
-              <Card>
-                <CardBody>
-                  <Nav tabs>
-                    <NavItem>
-                      <NavLink
+      <Card>
+        <Row className='profile__card tabs tabs--bordered-bottom'>
 
-                        className={classnames({ active: this.state.activeTab === '1' })}
-                        onClick={() => {
-                          this.toggle('1');
-                        }}
-                      >
-                        <UserIcon />
-                        Персональные данные
+          <Col xl={9}
+          >
+            <TabContent activeTab={this.state.activeTab}>
+              <TabPane tabId='1'>
+                <PersonalData onSubmit={showResults} />
+              </TabPane>
+              <TabPane tabId='2'>
+                <PassportData onSubmit={showResults} />
+              </TabPane>
+              <TabPane tabId='3'>
+                <AnketaPODFT onSubmit={showResults} />
+              </TabPane>
+              <TabPane tabId='4'>
+                <AnketaPODFT onSubmit={showResults} />
+              </TabPane>
+            </TabContent>
+          </Col>
+
+
+          <Col xl={3}>
+            <Card>
+              <CardBody>
+                <Nav tabs>
+                  <NavItem>
+                    <NavLink
+
+                      className={classnames({ active: this.state.activeTab === '1' })}
+                      onClick={() => {
+                        this.toggle('1');
+                      }}
+                    >
+                      <UserIcon />
+                      Персональные данные
                   </NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink
-                        className={classnames({ active: this.state.activeTab === '2' })}
-                        onClick={() => {
-                          this.toggle('2');
-                        }}
-                      >
-                        <UserIcon />
-                        Банковские реквизиты
+                  </NavItem>
+                  <NavItem>
+                    <NavLink
+                      className={classnames({ active: this.state.activeTab === '2' })}
+                      onClick={() => {
+                        this.toggle('2');
+                      }}
+                    >
+                      <UserIcon />
+                      Банковские реквизиты
                   </NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink
-                        className={classnames({ active: this.state.activeTab === '3' })}
-                        onClick={() => {
-                          this.toggle('3');
-                        }}
-                      >
-                        <UserIcon />
-                        Анкета ПОД/ФТ
+                  </NavItem>
+                  <NavItem>
+                    <NavLink
+                      className={classnames({ active: this.state.activeTab === '3' })}
+                      onClick={() => {
+                        this.toggle('3');
+                      }}
+                    >
+                      <UserIcon />
+                      Анкета ПОД/ФТ
                   </NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink
-                        className={classnames({ active: this.state.activeTab === '4' })}
-                        onClick={() => {
-                          this.toggle('4');
-                        }}
-                      >
-                        <UserIcon />
-                        Анкета FATCA
+                  </NavItem>
+                  <NavItem>
+                    <NavLink
+                      className={classnames({ active: this.state.activeTab === '4' })}
+                      onClick={() => {
+                        this.toggle('4');
+                      }}
+                    >
+                      <UserIcon />
+                      Анкета FATCA
                 </NavLink>
-                    </NavItem>
-                  </Nav>
-                </CardBody>
-              </Card>
-            </Col>
+                  </NavItem>
+                </Nav>
+              </CardBody>
+            </Card>
+          </Col>
 
-            <Col xl={9}
-            >
-              <TabContent activeTab={this.state.activeTab}>
-                <TabPane tabId='1'>
-                  <PersonalData onSubmit={showResults} />
-                </TabPane>
-                <TabPane tabId='2'>
-                  <PassportData onSubmit={showResults} />
-                </TabPane>
-                <TabPane tabId='3'>
-                  <AnketaPODFT onSubmit={showResults} />
-                </TabPane>
-                <TabPane tabId='4'>
-                  <AnketaPODFT onSubmit={showResults} />
-                </TabPane>
-              </TabContent>
-            </Col>
-
-          </Row>
-        </Card>
-      </Col>
+        </Row>
+      </Card>
     )
   }
 }

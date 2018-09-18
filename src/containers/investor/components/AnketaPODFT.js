@@ -48,7 +48,6 @@ class AnketaPODFT extends PureComponent {
     render() {
         const { handleSubmit, reset, t } = this.props;
         return (
-            <Col md={12} lg={12}>
                 <Card>
                     <CardBody>
                         <div className='card__title'>
@@ -67,7 +66,6 @@ class AnketaPODFT extends PureComponent {
                         </form>
                     </CardBody>
                 </Card>
-            </Col>
         )
     }
 }

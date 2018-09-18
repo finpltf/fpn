@@ -10,7 +10,7 @@ class BuyButton extends PureComponent {
     const {t} = this.props;
 
     return (
-      <Col md={12} lg={12} xl={12}> 
+      <Col md={12} lg={3}> 
                 <Button  color='primary' className='rounded'><CartIcon/> Купить онлайн</Button>                                                             
       </Col>
     )

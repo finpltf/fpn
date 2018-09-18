@@ -15,7 +15,7 @@ import Manager from './components/Manager';
 export default class uk_page extends PureComponent {
     render() {
         return (
-            <Container className='uk__page'>
+            <Container className='ukPage'>
 
                 <div>
                     <Breadcrumb>

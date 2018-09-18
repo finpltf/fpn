@@ -21,7 +21,7 @@ export default class UkCard extends PureComponent {
 
     render() {
         return (
-            <Col className='company__card' xl={3} lg={3} md={6} sm={12}>
+            <Col className='company__card' xl={4} lg={6} md={6} sm={12}>
                 <Card className='no_padding'>
                     <CardBody>
                         <NavLink to={'/uk/uk_page'} onClick={this.props.onClick}>

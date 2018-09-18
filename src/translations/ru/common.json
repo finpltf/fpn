@@ -178,6 +178,10 @@
     "download": "Скачать",
     "no_messages": "Нет сообщений"
   },
+  "investor": {
+    "title": "Профиль инвестора",
+    "animated_line_inputs": "Animated line inputs forms with floating labels"
+  },
   "forms": {
     "title": "Forms",
     "submit": "Submit",
@@ -198,10 +202,6 @@
       "title": "File upload",
       "file_upload_default": "File upload default",
       "file_upload_custom_height": "File upload custom height"
-    },
-    "floating_labels_form": {
-      "title": "Анкета инвестора",
-      "animated_line_inputs": "Animated line inputs forms with floating labels"
     },
     "form_dropzone": {
       "title": "Form dropzone",

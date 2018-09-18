@@ -1,13 +1,12 @@
 import React, { PureComponent } from 'react';
-import { Col, Container, Row, Badge, UncontrolledTooltip, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Row, Col,Container, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import FundPage from './components/FundPage';
-import BuyButton from './components/BuyButton';
-import { NavLink, withRouter } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default class fundPage extends PureComponent {
   render() {
     return (
-      <Container className='fund__page'>
+      <Container className='fundPage'>
 
         <div>
           <Breadcrumb>
@@ -17,24 +16,12 @@ export default class fundPage extends PureComponent {
           </Breadcrumb>
         </div>
 
+        <h1 className='page-title'>ОПИФ РФИ Валютные еврооблигации» </h1>
+        <h3 className='page-subhead subhead'>ООО УК «ИНВЕСТ МЕНЕДЖМЕНТ ЦЕНТР»</h3>
         <Row>
-          <Col md={9}>
-            <h1 className='page-title'>ОПИФ РФИ «ТФГ - Валютные еврооблигации»<Badge color="light" className='green' id='dailyIncomeOne' >+1.05%</Badge></h1>
-            <UncontrolledTooltip placement='top' target='dailyIncomeOne'>
-              Доходность за сутки
-            </UncontrolledTooltip>
-            <h3 className='page-subhead subhead'>ООО УК «ИНВЕСТ МЕНЕДЖМЕНТ ЦЕНТР»</h3>
-          </Col>
-          <Col md={3}>
-
-          </Col>
-        </Row>
-        <Row>
-
-
-
+          <Col>
           <FundPage />
-
+          </Col>
         </Row>
       </Container>
     )

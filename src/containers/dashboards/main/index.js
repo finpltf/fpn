@@ -30,14 +30,11 @@ class Dashboard extends PureComponent {
     return (
       <Container className='dashboard'>
 
-
         <Row>
           <Col md={12}>
-            <h3 className='page-title'>Доходность</h3>
+            <h1 className='page-title'>Ваш портфель</h1>
           </Col>
-        </Row>
 
-        <Row>
 
           <Col lg={5}>
             <MyIncomes />
@@ -45,26 +42,19 @@ class Dashboard extends PureComponent {
           <Col lg={7}>
           </Col>
 
-        </Row>
 
 
-        <hr />
-        <Row>
+          <hr className='h30 invis' />
           <Col md={12}>
-            <h3 className='page-title'>Ваш портфель</h3>
+            <h3 className='page-title'>Фонды в портфеле</h3>
           </Col>
-        </Row>
 
-        <Row>
           <MyFundCard />
           <MyFundCard />
           <MyFundCard />
           <MyFundCard />
           <MyFundCard />
           <AddFundCard />
-        </Row>
-
-        <Row>
         </Row>
       </Container>
     )

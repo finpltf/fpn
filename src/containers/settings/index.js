@@ -10,17 +10,13 @@ class Settings extends PureComponent {
     const { t } = this.props;
 
     return (
-      <Container noWrap>
+      <Container noWrap className='settingsPage'>
         <Row>
-          <Col sm={12} md={12} lg={6}>
+          <Col md={12} lg={12}>
             <h3 className='page-title'>{t('settings.page_title')}</h3>
-            <h3 className='page-subhead subhead'></h3>
           </Col>
-        </Row>
-        <Row>
-          <Col sm={12} md={12} lg={12} >
-            <SettingsForm onSubmit={showResults} />
-          </Col>
+          <h3 className='page-subhead subhead'></h3>
+          <SettingsForm onSubmit={showResults} />
         </Row>
       </Container>
     )

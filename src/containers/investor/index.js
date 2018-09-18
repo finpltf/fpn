@@ -12,7 +12,7 @@ class InvestorProfile extends PureComponent {
       <Container noWrap className='investorPage'>
         <Row>
           <Col sm={12} md={12} lg={6}>
-            <h3 className='page-title'>{t('forms.floating_labels_form.title')}</h3>
+            <h1 className='page-title'>{t('investor.title')}</h1>
           </Col>
         </Row>
 

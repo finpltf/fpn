@@ -16,7 +16,7 @@ const showNotification = () => {
       message='Вы успешно зарегистрировались на Platform.Finance. Теперь вы можете покупать паевые инвестиционные фонды. Кайфуйте, тащитесь, инвестируйте!' />,
     duration: 4,
     closable: true,
-    style: { top: 0, left: 'calc(100vw - 120%)' },
+    style: { top: 0, left: 'calc(100vw - 100%)' },
     className: 'right-up'
   });
 };

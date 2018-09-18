@@ -7,9 +7,8 @@ export default class UkList extends PureComponent {
     return (
       <Container className='UkList'>
         <Row>
-          <h3 className='page-title'>Управляющие компании</h3>
-        </Row>
-        <Row>
+          <h1 className='page-title'>Управляющие компании</h1>
+
           <GetUkList />
         </Row>
       </Container>

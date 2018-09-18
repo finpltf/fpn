@@ -10,6 +10,7 @@ import UkPage from '../containers/uk_page';
 
 import InvestorProfile from '../containers/investor';
 import Settings from '../containers/settings';
+import FAQ from '../containers/faq';
 
 
 import Mail from '../containers/mail';
@@ -41,6 +42,7 @@ const wrappedRoutes = () => (
       <Route path='/investor' component={InvestorProfile} />
       <Route path='/settings' component={Settings} />
       <Route path='/mail' component={Mail} />
+      <Route path='/faq' component={FAQ} />
     </div>
   </div>
 );
