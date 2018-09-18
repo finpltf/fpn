@@ -15,10 +15,7 @@ pipelines:
               - unset CI
               - npm run build
         - step:
-            name: install surge.sh
+            name: install surge.sh & deploy
             script:
-              - npm install -g surge              
-    - step:          # non-parallel step
-        name: Deploy to Surge
-        script:         
-          - surge --project ./build --domain fpn.surge.sh                    
+              - npm install -g surge 
+              - surge --project ./build --domain fpn.surge.sh
