@@ -9,7 +9,7 @@ pipelines:
   default:
   - step:    
       name: Deploy to Surge
-      deployment: test   # set to test, staging or production
+      deployment: production   # set to test, staging or production
       script:
             - npm install -g surge
             - npm install
