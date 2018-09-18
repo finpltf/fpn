@@ -8,13 +8,10 @@ image: node:slim
 pipelines:
   default:
       - step:
-          name: install npm modules & build application
+          name: install npm modules, build application & deploy
           script:
             - npm install
             - unset CI
             - npm run build
-      - step:
-          name: install surge.sh & deploy
-          script:
             - npm install -g surge 
-            - surge --project ./build --domain fpn.surge.sh
+            - surge --project ./build --domain fpn.surge.sh      
