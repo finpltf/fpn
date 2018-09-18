@@ -1,13 +1,20 @@
-image: node:7.5.0
+# This is a sample build configuration for JavaScript.
+# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: node:6.9.4
 
 pipelines:
   default:
-    - step:
-        name: Build and push surge
-        deployment: test
-        script:
-        - npm install -g surge
-        - npm install
-        - npm run build
-        - surge build fpn.surge.sh
-       
+  - step:    
+      name: Deploy to Surge
+      deployment: test   # set to test, staging or production
+      caches:
+            - node
+      script:
+            - npm install -g surge
+            - npm install
+            - npm run build
+            - surge build fpn.surge.sh          
+          
