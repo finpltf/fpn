@@ -1,11 +1,15 @@
-image: node:6.9.4
+image: node:7.5.0
 
 pipelines:
-  branches:
-    master:
-      - step:
-          script:
-            - npm install -g surge
-            - npm install
-            - npm run build
-            - surge build fpn.surge.sh            
+  default:
+    - step:
+        name: Build and push to S3
+        script:
+        - npm install -g surge
+        - npm install
+        - npm run build    
+    - step:
+        name: Deploy to test
+        deployment: test
+        script:
+        - surge build fpn.surge.sh
