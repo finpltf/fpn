@@ -10,11 +10,12 @@ pipelines:
   - step:    
       name: Deploy to Surge
       deployment: test   # set to test, staging or production
-      caches:
-            - node
       script:
             - npm install -g surge
             - npm install
             - npm run build
-            - surge build fpn.surge.sh          
-          
+            - surge --project ./build --domain fpn.surge.sh
+      caches:
+            - node
+
+
