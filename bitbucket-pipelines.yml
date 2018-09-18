@@ -3,13 +3,13 @@
 # Only use spaces to indent your .yml configuration.
 # -----
 # You can specify a custom docker image from Docker Hub as your build environment.
-image: node:6.9.4
+image: node:slim
 
 pipelines:
   default:
   - step:    
       name: Deploy to Surge
-      deployment: test   # set to test, staging or production
+      deployment: staging   # set to test, staging or production
       script:
             - npm install -g surge
             - npm install
@@ -17,5 +17,6 @@ pipelines:
             - surge --project ./build --domain fpn.surge.sh
       caches:
             - node
+            
 
 
