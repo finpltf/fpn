@@ -1,5 +1,5 @@
-import React, {PureComponent} from 'react';
-import {Col, Row, Container} from 'reactstrap';
+import React, { PureComponent } from 'react';
+import { Col, Row, Container } from 'reactstrap';
 
 export default class FeatureRequest extends PureComponent {
   render() {
@@ -8,7 +8,7 @@ export default class FeatureRequest extends PureComponent {
         <Container>
           <Row>
             <Col md={12}>
-              <h3 className='landing__section-title'>Feature request</h3>
+              <h3 className='landing__section-title'>Преимущества платформы</h3>
             </Col>
           </Row>
           <Row>
@@ -18,8 +18,8 @@ export default class FeatureRequest extends PureComponent {
                 request it and we'll try to implement them</p>
               <div className='landing__center-btn'>
                 <a className='landing__btn' href='https://aspiritythemes.typeform.com/to/MrjOAR' target='_blank'
-                   rel='noopener noreferrer'>
-                  Request features</a>
+                  rel='noopener noreferrer'>
+                  Зарегистрироваться</a>
               </div>
             </Col>
           </Row>

@@ -1,0 +1,70 @@
+{
+  "keys": {
+    "accessKey": "DCF1EEF05FDC04DEDCBD462B4C1603BBB5F8A318",
+    "secretKey": "CBD3BE1E2C6078616A80DAC2E41C4AE5DB63340D"
+  },
+  "applicationId": "5ba0aafc84be0f0016ca02a5",
+  "params": [
+    {
+      "name": "whitespaceRemoval"
+    },
+    {
+      "name": "dotToBracketNotation"
+    },
+    {
+      "name": "stringConcealing"
+    },
+    {
+      "name": "extendPredicates"
+    },
+    {
+      "name": "functionReordering"
+    },
+    {
+      "options": {
+        "features": [
+          "opaqueFunctions"
+        ]
+      },
+      "name": "functionOutlining"
+    },
+    {
+      "name": "propertyKeysObfuscation"
+    },
+    {
+      "name": "regexObfuscation"
+    },
+    {
+      "options": {
+        "features": [
+          "opaqueSteps",
+          "deadClones",
+          "clones"
+        ]
+      },
+      "name": "controlFlowFlattening"
+    },
+    {
+      "name": "booleanToAnything"
+    },
+    {
+      "name": "identifiersRenaming"
+    }
+  ],
+  "areSubscribersOrdered": false,
+  "applicationTypes": {
+    "webBrowserApp": true,
+    "desktopApp": false,
+    "serverApp": false,
+    "hybridMobileApp": false,
+    "javascriptNativeApp": false,
+    "html5GameApp": false
+  },
+  "languageSpecifications": {
+    "es5": true,
+    "es6": false,
+    "es7": false
+  },
+  "useRecommendedOrder": false,
+  "jscramblerVersion": "5.4"
+}

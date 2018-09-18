@@ -17,7 +17,6 @@ class Topbar extends PureComponent {
           </div>
           <div className='topbar__right'>            
             <TopbarMail new/>
-            <TopbarProfile/>            
           </div>
         </div>
       </div>

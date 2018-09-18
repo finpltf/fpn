@@ -43,7 +43,7 @@ class SidebarContent extends PureComponent {
 
 
         <ul className='sidebar__block'>
-          <SidebarLink title='Сообщения' route='/chat' icon='envelope' onClick={this.hideSidebar} />
+          <SidebarLink title='Сообщения' route='/main' icon='envelope' onClick={this.hideSidebar} />
         </ul>
 
         <ul className='sidebar__block'>
@@ -52,17 +52,10 @@ class SidebarContent extends PureComponent {
 
 
         <ul className='sidebar__block'>
-
           <SidebarLink title='Анкета инвестора' route='/investor' icon='user' onClick={this.hideSidebar} />
           <SidebarLink title='Настройки' route='/settings' icon='cog' onClick={this.hideSidebar} />
           <SidebarLink title='Выход' route='/logout' icon='exit' onClick={this.hideSidebar} />
         </ul>
-
-
-
-
-
-
       </div>
     )
   }

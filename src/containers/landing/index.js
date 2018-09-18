@@ -1,5 +1,5 @@
-import React, {PureComponent} from 'react';
-import {Col, Row, Container} from 'reactstrap';
+import React, { PureComponent } from 'react';
+import { Col, Row, Container } from 'reactstrap';
 import scrollToComponent from 'react-scroll-to-component';
 import Header from './components/Header';
 import Technologies from './components/Technologies';
@@ -21,12 +21,9 @@ export default class Landing extends PureComponent {
               <Col md={12}>
                 <div className='landing__menu-wrap'>
                   <p className='landing__menu-logo'>
-                    <img src={logo} alt=''/>
+                    <img src={logo} alt='' />
                   </p>
                   <nav className='landing__menu-nav'>
-                    <button
-                      onClick={() => scrollToComponent(this.About, {offset: -50, align: 'top', duration: 1000})}>О продукте                     
-                    </button>
                     <button onClick={() => scrollToComponent(this.Features, {
                       offset: -50,
                       align: 'top',
@@ -34,45 +31,49 @@ export default class Landing extends PureComponent {
                     })}>Возможности
                     </button>
                     <button
-                      onClick={() => scrollToComponent(this.Demos, {offset: -50, align: 'top', duration: 1500})}>FAQ
+                      onClick={() => scrollToComponent(this.About, { offset: -50, align: 'top', duration: 1000 })}>О продукте
+                    </button>
+
+                    <button
+                      onClick={() => scrollToComponent(this.Demos, { offset: -50, align: 'top', duration: 1500 })}>FAQ
                     </button>
                     <button
-                      onClick={() => scrollToComponent(this.FeatureRequest, {
-                        offset: -50,
-                        align: 'top',
-                        duration: 2000
-                      })}>
-                      Каталог ПИФ <span className='landing__menu-nav-new'/>
+                      onClick={() => window.location.href = '/funds'}>
+                      Каталог фондов <span className='landing__menu-nav-new' />
                     </button>
-                    
+                    <button
+                      onclick={() => window.location.href = '/uk'}
+                    >
+                      Управляющие компании
+                    </button>
                     <a className='landing__btn' target='_blank' rel='noopener noreferrer'
-                       href='/login'>Зарегистрироваться</a>
-           
-                  </nav> 
+                      href='/login'>Зарегистрироваться</a>
+
+                  </nav>
                 </div>
               </Col>
             </Row>
           </Container>
         </div>
-        <Header/>
+        <Header />
         <span ref={(section) => {
           this.About = section;
-        }}/>
-        <Technologies/>
+        }} />
+        <Technologies />
         <span ref={(section) => {
           this.Demos = section;
-        }}/>
-        <Demos/>
+        }} />
+        <Demos />
         <span ref={(section) => {
           this.Features = section;
-        }}/>
-        <Features/>
+        }} />
+        <Features />
         <span ref={(section) => {
           this.FeatureRequest = section;
-        }}/>
-        <FeatureRequest/>
-        <Purchase/>
-        <Footer/>
+        }} />
+        <FeatureRequest />
+        <Purchase />
+        <Footer />
       </div>
     )
   }

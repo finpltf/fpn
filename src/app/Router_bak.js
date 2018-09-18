@@ -25,6 +25,7 @@ const Router = () => (
     <main>
       <Switch>
         <Route exact path='/' component={Landing} />
+        <Route path='/404' component={NotFound404} />
         <Route path='/' component={wrappedRoutes} />
       </Switch>
     </main>
@@ -41,6 +42,8 @@ const wrappedRoutes = () => (
       <Route path='/investor' component={InvestorProfile} />
       <Route path='/settings' component={Settings} />
       <Route path='/mail' component={Mail} />
+      <Route path='/chat' component={Chat} />
+      <Route path='/account' component={Account} />
     </div>
   </div>
 );
@@ -68,4 +71,3 @@ const Dashboards = () => (
 
 
 export default Router;
-

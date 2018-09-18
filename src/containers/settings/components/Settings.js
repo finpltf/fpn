@@ -89,7 +89,7 @@ class Settings extends PureComponent {
                 <Col lg={6} md={12}>
                   <div>
 
-                    <Badge color='success'>New</Badge>
+                    <Badge color='success'>Подтверждён</Badge>
                     <Field
                       name='phone'
                       component={renderTextField}

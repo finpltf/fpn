@@ -5,14 +5,12 @@ import classnames from 'classnames';
 import PersonalData from './PersonalData';
 import PassportData from './PassportData';
 import AddressData from './AddressData';
+import AnketaPODFT from './AnketaPODFT';
 import showResults from './Show';
 import UserIcon from 'mdi-react/UserIcon';
 
 
-const rocket = process.env.PUBLIC_URL + '/img/pricing_cards/001-rocket.svg';
-
 export default class InvestorTabs extends PureComponent {
-
 
 
 
@@ -73,8 +71,19 @@ export default class InvestorTabs extends PureComponent {
                         }}
                       >
                         <UserIcon />
-                        Анкета FATA/ХУЯТКА
+                        Анкета ПОД/ФТ
                   </NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink
+                        className={classnames({ active: this.state.activeTab === '4' })}
+                        onClick={() => {
+                          this.toggle('4');
+                        }}
+                      >
+                        <UserIcon />
+                        Анкета FATCA
+                </NavLink>
                     </NavItem>
                   </Nav>
                 </CardBody>
@@ -91,7 +100,10 @@ export default class InvestorTabs extends PureComponent {
                   <PassportData onSubmit={showResults} />
                 </TabPane>
                 <TabPane tabId='3'>
-                  <AddressData onSubmit={showResults} />
+                  <AnketaPODFT onSubmit={showResults} />
+                </TabPane>
+                <TabPane tabId='4'>
+                  <AnketaPODFT onSubmit={showResults} />
                 </TabPane>
               </TabContent>
             </Col>
