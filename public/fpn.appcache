@@ -1,0 +1,19 @@
+CACHE MANIFEST
+# 2018-09-18:v2
+
+# Explicitly cached 'master entries'.
+CACHE:
+/favicon.ico
+/img/landing/logo_svg.svg
+/static/js/main.66fc1403.js
+/static/css/main.477ccc83.css
+manifest.json
+index.html
+
+
+# Resources that require the user to be online.
+NETWORK:
+login.php
+/myapi
+http://api.twitter.com
+

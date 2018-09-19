@@ -10,21 +10,20 @@
       "type": "image/x-icon"
     },
     {
-      "src": "/img/icons/icons-192.png",
+      "src": "/icons-192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/img/icons/icons-512.png",
+      "src": "/icons-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": "/funds",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#ee1a2d",
   "background_color": "#eeeeee",
-  "scope": "/funds/",
   "prefer_related_applications": true,
   "related_applications": [
     {
