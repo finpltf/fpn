@@ -2,7 +2,7 @@
   "short_name": "Fin. Platform",
   "name": "Platform Finance",
   "description": "Онлайн-сервис для приобретения ПИФ.",
-  "lang": "ru-RU"
+  "lang": "ru-RU",
   "icons": [
     {
       "src": "fav.ico",
