@@ -20,10 +20,10 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "/",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#ee1a2d",
-  "background_color": "#eeeeee",  
+  "background_color": "#eeeeee",
   "prefer_related_applications": true,
   "related_applications": [
     {
