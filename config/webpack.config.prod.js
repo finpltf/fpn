@@ -150,8 +150,7 @@ module.exports = {
             include: paths.appSrc,
             loader: require.resolve('babel-loader'),
             options: {
-
-              compact: true,
+              minified: true,
             },
           },
           // The notation here is somewhat confusing.
@@ -189,9 +188,9 @@ module.exports = {
                     autoprefixer({
                       browsers: [
                         '>1%',
-                        'last 4 versions',
+                        'last 2 versions',
                         'Firefox ESR',
-                        'not ie < 9',
+                        'not ie < 10',
                       ],
                       flexbox: 'no-2009',
                     }),
@@ -289,7 +288,7 @@ module.exports = {
         useShortDoctype: true,
         removeEmptyAttributes: true,
         removeStyleLinkTypeAttributes: true,
-        keepClosingSlash: true,
+        keepClosingSlash: false,
         minifyJS: true,
         minifyCSS: true,
         minifyURLs: true,
@@ -308,7 +307,7 @@ module.exports = {
         // https://github.com/facebookincubator/create-react-app/issues/2376
         // Pending further investigation:
         // https://github.com/mishoo/UglifyJS2/issues/2011
-        comparisons: false,
+        comparisons: true,
       },
       mangle: {
         safari10: true,
@@ -366,10 +365,6 @@ module.exports = {
     // https://github.com/jmblog/how-to-optimize-momentjs-with-webpack
     // You can remove this if you don't use Moment.js:
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-    new JavaScriptObfuscator({
-      rotateUnicodeArray: true
-    }, ['abc.js'])
-
   ],
   // Some libraries import Node modules but don't use them in the browser.
   // Tell Webpack to provide empty mocks for them so importing them works.

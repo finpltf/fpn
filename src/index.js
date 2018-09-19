@@ -8,9 +8,11 @@ import i18next from 'i18next';
 import store from './app/store';
 import ScrollToTop from './app/ScrollToTop';
 import { config as i18nextConfig } from './translations/index';
+import { unregister } from './registerServiceWorker';
 
 i18next.init(i18nextConfig);
 
+unregister();
 
 render(
   <Provider store={store}>
