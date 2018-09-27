@@ -9,6 +9,8 @@ body * {
 
 }
 .landing {
+
+
   font-family: 'Fira Sans', sans-serif;
   width: 100%;
   background: #ffffff;
@@ -21,9 +23,10 @@ body * {
   }
 
   .page {
-    padding-top:180px;
+    padding-top:240px;
     text-align: center;
   }
+
   @media (min-width: 576px) {
 
     .container {
@@ -81,6 +84,28 @@ body * {
       width: auto;
       padding: 16px 30px;
     }
+
+      &.rounded {
+    border-radius: 30px !important;
+    overflow: visible;
+    position: relative;
+    
+    &:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    border-radius: 35.5px;
+    border: solid 2px #ffffff;
+    transition: all 0.2s;
+    border-color: #ee1a2d;
+    background: transparent !important;
+    z-index: 3;    
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    transform: translate(-35px, -21px);
+    }
+  }
+  
   }
   .landing__btn2 {
     background-color: #001aa6;
@@ -203,7 +228,6 @@ body * {
   .landing__header-img {
     margin-top: 80px;
     max-width: 1000px;
-    padding-bottom: 120px;
   }
 
   .landing__header-subhead{
@@ -444,12 +468,12 @@ body * {
       margin: 0;
 
       &.landing__img--over {
-        margin: -50px 0 -100px -150px;
+        margin: -50px 0 -80px -100px;
         width: calc(100% + 150px);
       }
 
       &.landing__img--over-right {
-        margin: -50px -150px -100px 0;
+        margin: -50px -140px -100px -80px;
         width: calc(100% + 150px);
       }
     }
@@ -468,16 +492,17 @@ body * {
 
     p {
       color: #999999;
-      font-size: 16px;
+      font-size: 14px;
       line-height: 1.8;
       margin-top: 16px;
     }
 
     @media screen and (min-width: 768px) {
-      max-width: 360px;
+      max-width: 400px;
       text-align: left;
       margin-bottom: 0;
-      margin-right: 30px;
+    margin-right: 30px;
+    margin-left: 30px;
 
       .landing__section-title {
         text-align: left;
@@ -522,7 +547,27 @@ body * {
     opacity: 0.9;
   }
 
-  //Demo
+// Why 
+.icon {
+  max-width: 100%;
+}
+.why {
+text-align: left;
+margin: 70px;
+h4 {
+  font-weight: 600;
+}
+p {
+  color:#999999;
+}
+.icon {
+  max-width: 60px;
+  margin: 15px auto;
+}
+
+}
+
+  //Demo  
 
   .landing__demo {
     text-align: center;
@@ -628,32 +673,33 @@ body * {
     opacity: 0.95;
     border-radius: 10px;
     background-color: #ffffff;
-    box-shadow: 0 3px 10px 0 rgba(38, 90, 89, 0.1);
     padding: 30px 0;
-    text-align: center;
+    text-align: left;
     margin: 0 15px 68px 15px;
   }
 
   .landing__feature-img-wrap {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 18px;
-    margin-right: auto;
-    margin-left: auto;
+    width: 80px;
+    height: 80px;
+    margin: 18px 0;
     display: flex;
 
     img {
-      width: auto;
       margin: auto;
+      max-width: 100%;
     }
   }
 
   .landing__feature-title {
     margin: 0;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 18px;
     line-height: 1.44;
-    color: #a0a0a0;
+    color: #333;
+  }
+  
+  .landing__feature-text {
+    color:#999999;
   }
 
   .landing__center-btn {
@@ -749,3 +795,4 @@ body * {
     }
   }
 }
+

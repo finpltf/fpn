@@ -38,7 +38,7 @@ export default class FundPage extends PureComponent {
             <hr className='h15 invis' />
 
 
-            <h3>Доходность</h3>
+            <h3 className='margin-30'>Доходность</h3>
             <Row className='margin-30'>
               <Col sm={6} xl={2}>
                 <div className='subhead' id='scha' >3 мес.</div>
@@ -62,7 +62,7 @@ export default class FundPage extends PureComponent {
 
             <Row>
               <Col xl={12}>
-                <h3>ДИНАМИКА ИЗМЕНЕНИЯ СТОИМОСТИ ПАЯ И СЧА</h3>
+                <h3 className='margin-30'>ДИНАМИКА ИЗМЕНЕНИЯ СТОИМОСТИ ПАЯ И СЧА</h3>
               </Col>
 
             </Row>
@@ -100,7 +100,7 @@ export default class FundPage extends PureComponent {
 
             <hr className='h30' />
             <div className="features row margin-30">
-              <h3>Преимущества</h3>
+              <h3 className='margin-30'>Преимущества</h3>
               <ul className="list-deco">
                 <li className="list-deco__item col-md-6">Консервативно управляемый фонд</li>
                 <li className="list-deco__item col-md-6">Основа стратегии управления – фундаментальный анализ</li>
@@ -109,7 +109,7 @@ export default class FundPage extends PureComponent {
               </ul>
             </div>
 
-            <Row className='margin-30'>
+            <Row>
               <div className='body-btn'>
                 <BuyButton />
               </div>
@@ -118,7 +118,7 @@ export default class FundPage extends PureComponent {
 
             <Row className='margin-30'>
 
-              <h3>КОМИССИИ</h3>
+              <h3 className='margin-30'>КОМИССИИ</h3>
               <ul className='list-deco'>
                 <li className='list-deco__item col-md-6'>
                   <div>Вознаграждение управляющей компании – 1.0%</div>
@@ -144,13 +144,9 @@ export default class FundPage extends PureComponent {
 
             </Row>
 
-
-
             <hr className=' h15 ' />
-
-
-            <h3>Документы фонда</h3>
-            <Row className='margin-30 docs'>
+            <h3 className='margin-30 '>Документы фонда</h3>
+            <Row className=' docs'>
               <Col md={6}>
                 <a href="https://www.solid-mn.ru/services/funds/solid-mmvb/" target="_blank" class="files2dl__link files2dl__link_wide"><img width="80" src="https://platform.finance/img/icons/pdf.svg" alt="Информация о размерах суммы, на которую выдается один инвестиционный пай" class="svgIcon" /><span>Информация о размерах суммы, на которую выдается один инвестиционный пай</span></a>
               </Col>

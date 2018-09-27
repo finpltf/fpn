@@ -11,9 +11,3 @@ manifest.json
 index.html
 
 
-# Resources that require the user to be online.
-NETWORK:
-login.php
-/myapi
-http://api.twitter.com
-

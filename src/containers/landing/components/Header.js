@@ -8,16 +8,15 @@ const img = process.env.PUBLIC_URL + '/img/landing/macbook.png';
 export default class Header extends PureComponent {
   render() {
     return (
-      <div className='landing__menulanding__header page' style={{ backgroundImage: 'url(' + background + ')' }}>
+      <div className='landing__header page' style={{ backgroundImage: 'url(' + background + ')' }}>
         <Container>
           <Row>
             <Col md={12}>
               <h2 className='landing__header-title'>Управляйте инвестициями <b>в режиме онлайн</b> на Финансовой Платформе.
               </h2>
-              <p className='landing__header-subhead'>Мы собрали лучшие фонды проверенных управляющих  компаний. Инвестировать проще чам вы думаете. Специальные знания не нужны, и всё можно купить онлайн.</p>
-              <Link className='landing__btn landing__btn--header' to='/funds' >Выбрать ПИФ</Link>
-              <button className='landing__btn2' onClick={() => scrollToComponent(this.Demos, { offset: -450, align: 'top', duration: 3500 })}>Узнать больше</button>
-
+              <p className='landing__header-subhead'>Мы собрали лучшие паевые инвестиционные фонды проверенных управляющих  компаний и продаём их без дополнительных комиссий. Все инвестиции в одном личном кабинете. Удобная аналитика вложений.</p>
+              <Link className='landing__btn landing__btn--header rounded' to='/funds' >Перейти в каталог ПИФ</Link>
+              <hr className='invis' />
               <img className='landing__header-img' src={img} alt='macbook' />
             </Col>
           </Row>

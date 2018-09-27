@@ -1,5 +1,5 @@
 {
-  "short_name": "FP",
+  "short_name": "Пифы",
   "name": "Platform Finance",
   "description": "Онлайн-сервис для приобретения ПИФ.",
   "lang": "ru-RU",
@@ -20,15 +20,8 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/funds",
   "display": "standalone",
   "theme_color": "#ee1a2d",
-  "background_color": "#eeeeee",
-  "prefer_related_applications": true,
-  "related_applications": [
-    {
-      "platform": "play",
-      "id": "com.google.samples.apps.iosched"
-    }
-  ]
+  "background_color": "#eeeeee"
 }

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 496 496" style="enable-background:new 0 0 496 496;" xml:space="preserve" width="512px" height="512px" class=""><g><g>
+	<path style="fill:#EE1A2D" d="M392,136h-48V88h48V136z" data-original="#FFA64D" class="active-path" data-old_color="#ee1a2d"/>
+	<path style="fill:#EE1A2D" d="M312,224h-48V120h48V224z" data-original="#FFA64D" class="active-path" data-old_color="#ee1a2d"/>
+	<path style="fill:#EE1A2D" d="M232,176h-48v-72h48V176z" data-original="#FFA64D" class="active-path" data-old_color="#ee1a2d"/>
+	<path style="fill:#EE1A2D" d="M152,320h-48v-96h48V320z" data-original="#FFA64D" class="active-path" data-old_color="#ee1a2d"/>
+</g><g>
+	<rect x="360" y="136" style="fill:#333333" width="16" height="88" data-original="#333333" class=""/>
+	<rect x="360" style="fill:#333333" width="16" height="88" data-original="#333333" class=""/>
+	<rect x="280" y="224" style="fill:#333333" width="16" height="64" data-original="#333333" class=""/>
+	<rect x="280" y="16" style="fill:#333333" width="16" height="104" data-original="#333333" class=""/>
+	<rect x="200" y="176" style="fill:#333333" width="16" height="128" data-original="#333333" class=""/>
+	<rect x="200" y="48" style="fill:#333333" width="16" height="56" data-original="#333333" class=""/>
+	<rect x="120" y="320" style="fill:#333333" width="16" height="88" data-original="#333333" class=""/>
+	<rect x="120" y="144" style="fill:#333333" width="16" height="80" data-original="#333333" class=""/>
+	<path style="fill:#333333" d="M456,192h-64v16h24v272H64V208h40v-16H40c-22.056,0-40,17.944-40,40v224c0,22.056,17.944,40,40,40   h416c22.056,0,40-17.944,40-40V232C496,209.944,478.056,192,456,192z M16,456V232c0-13.232,10.768-24,24-24h8v272h-8   C26.768,480,16,469.232,16,456z M480,456c0,13.232-10.768,24-24,24h-24V208h24c13.232,0,24,10.768,24,24V456z" data-original="#333333" class=""/>
+	<rect x="448" y="304" style="fill:#333333" width="16" height="80" data-original="#333333" class=""/>
+	<path style="fill:#333333" d="M400,320H200v144h200V320z M384,448H216V336h168V448z" data-original="#333333" class=""/>
+	<rect x="232" y="352" style="fill:#333333" width="136" height="16" data-original="#333333" class=""/>
+	<rect x="264" y="384" style="fill:#333333" width="104" height="16" data-original="#333333" class=""/>
+	<rect x="232" y="384" style="fill:#333333" width="16" height="16" data-original="#333333" class=""/>
+	<rect x="232" y="416" style="fill:#333333" width="104" height="16" data-original="#333333" class=""/>
+	<rect x="352" y="416" style="fill:#333333" width="16" height="16" data-original="#333333" class=""/>
+</g></g> </svg>

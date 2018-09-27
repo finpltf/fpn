@@ -9,7 +9,7 @@ import BtcEth from './components/BtcEth';
 import ABTestingAnalytics from './components/ABTestingAnalytics';
 import CryptotrendsToday from './components/CryptotrendsToday';
 import TopTen from './components/TopTen';
-import PlaceOrder from './components/PlaceOrder';
+import MyPortfolioPie from './components/MyPortfolioPie';
 
 import MyIncomes from './components/MyIncomes';
 import NavDay from './components/NavDay';
@@ -22,6 +22,8 @@ import AddFundCard from './components/AddFundCard';
 
 
 import { translate } from 'react-i18next';
+
+
 
 class Dashboard extends PureComponent {
   render() {
@@ -36,11 +38,18 @@ class Dashboard extends PureComponent {
           </Col>
 
 
+
+
           <Col lg={5}>
-            <MyIncomes />
+            <MyPortfolioPie />
           </Col>
+
           <Col lg={7}>
+            <Row><NavDay /></Row>
+            <Row><NavMounth /></Row>
+            <Row><NavTotal /></Row>
           </Col>
+
 
 
 

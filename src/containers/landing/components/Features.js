@@ -1,5 +1,5 @@
-import React, {PureComponent} from 'react';
-import {Col, Row, Container} from 'reactstrap';
+import React, { PureComponent } from 'react';
+import { Col, Row, Container } from 'reactstrap';
 
 export default class Features extends PureComponent {
   render() {
@@ -8,107 +8,69 @@ export default class Features extends PureComponent {
         <Container>
           <Row>
             <Col md={12}>
-              <h3 className='landing__section-title'>Main features</h3>
+              <h3 className='landing__section-title'>Основные возможности платформы</h3>
             </Col>
           </Row>
           <Row>
-            <Col lg={3} md={4} sm={6} xs={12}>
+            <Col lg={4} md={4} sm={6} xs={12}>
               <div className='landing__feature'>
                 <div className='landing__feature-img-wrap'>
-                  <img src={process.env.PUBLIC_URL + '/img/landing/features/01.png'} alt=''/>
+                  <img src={process.env.PUBLIC_URL + '/img/landing/icons/profile.svg'} alt='' />
                 </div>
-                <p className='landing__feature-title'>ФИНАНСОВЫЕ ПРОДУКТЫ ЛУЧШИХ УПРАВЛЯЮЩИХ КОМПАНИЙ</p>
+                <h4 className='landing__feature-title'>Онлайн-идентификация</h4>
+                <p className='landing__feature-text'>Тыры-пыры, трали-вали, тоси-боси, бла-бла-бла.</p>
               </div>
             </Col>
-            <Col lg={3} md={4} sm={6} xs={12}>
+            <Col lg={4} md={4} sm={6} xs={12}>
               <div className='landing__feature'>
                 <div className='landing__feature-img-wrap'>
-                  <img src={process.env.PUBLIC_URL + '/img/landing/features/02.png'} alt=''/>
+                  <img src={process.env.PUBLIC_URL + '/img/landing/icons/profits.svg'} alt='' />
                 </div>
-                <p className='landing__feature-title'>ДИСТАНЦИОННАЯ ИДЕНТИФИКАЦИЯ И ОНЛАЙН-ОБСЛУЖИВАНИЕ</p>
+                <h4 className='landing__feature-title'>Расширенная аналитика
+</h4>
+                <p className='landing__feature-text'>Тыры-пыры, трали-вали, тоси-боси, бла-бла-бла.</p>
               </div>
             </Col>
-            <Col lg={3} md={4} sm={6} xs={12}>
+            <Col lg={4} md={4} sm={6} xs={12}>
               <div className='landing__feature'>
                 <div className='landing__feature-img-wrap'>
-                  <img src={process.env.PUBLIC_URL + '/img/landing/features/03.png'} alt=''/>
+                  <img src={process.env.PUBLIC_URL + '/img/landing/icons/growth.svg'} alt='' />
                 </div>
-                <p className='landing__feature-title'>ЕДИНЫЙ КАБИНЕТ ДЛЯ УПРАВЛЕНИЯ ФИНАНСАМИ
-</p>
+                <h4 className='landing__feature-title'>Красная стрелка в руке</h4>
+                <p className='landing__feature-text'>Тыры-пыры, трали-вали, тоси-боси, бла-бла-бла.</p>
               </div>
             </Col>
-            <Col lg={3} md={4} sm={6} xs={12}>
+            <Col lg={4} md={4} sm={6} xs={12}>
               <div className='landing__feature'>
                 <div className='landing__feature-img-wrap'>
-                  <img src={process.env.PUBLIC_URL + '/img/landing/features/04.png'} alt=''/>
+                  <img src={process.env.PUBLIC_URL + '/img/landing/icons/clock.svg'} alt='' />
                 </div>
-                <p className='landing__feature-title'>Helpful <br/>Documentation</p>
+                <h4 className='landing__feature-title'>Круглосуточный доступ к системе</h4>
+                <p className='landing__feature-text'>Тыры-пыры, трали-вали, тоси-боси, бла-бла-бла.</p>
               </div>
             </Col>
-            <Col lg={3} md={4} sm={6} xs={12}>
+            <Col lg={4} md={4} sm={6} xs={12}>
               <div className='landing__feature'>
                 <div className='landing__feature-img-wrap'>
-                  <img src={process.env.PUBLIC_URL + '/img/landing/features/05.png'} alt=''/>
+                  <img src={process.env.PUBLIC_URL + '/img/landing/icons/trophy.svg'} alt='' />
                 </div>
-                <p className='landing__feature-title'>200+ UI <br/>Elements</p>
+
+
+                <h4 className='landing__feature-title'>Лучшие финансовые продукты</h4>
+                <p className='landing__feature-text'>Тыры-пыры, трали-вали, тоси-боси, бла-бла-бла.</p>
               </div>
             </Col>
-            <Col lg={3} md={4} sm={6} xs={12}>
+
+            <Col lg={4} md={4} sm={6} xs={12}>
               <div className='landing__feature'>
                 <div className='landing__feature-img-wrap'>
-                  <img src={process.env.PUBLIC_URL + '/img/landing/features/06.png'} alt=''/>
+                  <img src={process.env.PUBLIC_URL + '/img/landing/icons/shield.svg'} alt='' />
                 </div>
-                <p className='landing__feature-title'>Form <br/>Validation</p>
+                <h4 className='landing__feature-title'>Высокий уровень безопасности</h4>
+                <p className='landing__feature-text'>Тыры-пыры, трали-вали, тоси-боси, бла-бла-бла.</p>
               </div>
             </Col>
-            <Col lg={3} md={4} sm={6} xs={12}>
-              <div className='landing__feature'>
-                <div className='landing__feature-img-wrap'>
-                  <img src={process.env.PUBLIC_URL + '/img/landing/features/07.png'} alt=''/>
-                </div>
-                <p className='landing__feature-title'>Bootstrap 4 <br/>Framework</p>
-              </div>
-            </Col>
-            <Col lg={3} md={4} sm={6} xs={12}>
-              <div className='landing__feature'>
-                <div className='landing__feature-img-wrap'>
-                  <img src={process.env.PUBLIC_URL + '/img/landing/features/08.png'} alt=''/>
-                </div>
-                <p className='landing__feature-title'>Dark & Light <br/>Layouts</p>
-              </div>
-            </Col>
-            <Col lg={3} md={4} sm={6} xs={12}>
-              <div className='landing__feature'>
-                <div className='landing__feature-img-wrap'>
-                  <img src={process.env.PUBLIC_URL + '/img/landing/features/09.png'} alt=''/>
-                </div>
-                <p className='landing__feature-title'>Uniq <br/>Calendar</p>
-              </div>
-            </Col>
-            <Col lg={3} md={4} sm={6} xs={12}>
-              <div className='landing__feature'>
-                <div className='landing__feature-img-wrap'>
-                  <img src={process.env.PUBLIC_URL + '/img/landing/features/10.png'} alt=''/>
-                </div>
-                <p className='landing__feature-title'>E-commerce <br/>Pages</p>
-              </div>
-            </Col>
-            <Col lg={3} md={4} sm={6} xs={12}>
-              <div className='landing__feature'>
-                <div className='landing__feature-img-wrap'>
-                  <img src={process.env.PUBLIC_URL + '/img/landing/features/11.png'} alt=''/>
-                </div>
-                <p className='landing__feature-title'>Tables <br/>Set</p>
-              </div>
-            </Col>
-            <Col lg={3} md={4} sm={6} xs={12}>
-              <div className='landing__feature'>
-                <div className='landing__feature-img-wrap'>
-                  <img src={process.env.PUBLIC_URL + '/img/landing/features/12.png'} alt=''/>
-                </div>
-                <p className='landing__feature-title'>Lots of <br/>Charts</p>
-              </div>
-            </Col>
+
           </Row>
         </Container>
       </section>

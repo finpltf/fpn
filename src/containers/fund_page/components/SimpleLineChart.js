@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from 'recharts';
 import { translate } from 'react-i18next';
 import Moment from 'react-moment';
 import PeriodSelector from './PeriodSelector';
@@ -183,7 +183,7 @@ class SimpleLineChart extends PureComponent {
     return (
       <div className='chart'>
         <ResponsiveContainer height={250}>
-          <AreaChart
+          <LineChart
             height={250}
             data={nav}
             margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
@@ -195,7 +195,8 @@ class SimpleLineChart extends PureComponent {
               </linearGradient>
             </defs>
             <Tooltip content={<CustomTooltip />} />
-            <YAxis minTickGap={50} hide={true} padding={{ top: 0, bottom: 20, left: -20, right: -20 }} domain={[dataMin => (Math.abs(dataMin)), dataMax => (Math.abs(dataMax))]} />
+            <CartesianGrid strokeDasharray='3 3' />
+            <YAxis minTickGap={50} hide={true} padding={{ top: 10, bottom: 20, left: -20, right: -20 }} domain={[dataMin => (Math.abs(dataMin)), dataMax => (Math.abs(dataMax))]} />
             <XAxis hide={true} padding={{ top: 0, bottom: 0, left: 10, right: 10 }} dataKey='dataDate' />
             <defs>
               <linearGradient id="splitColor" x1="20" y1="0" x2="0" y2="2">
@@ -203,8 +204,8 @@ class SimpleLineChart extends PureComponent {
                 <stop offset={off} stopColor="#00f4b0" stopOpacity={0.5} />
               </linearGradient>
             </defs>
-            <Area type="monotone" name='Доходность' dataKey="navOne" stroke="#ccc" fill="url(#colorUv)" />
-          </AreaChart>
+            <Line type="monotone" name='Доходность' dataKey="navOne" stroke='#ee1a2d' activeDot={{ r: 8 }} />
+          </LineChart>
 
 
 
