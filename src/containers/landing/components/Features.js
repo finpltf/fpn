@@ -8,7 +8,7 @@ export default class Features extends PureComponent {
         <Container>
           <Row>
             <Col md={12}>
-              <h3 className='landing__section-title'>Основные возможности платформы</h3>
+              <h3 className='landing__section-title'>Преимущества платформы</h3>
             </Col>
           </Row>
           <Row>

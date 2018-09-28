@@ -80,7 +80,7 @@ export default class Landing extends PureComponent {
 
 
 
-                <h3 className='landing__section-title'>Инвестиции всегда под рукой</h3>
+                <h3 className='landing__section-title'>Контроль инвестиций где бы вы не находились</h3>
                 <p>Мы сделали процесс инвестиций простым и удобным. Современные технологии позволяют управлять вложениями в любое время и в любом месте.</p> <p>Отслеживайте изменения рынка и состояние вашего инвестиционного портфеля в режиме реального времени.</p>
                 <p>
                   <Link className='landing__btn landing__btn--header rounded' to='/registration' >Создать личный кабинет</Link>
@@ -106,10 +106,9 @@ export default class Landing extends PureComponent {
           <Col md={6} sm={12} xs={12}>
             <div className='landing__code-text'>
               <div className='landing__code-wrap'>
-                <h3 className='landing__section-title'>Заполните анкету инвестора</h3>
-                <p>Уй, езда, Борис Бурда.</p>
-                <p>React framework allows you to create a component architecture, get the best productivity and
-                    render changes automatically.</p>
+                <h3 className='landing__section-title'>Какой-то ещё интересный блок</h3>
+                <p>Нужно подумать что сюда вставить, чтобы это было полезно, интересно, стильно, модно и молодёжно. </p>
+
               </div>
             </div>
           </Col>

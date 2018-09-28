@@ -14,7 +14,6 @@ export default class Why extends PureComponent {
       <Container>
         <Row className='why'>
           <Col md={12}>
-            <h2 className='landing__header-title'>Почему выбирают нас</h2>
             <Row>
               <Col>
 
