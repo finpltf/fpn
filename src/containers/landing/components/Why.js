@@ -35,7 +35,7 @@ export default class Why extends PureComponent {
 
 
                 <img className='icon' src={tax} alt='' />
-                <h4>Это бесплатно</h4>
+                <h4>Без дополнительных комиссий</h4>
                 <p>Вы платите столько же, как если бы вы пришли непосредственно в офис управляющей компании.</p>
               </Col>
             </Row>

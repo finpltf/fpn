@@ -16,7 +16,8 @@ body * {
   background: #ffffff;
   position: absolute;
   z-index: 0;
-  overflow-x: hidden;
+    overflow: hidden;
+    width: 101%;
 
   .container{
     transition: 0.3s;
@@ -82,7 +83,7 @@ body * {
       margin-bottom: 20px;
       align-items: center;
       width: auto;
-      padding: 16px 30px;
+      padding: 15px 30px;
     }
 
       &.rounded {
@@ -102,7 +103,7 @@ body * {
     z-index: 3;    
     width: calc(100% + 10px);
     height: calc(100% + 10px);
-    transform: translate(-35px, -21px);
+    transform: translate(-35px, -20px);
     }
   }
   
@@ -153,28 +154,29 @@ body * {
   .landing__menu {
     position: absolute;
     width: 100%;
+    background: #FFF;
     box-shadow: 0px 0px 20px 5px #ddd;
   }
 
   .landing__menu-wrap {
     width: 100%;
     display: flex;
-    padding-top: 45px;
+    padding-top: 30px;
     padding-bottom: 20px;
   }
 
   .landing__menu-logo {
-    margin-top: -20px;
+    margin-top: -10px;
     height: auto;
   }
   .landing__menu-logo img{
-    max-width: 220px;
+    max-width: 180px;
 
   }
 
   .landing__menu-nav {
     margin-left: auto;
-    padding-top:5px;
+    padding-top:10px;
     button {
       position: relative;
       background: transparent;
@@ -226,7 +228,7 @@ body * {
   }
 
   .landing__header-img {
-    margin-top: 80px;
+    margin-top: 0px;
     max-width: 1000px;
   }
 
@@ -234,7 +236,7 @@ body * {
     color: $landing-accent-color;
     font-size: 16px;
     line-height: 1.8;
-    max-width: 500px;
+    max-width: 850px;
     margin-bottom: 30px;
     margin-right: auto;
     margin-left: auto;
@@ -410,7 +412,9 @@ body * {
     margin-top: 105px;
     flex-direction: row-reverse;
     padding-bottom: 100px;
-
+    max-width: 1500px;
+    margin: 0 auto;
+    
     @media screen and (min-width: 768px) {
       flex-direction: row;
     }
@@ -554,6 +558,7 @@ body * {
 .why {
 text-align: left;
 margin: 70px;
+text-align: center;
 h4 {
   font-weight: 600;
 }
@@ -704,12 +709,17 @@ p {
 
   .landing__center-btn {
     text-align: center;
-    margin-top: -20px;
-    height: 40px;
+    margin-top: 40px;
   }
 
   //Footer
 
+
+  .end__text {
+    max-width: 950px;
+    margin: 0 auto;
+    text-align: center;
+  }
   .landing__footer {
     text-align: center;
     position: relative;

@@ -24,11 +24,11 @@ export default class Features extends PureComponent {
             <Col lg={4} md={4} sm={6} xs={12}>
               <div className='landing__feature'>
                 <div className='landing__feature-img-wrap'>
-                  <img src={process.env.PUBLIC_URL + '/img/landing/icons/profits.svg'} alt='' />
+                  <img src={process.env.PUBLIC_URL + '/img/landing/icons/certificate.svg'} alt='' />
                 </div>
-                <h4 className='landing__feature-title'>Расширенная аналитика
+                <h4 className='landing__feature-title'>Государственная защита
 </h4>
-                <p className='landing__feature-text'>Тыры-пыры, трали-вали, тоси-боси, бла-бла-бла.</p>
+                <p className='landing__feature-text'>Деятельность управляющей компании контролируется Центральным банком РФ. Ценные бумаги хранятся в специализированном депозитарии.</p>
               </div>
             </Col>
             <Col lg={4} md={4} sm={6} xs={12}>
@@ -36,7 +36,7 @@ export default class Features extends PureComponent {
                 <div className='landing__feature-img-wrap'>
                   <img src={process.env.PUBLIC_URL + '/img/landing/icons/growth.svg'} alt='' />
                 </div>
-                <h4 className='landing__feature-title'>Красная стрелка в руке</h4>
+                <h4 className='landing__feature-title'>Активы под управлением профессионалов</h4>
                 <p className='landing__feature-text'>Тыры-пыры, трали-вали, тоси-боси, бла-бла-бла.</p>
               </div>
             </Col>
@@ -45,19 +45,19 @@ export default class Features extends PureComponent {
                 <div className='landing__feature-img-wrap'>
                   <img src={process.env.PUBLIC_URL + '/img/landing/icons/clock.svg'} alt='' />
                 </div>
-                <h4 className='landing__feature-title'>Круглосуточный доступ к системе</h4>
-                <p className='landing__feature-text'>Тыры-пыры, трали-вали, тоси-боси, бла-бла-бла.</p>
+                <h4 className='landing__feature-title'>Простое онлан-оформление</h4>
+                <p className='landing__feature-text'>Нужен только ваш паспорт или подтверждённая запись на Госуслугах.</p>
               </div>
             </Col>
             <Col lg={4} md={4} sm={6} xs={12}>
               <div className='landing__feature'>
                 <div className='landing__feature-img-wrap'>
-                  <img src={process.env.PUBLIC_URL + '/img/landing/icons/trophy.svg'} alt='' />
+                  <img src={process.env.PUBLIC_URL + '/img/landing/icons/goal.svg'} alt='' />
                 </div>
 
 
-                <h4 className='landing__feature-title'>Лучшие финансовые продукты</h4>
-                <p className='landing__feature-text'>Тыры-пыры, трали-вали, тоси-боси, бла-бла-бла.</p>
+                <h4 className='landing__feature-title'>Без дополнительных комиссий.</h4>
+                <p className='landing__feature-text'>Совершая сделки через платформу комиссии будут такие же, как если бы вы пришли в офис управляющей компании.</p>
               </div>
             </Col>
 

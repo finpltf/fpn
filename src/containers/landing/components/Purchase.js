@@ -1,5 +1,5 @@
-import React, {PureComponent} from 'react';
-import {Col, Row, Container} from 'reactstrap';
+import React, { PureComponent } from 'react';
+import { Col, Row, Container } from 'reactstrap';
 
 export default class Purchase extends PureComponent {
   render() {
@@ -8,12 +8,13 @@ export default class Purchase extends PureComponent {
         <Container>
           <Row>
             <Col md={12}>
-              <h3 className='landing__section-title'>Get the <b>EasyDEV React Bootstrap 4 Admin Template</b> only for
-                $25 and save your time and nerves</h3>
+              <h3 className='landing__section-title'>
+                Это выгоднее чем банковский вклад или хранение денег дома под подушкой.
+              Пожалуйста, <b>пройдите простую регистрацию</b> и попробуйте. Мы уверены, вам понравится!
+                </h3>
               <div className='landing__center-btn'>
                 <a className='landing__btn landing__btn--gradient' target='_blank' rel='noopener noreferrer'
-                   href='https://themeforest.net/item/easypro-developer-friendly-react-bootstrap-4-admin-template/21798550'>Purchase
-                  now for $25</a>
+                  href='/registration'>Зарегистрироваться за 3 минуты</a>
               </div>
             </Col>
           </Row>

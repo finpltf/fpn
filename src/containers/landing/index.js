@@ -144,7 +144,6 @@ export default class Landing extends PureComponent {
 
         <Technologies />
         <FeatureRequest />
-        <Purchase />
         <Footer />
       </div>
     )

@@ -93,11 +93,6 @@ export default class Technologies extends PureComponent {
                 </div>
               </div>
             </Col>
-            <Col md={12}>
-              <p className='landing__seed'>Просто начать
-
-                <br /> <span role='img' aria-label='seedling'>🌱</span></p>
-            </Col>
           </Row>
 
         </Container>
