@@ -4,8 +4,13 @@ $landing-accent-color: #333;
 $landing-btn-color: #FFF;
 $landing-gradient: linear-gradient(228deg, rgba(127, 244, 222, 0.95), rgba(56, 199, 225, 1));
 $landing-gradient-hover: linear-gradient(228deg, darken(#888, 5%), darken(#ccc, 5%));
+
+html {
+overflow-x: hidden;
+}
 body * {
   font-family: 'Fira Sans', sans-serif;
+  
 
 }
 .landing {
@@ -16,7 +21,7 @@ body * {
   background: #ffffff;
   position: absolute;
   z-index: 0;
-    overflow: hidden;
+  overflow: hidden;
     width: 101%;
 
   .container{
@@ -218,7 +223,8 @@ body * {
   .landing__menu-nav {
     margin-left: auto;
     padding-top:10px;
-    button {
+
+    button, a {
       position: relative;
       background: transparent;
       border: none;

@@ -4,21 +4,15 @@ import scrollToComponent from 'react-scroll-to-component';
 import Header from './components/Header';
 import Why from './components/Why';
 import Technologies from './components/Technologies';
-import Demos from './components/Demos';
 import Features from './components/Features';
-import Purchase from './components/Purchase';
 import Footer from './components/Footer';
 import FeatureRequest from './components/FeatureRequest';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 const logo = process.env.PUBLIC_URL + '/img/landing/logo_svg.svg';
-
-const fund_cards = process.env.PUBLIC_URL + '/img/landing/fund_cards.png';
 const funds_scroll = process.env.PUBLIC_URL + 'https://is.gd/djrEgv';
-const code_example = process.env.PUBLIC_URL + '/img/landing/code_example.png';
 const responsive = process.env.PUBLIC_URL + '/img/landing/admin_book.png';
 const fund_page = process.env.PUBLIC_URL + 'https://is.gd/UkBPmk';
-const browser = process.env.PUBLIC_URL + '/img/landing/browser.svg';
 
 
 
@@ -38,22 +32,17 @@ export default class Landing extends PureComponent {
                     <button onClick={() => scrollToComponent(this.Features, {
                       offset: -50,
                       align: 'top',
-                      duration: 2500
+                      duration: 500
                     })}>Преимущества
                     </button>
                     <button
-                      onClick={() => scrollToComponent(this.Technologies, { offset: -50, align: 'top', duration: 1500 })}>Партнёры
+                      onClick={() => scrollToComponent(this.Technologies, { offset: 0, align: 'top', duration: 500 })}>Партнёры
                     </button>
-                    <button
-                      onClick={() => window.location.href = '/funds'}>
-                      Каталог фондов
-                    </button>
-                    <button
-                      onclick={() => window.location.href = '/dashboard'}
-                    >
-                      Личный кабинет
-                      <span className='landing__menu-nav-new' />
-                    </button>
+                    <NavLink to={this.props.route ? this.props.route : '/funds'} onClick={this.props.onClick} >  Каталог фондов
+                    </NavLink>
+                    <NavLink to={this.props.route ? this.props.route : '/investor'} onClick={this.props.onClick} > Личный кабинет
+                    <span className='landing__menu-nav-new' />
+                    </NavLink>
 
                   </nav>
                 </div>
