@@ -13,9 +13,12 @@ import { Link } from 'react-router-dom';
 
 const logo = process.env.PUBLIC_URL + '/img/landing/logo_svg.svg';
 
-const new_update = process.env.PUBLIC_URL + '/img/landing/new.png';
+const fund_cards = process.env.PUBLIC_URL + '/img/landing/fund_cards.png';
+const funds_scroll = process.env.PUBLIC_URL + 'https://is.gd/djrEgv';
 const code_example = process.env.PUBLIC_URL + '/img/landing/code_example.png';
 const responsive = process.env.PUBLIC_URL + '/img/landing/admin_book.png';
+const fund_page = process.env.PUBLIC_URL + 'https://is.gd/UkBPmk';
+const browser = process.env.PUBLIC_URL + '/img/landing/browser.svg';
 
 
 
@@ -36,23 +39,20 @@ export default class Landing extends PureComponent {
                       offset: -50,
                       align: 'top',
                       duration: 2500
-                    })}>Возможности
+                    })}>Преимущества
                     </button>
                     <button
-                      onClick={() => scrollToComponent(this.About, { offset: -50, align: 'top', duration: 1000 })}>О продукте
-                    </button>
-
-                    <button
-                      onClick={() => scrollToComponent(this.Demos, { offset: -50, align: 'top', duration: 1500 })}>FAQ
+                      onClick={() => scrollToComponent(this.Technologies, { offset: -50, align: 'top', duration: 1500 })}>Партнёры
                     </button>
                     <button
                       onClick={() => window.location.href = '/funds'}>
-                      Каталог фондов <span className='landing__menu-nav-new' />
+                      Каталог фондов
                     </button>
                     <button
-                      onclick={() => window.location.href = '/uk'}
+                      onclick={() => window.location.href = '/dashboard'}
                     >
-                      Управляющие компании
+                      Личный кабинет
+                      <span className='landing__menu-nav-new' />
                     </button>
 
                   </nav>
@@ -73,6 +73,65 @@ export default class Landing extends PureComponent {
         <Features />
 
 
+
+        <Row className='landing__code'>
+          <Col md={6} sm={12} xs={12}>
+            <div className='landing__code-text'>
+              <div className='landing__code-wrap'>
+                <h3 className='landing__section-title'>Ещё какой-то интересный блок</h3>
+                <p>Нужно подумать что сюда вставить, чтобы это было полезно, интересно, стильно, модно и молодёжно.</p>
+
+              </div>
+            </div>
+          </Col>
+          <Col md={6} sm={12} xs={12}>
+            <div className='landing__code-img landing__code-img--no-shadow'>
+              <div className='landing__code-wrap'>
+
+                <div className='browser'>
+                  <div className='panel'>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <img className='' src={fund_page} alt='' />
+                </div>
+
+              </div>
+            </div>
+          </Col>
+        </Row>
+
+        <Row className='landing__code'>
+
+          <Col md={6} sm={12} xs={12}>
+            <div className='landing__code-text'>
+              <div className='landing__code-wrap'>
+                <h3 className='landing__section-title'>Какой-то ещё интересный блок</h3>
+                <p>Нужно подумать что сюда вставить, чтобы это было полезно, интересно, стильно, модно и молодёжно. </p>
+
+              </div>
+            </div>
+          </Col>
+          <Col md={6} sm={12} xs={12}>
+            <div className='landing__code-img landing__code-img--no-shadow'>
+              <div className='landing__code-wrap'>
+                <Link to='/funds' >
+                  <div className='browser'>
+                    <div className='panel'>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                    <img className='' src={funds_scroll} alt='' />
+                  </div>
+
+                </Link>
+              </div>
+            </div>
+          </Col>
+        </Row>
+
         <Row className='landing__code'>
           <Col md={6} sm={12} xs={12}>
             <div className='landing__code-text'>
@@ -80,9 +139,10 @@ export default class Landing extends PureComponent {
 
 
 
-                <h3 className='landing__section-title'>Контроль инвестиций где бы вы не находились</h3>
-                <p>Мы сделали процесс инвестиций простым и удобным. Современные технологии позволяют управлять вложениями в любое время и в любом месте.</p> <p>Отслеживайте изменения рынка и состояние вашего инвестиционного портфеля в режиме реального времени.</p>
-                <p>
+                <h3 className='landing__section-title'>Инвестируйте с компьютера или мобильных устройствах</h3>
+                <p>Тыры-пыры, трали-вали, тоси-боси, бла-бла-бла. Тыры-пыры, трали-вали, тоси-боси, бла-бла-бла. <br /><br />Тыры-пыры, трали-вали, тоси-боси, бла-бла-бла. Тыры-пыры, трали-вали, тоси-боси, бла-бла-бла.</p>
+                <p className='text-center'>
+                  <br /><br />
                   <Link className='landing__btn landing__btn--header rounded' to='/registration' >Создать личный кабинет</Link>
                 </p>
               </div>
@@ -101,48 +161,18 @@ export default class Landing extends PureComponent {
         </Row>
 
 
-        <Row className='landing__code'>
-
-          <Col md={6} sm={12} xs={12}>
-            <div className='landing__code-text'>
-              <div className='landing__code-wrap'>
-                <h3 className='landing__section-title'>Какой-то ещё интересный блок</h3>
-                <p>Нужно подумать что сюда вставить, чтобы это было полезно, интересно, стильно, модно и молодёжно. </p>
-
-              </div>
-            </div>
-          </Col>
-          <Col md={6} sm={12} xs={12}>
-            <div className='landing__code-img landing__code-img--no-shadow'>
-              <div className='landing__code-wrap'>
-                <img className='landing__img landing__img--over-right' src={code_example} alt='' />
-              </div>
-            </div>
-          </Col>
-        </Row>
-
-        <Row className='landing__code'>
-          <Col md={6} sm={12} xs={12}>
-            <div className='landing__code-text'>
-              <div className='landing__code-wrap'>
-                <h3 className='landing__section-title'>Перейдите в каталог ПИФ</h3>
-                <p>Выберите фонды по желаемым критериям. Если не знаете какой ПИФ выбрать, напишите нам в чат, мы поможем принять решение.</p>
-
-              </div>
-            </div>
-          </Col>
-          <Col md={6} sm={12} xs={12}>
-            <div className='landing__code-img landing__code-img--no-shadow'>
-              <div className='landing__code-wrap'>
-                <img className='landing__img landing__img--over' src={responsive} alt='' />
-              </div>
-            </div>
-          </Col>
-        </Row>
         <Why />
 
+        <span ref={(section) => {
+          this.Technologies = section;
+        }} />
         <Technologies />
+
+        <br /><br /><br />
+
+
         <FeatureRequest />
+
         <Footer />
       </div>
     )

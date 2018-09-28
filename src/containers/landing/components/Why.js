@@ -15,27 +15,24 @@ export default class Why extends PureComponent {
         <Row className='why'>
           <Col md={12}>
             <Row>
-              <Col>
+              <Col sm={12} xl={4}>
 
                 <img className='icon' src={cabinet} alt='' />
                 <h4>Удобный личный кабинет</h4>
-                <p>Объедените фонды различных управляющих компаний в вашем личном кабинете.</p>
               </Col>
 
-              <Col>
+              <Col sm={12} xl={4}>
 
                 <img className='icon' src={online} alt='' />
                 <h4>Всё 100% онлайн</h4>
-                <p>  Покупка, обмен, продажа онлайн, без каких-либо бумажных документов.</p>
               </Col>
 
 
-              <Col>
+              <Col sm={12} xl={4}>
 
 
                 <img className='icon' src={tax} alt='' />
                 <h4>Без дополнительных комиссий</h4>
-                <p>Вы платите столько же, как если бы вы пришли непосредственно в офис управляющей компании.</p>
               </Col>
             </Row>
           </Col>
