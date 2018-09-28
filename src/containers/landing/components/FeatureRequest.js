@@ -7,7 +7,6 @@ export default class FeatureRequest extends PureComponent {
       <section className='landing__section'>
         <Container>
           <Row>
-
             <Col md={12}>
               <h3 className='end__text'>
 

@@ -17,7 +17,6 @@ export default class Technologies extends PureComponent {
   render() {
     return (
       <section className='landing__section'>
-        <img className='landing__section-background landing__section-background--technologies' src={background} alt='' />
         <Container>
           <Row>
             <Col md={12}>

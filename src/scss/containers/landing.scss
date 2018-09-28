@@ -5,24 +5,19 @@ $landing-btn-color: #FFF;
 $landing-gradient: linear-gradient(228deg, rgba(127, 244, 222, 0.95), rgba(56, 199, 225, 1));
 $landing-gradient-hover: linear-gradient(228deg, darken(#888, 5%), darken(#ccc, 5%));
 
-html {
-overflow-x: hidden;
-}
+html, body {
+overflow-x: hidden;  
+} 
+
 body * {
   font-family: 'Fira Sans', sans-serif;
-  
-
 }
+
 .landing {
-
-
-  font-family: 'Fira Sans', sans-serif;
   width: 100%;
   background: #ffffff;
   position: absolute;
   z-index: 0;
-  overflow: hidden;
-    width: 101%;
 
   .container{
     transition: 0.3s;

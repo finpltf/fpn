@@ -159,7 +159,6 @@ export default class Landing extends PureComponent {
 
         <br /><br /><br />
 
-
         <FeatureRequest />
 
         <Footer />
