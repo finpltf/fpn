@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Col, Row, Container } from 'reactstrap';
+import { Col, Row, Container, section } from 'reactstrap';
 import scrollToComponent from 'react-scroll-to-component';
 import Header from './components/Header';
 import Price from './components/Price';
@@ -122,35 +122,36 @@ export default class Landing extends PureComponent {
             </div>
           </Col>
         </Row>
-        <Row className='landing__code'>
-          <Col md={6} sm={12} xs={12}>
-            <div className='landing__code-text'>
-              <div className='landing__code-wrap'>
+        <section className='landing__section mob'>
+          <Row className='landing__code'>
+            <Col md={6} sm={12} xs={12}>
+              <div className='landing__code-text'>
+                <div className='landing__code-wrap'>
 
 
 
-                <h3 className='landing__section-title'>Инвестируйте на сайте или в мобильном приложении</h3>
-                <p>Мы разработали удобный сайт и мобильное приложение, чтобы выбор финансовых инструментов и сделки с ними были доступны для вас в любое время и в любом месте. Дома или на работе, в офисе или на пляже – теперь у вас есть все, чтобы принять осознанное решение об инвестировании и реализовать его с помощью Финансовой платформы в несколько кликов.</p>
-                <p className='text-center'>
-                  <br /><br />
-                  <Link className='landing__btn landing__btn--header rounded' to='/registration' >Создать личный кабинет</Link>
-                </p>
+                  <h3 className='landing__section-title'>Инвестируйте на сайте или в мобильном приложении</h3>
+                  <p>Мы разработали удобный сайт и мобильное приложение, чтобы выбор финансовых инструментов и сделки с ними были доступны для вас в любое время и в любом месте. Дома или на работе, в офисе или на пляже – теперь у вас есть все, чтобы принять осознанное решение об инвестировании и реализовать его с помощью Финансовой платформы в несколько кликов.</p>
+                  <p className='text-center'>
+                    <br /><br />
+                    <Link className='landing__btn landing__btn--header rounded' to='/registration' >Создать личный кабинет</Link>
+                  </p>
+                </div>
               </div>
-            </div>
-          </Col>
+            </Col>
 
 
 
-          <Col md={6} sm={12} xs={12}>
-            <div className='landing__code-img landing__code-img--no-shadow'>
-              <div className='landing__code-wrap'>
-                <img className='landing__img landing__img--over' src={responsive} alt='' />
+            <Col md={6} sm={12} xs={12}>
+              <div className='landing__code-img landing__code-img--no-shadow'>
+                <div className='landing__code-wrap'>
+                  <img className='landing__img landing__img--over' src={responsive} alt='' />
+                </div>
               </div>
-            </div>
-          </Col>
-        </Row>
+            </Col>
+          </Row>
 
-
+        </section>
 
 
         <span ref={(section) => {
