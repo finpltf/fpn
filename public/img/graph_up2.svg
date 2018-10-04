@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="246.1999969482422" height="31.399999618530273"><rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="none" stroke="none"/>
+    <defs>
+        
+    <marker xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" id="Arrow1Sstart" refX="0" refY="0" orient="auto" inkscape:stockid="Arrow1Sstart" overflow="visible">
+            <path transform="scale(0.20000000298023224) translate(6,0) " d="M0 0l5-5-17.5 5 17.5 5-5-5z" fill-rule="evenodd" stroke="#000" stroke-width="1pt" style="fill: rgb(26, 235, 26); stroke: rgb(26, 235, 26); stroke-dasharray: none;" id="svg_1"/>
+        </marker><filter xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" id="f001" inkscape:label="Matte jelly" x="0" y="0" width="1" height="1" inkscape:menu="ABCs" inkscape:menu-tooltip="Bulging, matte jelly covering" color-interpolation-filters="sRGB">
+            <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.85 0" result="result0" in="SourceGraphic"/>
+            <feGaussianBlur in="SourceAlpha" stdDeviation="7"/>
+            <feSpecularLighting surfaceScale="5" specularConstant=".9" specularExponent="25">
+                <feDistantLight elevation="60" azimuth="225"/>
+            </feSpecularLighting>
+            <feComposite operator="atop" in2="result0"/>
+        </filter></defs>
+    
+<g class="currentLayer" style=""><title>Layer 1</title>
+        <path stroke="#1aeb1a" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M-15.388778210846827,24.875138485342713 l10.92912699411045,-6.1743498746723455 L6.03272219990963,24.953152669649857 l10.637334454134201,-1.8758865226581838 l10.346477146657875,-3.8291962130757278 L38.52924587476466,6.040623140644872 l9.179306986752872,4.6891252900976745 l9.909723569193423,1.797281321803248 l11.07408803159865,-0.7033096918598762 l10.783230724122324,2.42316784590377 l10.493308649145925,3.0472813203609292 l11.511776841563025,-2.0319148912724736 l9.908788336693497,-2.7352245831323447 L122.72635737791163,9.81130871549024 l10.549422599141351,6.799054365677291 l10.322161101659855,1.2222222208119524 l10.730857704126587,-4.096335692672923 l10.423166211651631,1.4810874687402031 l10.78042502662255,-5.236406613343256 l10.512013299144401,-1.7458628821462732 l10.095834836678273,1.5130023623203988 l10.803805839120649,-1.0395981075474965 l10.691577939129784,2.674940895258639 l10.803805839120649,6.528368786793407 l10.613953641636101,3.700945622207163 L249.3942471676018,9.34676970893405 l10.258565291665027,5.618203303210042 l10.446547024149726,-3.13238770324145 l10.627046896635035,5.412529544582113 l9.508508826726075,1.4456264758733166 L300.7198067634243,15.443105399299252 " id="svg_3" fill="none" class="" stroke-opacity="1" marker-mid="" marker-end="" marker-start="" filter=""/>
+        
+    </g></svg>

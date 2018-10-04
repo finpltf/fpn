@@ -4,14 +4,13 @@ import { Col, Container, Row } from 'reactstrap';
 const cbrf = process.env.PUBLIC_URL + '/img/landing/cbrf.svg';
 const investfunds = process.env.PUBLIC_URL + '/img/landing/investfunds.jpg';
 const infinitum = process.env.PUBLIC_URL + '/img/landing/infinitum.svg';
-const redux_form = process.env.PUBLIC_URL + '/img/landing/technologies/redux_form.png';
-const sass = process.env.PUBLIC_URL + '/img/landing/technologies/sass.png';
-const mat_ui = process.env.PUBLIC_URL + '/img/landing/technologies/mat_ui.png';
-const redux = process.env.PUBLIC_URL + '/img/landing/technologies/redux.png';
+const tfg = process.env.PUBLIC_URL + '/img/landing/uk/tfg.svg';
+const iticapital = process.env.PUBLIC_URL + '/img/landing/uk/iticapital.svg';
+const solid = process.env.PUBLIC_URL + '/img/landing/uk/solid.svg';
+const open = process.env.PUBLIC_URL + '/img/landing/uk/open.svg';
+const arsagera = process.env.PUBLIC_URL + '/img/landing/uk/arsagera.png';
+const investmanagement = process.env.PUBLIC_URL + '/img/landing/uk/investmanagement.png';
 
-const update = process.env.PUBLIC_URL + '/img/landing/seed.png';
-
-const background = process.env.PUBLIC_URL + '/img/landing/right_bg.png';
 
 export default class Technologies extends PureComponent {
   render() {
@@ -23,32 +22,32 @@ export default class Technologies extends PureComponent {
               <h3 className='landing__section-title'>Партнёры</h3>
             </Col>
           </Row>
-          <Row className='hide'>
-            <Col md={{ size: 3, offset: 0 }} sm={{ size: 4, offset: 2 }} xs={6}>
+          <Row className=''>
+            <Col md={{ size: 2, offset: 1 }} sm={{ size: 4, offset: 0 }} xs={6}>
               <div className='landing__technology'>
                 <div className='landing__technology-img-wrap'>
-                  <img className='landing__technology-img' src='https://my.platform.finance/site/org_291_logo.jpg' alt='react' />
+                  <img className='landing__technology-img' src={tfg} alt='react' />
                 </div>
               </div>
             </Col>
             <Col md={{ size: 2, offset: 0 }} sm={4} xs={6}>
-              <div className='landing__technology landing__technology--small'>
+              <div className='landing__technology '>
                 <div className='landing__technology-img-wrap'>
-                  <img className='landing__technology-img' src='https://my.platform.finance/site/org_278_logo.jpg' alt='router' />
+                  <img className='landing__technology-img' src={solid} alt='router' />
                 </div>
               </div>
             </Col>
             <Col md={{ size: 2, offset: 0 }} sm={4} xs={6}>
-              <div className='landing__technology landing__technology--small'>
+              <div className='landing__technology '>
                 <div className='landing__technology-img-wrap'>
-                  <img className='landing__technology-img' src='https://my.platform.finance/site/org_169_logo.jpg' alt='router' />
+                  <img className='landing__technology-img' src={investmanagement} alt='router' />
                 </div>
               </div>
             </Col>
             <Col md={{ size: 3, offset: 0 }} sm={{ size: 4, offset: 2 }} xs={6}>
               <div className='landing__technology'>
                 <div className='landing__technology-img-wrap'>
-                  <img className='landing__technology-img' src='https://my.platform.finance/site/org_484_logo.jpg' alt='bootstrap' />
+                  <img className='landing__technology-img' src={arsagera} alt='bootstrap' />
                 </div>
               </div>
             </Col>

@@ -7,7 +7,6 @@ export default class Footer extends PureComponent {
   render() {
     return (
       <footer className='landing__footer'>
-        <img className='landing__footer-background' src={background} alt='' />
         <Container>
           <Row>
             <Col md={12}>

@@ -2,17 +2,20 @@ import React, { PureComponent } from 'react';
 import { Col, Row, Container } from 'reactstrap';
 import scrollToComponent from 'react-scroll-to-component';
 import Header from './components/Header';
-import Why from './components/Why';
+import Price from './components/Price';
+import Registration from './components/Registration';
 import Technologies from './components/Technologies';
+import FundsLine from './components/FundsLine';
 import Features from './components/Features';
 import Footer from './components/Footer';
 import FeatureRequest from './components/FeatureRequest';
 import { NavLink, Link } from 'react-router-dom';
+import UserIcon from 'mdi-react/UserIcon';
 
 const logo = process.env.PUBLIC_URL + '/img/landing/logo_svg.svg';
-const funds_scroll = process.env.PUBLIC_URL + 'https://is.gd/djrEgv';
+const funds_scroll = process.env.PUBLIC_URL + 'https://vgy.me/BHMrSL.png';
 const responsive = process.env.PUBLIC_URL + '/img/landing/admin_book.png';
-const fund_page = process.env.PUBLIC_URL + 'https://is.gd/UkBPmk';
+const fund_page = process.env.PUBLIC_URL + 'https://vgy.me/NkQAed.png';
 
 
 
@@ -44,60 +47,32 @@ export default class Landing extends PureComponent {
                     <span className='landing__menu-nav-new' />
                     </NavLink>
 
+
                   </nav>
+                  <NavLink className='cabinetIcon' to={this.props.route ? this.props.route : '/investor'} onClick={this.props.onClick} >
+
+                    <UserIcon />
+
+                  </NavLink>
                 </div>
               </Col>
             </Row>
           </Container>
         </div>
         <Header />
+
+        <FundsLine />
         <span ref={(section) => {
           this.About = section;
         }} />
 
-
-        <span ref={(section) => {
-          this.Features = section;
-        }} />
-        <Features />
-
-
-
-        <Row className='landing__code'>
-          <Col md={6} sm={12} xs={12}>
-            <div className='landing__code-text'>
-              <div className='landing__code-wrap'>
-                <h3 className='landing__section-title'>Ещё какой-то интересный блок</h3>
-                <p>Нужно подумать что сюда вставить, чтобы это было полезно, интересно, стильно, модно и молодёжно.</p>
-
-              </div>
-            </div>
-          </Col>
-          <Col md={6} sm={12} xs={12}>
-            <div className='landing__code-img landing__code-img--no-shadow'>
-              <div className='landing__code-wrap'>
-
-                <div className='browser'>
-                  <div className='panel'>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                  <img className='' src={fund_page} alt='' />
-                </div>
-
-              </div>
-            </div>
-          </Col>
-        </Row>
-
         <Row className='landing__code'>
 
           <Col md={6} sm={12} xs={12}>
             <div className='landing__code-text'>
               <div className='landing__code-wrap'>
-                <h3 className='landing__section-title'>Какой-то ещё интересный блок</h3>
-                <p>Нужно подумать что сюда вставить, чтобы это было полезно, интересно, стильно, модно и молодёжно. </p>
+                <h3 className='landing__section-title'>Фонды на любой вкус</h3>
+                <p>Теперь банановыыыыый.<br /> Ну и во-первых — это красиво, во-вторых — полезно, интересно, стильно, модно и молодёжно. А ещё есть удобные фильтрики, поиск по типу, уровню риска, минимальной суммы инвестиций. </p>
 
               </div>
             </div>
@@ -121,6 +96,35 @@ export default class Landing extends PureComponent {
           </Col>
         </Row>
 
+
+
+        <Row className='landing__code'>
+          <Col md={6} sm={12} xs={12}>
+            <div className='landing__code-text'>
+              <div className='landing__code-wrap'>
+                <h3 className='landing__section-title'>Подробная карточка фонда</h3>
+                <p>Динамика изменений стоимости пая и чистых активов за весь период существования фонда. Информация о скидках, надбавках. Все необходимые документы. Простой процесс приобретения. </p>
+
+              </div>
+            </div>
+          </Col>
+          <Col md={6} sm={12} xs={12}>
+            <div className='landing__code-img landing__code-img--no-shadow'>
+              <div className='landing__code-wrap'>
+
+                <div className='browser'>
+                  <div className='panel'>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <img className='' src={fund_page} alt='' />
+                </div>
+
+              </div>
+            </div>
+          </Col>
+        </Row>
         <Row className='landing__code'>
           <Col md={6} sm={12} xs={12}>
             <div className='landing__code-text'>
@@ -150,7 +154,14 @@ export default class Landing extends PureComponent {
         </Row>
 
 
-        <Why />
+
+
+        <span ref={(section) => {
+          this.Features = section;
+        }} />
+        <Features />
+
+
 
         <span ref={(section) => {
           this.Technologies = section;

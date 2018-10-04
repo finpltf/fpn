@@ -18,8 +18,6 @@ export default class Header extends PureComponent {
             Покупать, погашать и обменивать паи теперь легко и просто. Не нужно никуда ходить, всё онлайн.
                 </p>
               <Link className='landing__btn landing__btn--header rounded' to='/funds' >Перейти в каталог ПИФ</Link>
-              <hr className='invis' />
-              <img className='landing__header-img' src={img} alt='macbook' />
             </Col>
           </Row>
         </Container>

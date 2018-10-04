@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="258.20000000000005" height="37" style=""><rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="none" stroke="none" class="" style=""/>
+    <defs>
+        <linearGradient id="a" x1="49.482%" x2="50%" y1="23.476%" y2="100%">
+            <stop offset="0%" stop-color="#3ACA60" stop-opacity=".076"/>
+            <stop offset="100%" stop-color="#FFF" stop-opacity=".086"/>
+        </linearGradient>
+    </defs>
+    
+<g class="currentLayer" style=""><title>Layer 1</title>
+        
+        <path stroke="#e84141" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M-17.4,35.29924L-5.82464,24.95115L5.28814,35.42999L16.55446,32.28604L27.51272,25.86838L39.70618,3.73295L49.42825,11.59184L59.92394,14.60405L71.65283,13.42531L83.07367,17.4865L94.18745,22.59368L106.37991,19.18823L116.8746,14.60405L127.68184,12.05255L140.05505,21.44764L150.98755,23.49606L162.35292,16.63068L173.39241,19.11295L184.81028,10.33683L195.94386,7.4108L206.63666,9.94656L218.07929,8.20422L229.40306,12.68737L240.84569,23.62879L249.68724,24.2315L262.23956,15.67399L273.90471,18.68999L283.36896,17.44017L304.62438,15.71147L306.29513,24.93431L317.39999,19.49133" id="svg_3" fill="none" stroke-opacity="1" transform="rotate(-180 150,19.581474304199215) " class="selected"/>
+    </g></svg>
