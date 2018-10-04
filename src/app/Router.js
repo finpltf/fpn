@@ -15,9 +15,7 @@ import FAQ from '../containers/faq';
 
 import Mail from '../containers/mail';
 
-
 import Dashboard from '../containers/dashboards/main';
-import DashboardEdit from '../containers/dashboards/crypto_table_edit';
 
 import Landing from '../containers/landing';
 
@@ -64,7 +62,6 @@ const Funds = () => (
 const Dashboards = () => (
   <Switch>
     <Route exact path='/dashboard' component={Dashboard} />
-    <Route path='/dashboard/edit/:index' component={DashboardEdit} />
   </Switch>
 );
 

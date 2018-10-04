@@ -14,7 +14,7 @@ const showNotification = () => {
   notification.notice({
     content: <BasicNotification title='Добро пожаловать на Финансовую Платформу!👋'
       message='Вы успешно зарегистрировались на Platform.Finance. Теперь вы можете покупать паевые инвестиционные фонды. Кайфуйте, тащитесь, инвестируйте!' />,
-    duration: 4,
+    duration: 5,
     closable: true,
     style: { top: 0, left: 'calc(100vw - 100%)' },
     className: 'right-up'

@@ -1,15 +1,5 @@
 import React, { PureComponent } from 'react';
 import { Col, Container, Row } from 'reactstrap';
-import BTC from './components/BTC';
-import ETH from './components/ETH';
-import BCH from './components/BCH';
-import XRP from './components/XRP';
-import TradeHistory from './components/TradeHistory';
-import BtcEth from './components/BtcEth';
-import ABTestingAnalytics from './components/ABTestingAnalytics';
-import CryptotrendsToday from './components/CryptotrendsToday';
-import TopTen from './components/TopTen';
-import MyPortfolioPie from './components/MyPortfolioPie';
 
 import MyIncomes from './components/MyIncomes';
 import NavDay from './components/NavDay';
@@ -40,9 +30,6 @@ class Dashboard extends PureComponent {
 
 
 
-          <Col lg={5}>
-            <MyPortfolioPie />
-          </Col>
 
           <Col lg={7}>
             <Row><NavDay /></Row>

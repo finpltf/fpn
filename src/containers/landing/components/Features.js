@@ -18,7 +18,7 @@ export default class Features extends PureComponent {
                   <img src={process.env.PUBLIC_URL + '/img/landing/icons/profile.svg'} alt='' />
                 </div>
                 <h4 className='landing__feature-title'>Онлайн-идентификация</h4>
-                <p className='landing__feature-text'>Тыры-пыры, трали-вали, тоси-боси, бла-бла-бла.</p>
+                <p className='landing__feature-text'>Вы сможете подтвердить свою личность прямо на сайте Финансовой платформы</p>
               </div>
             </Col>
             <Col lg={4} md={4} sm={6} xs={12}>
@@ -26,18 +26,18 @@ export default class Features extends PureComponent {
                 <div className='landing__feature-img-wrap'>
                   <img src={process.env.PUBLIC_URL + '/img/landing/icons/certificate.svg'} alt='' />
                 </div>
-                <h4 className='landing__feature-title'>Государственная защита
+                <h4 className='landing__feature-title'>Простая процедура заключения договора
 </h4>
-                <p className='landing__feature-text'>Деятельность управляющей компании контролируется Центральным банком РФ. Ценные бумаги хранятся в специализированном депозитарии.</p>
+                <p className='landing__feature-text'>Онлайн-заключение договора с управляющей компанией проще, чем в офисе, и занимает меньше времени</p>
               </div>
             </Col>
             <Col lg={4} md={4} sm={6} xs={12}>
               <div className='landing__feature'>
                 <div className='landing__feature-img-wrap'>
-                  <img src={process.env.PUBLIC_URL + '/img/landing/icons/growth.svg'} alt='' />
+                  <img src={process.env.PUBLIC_URL + '/img/landing/icons/bank_2.svg'} alt='' />
                 </div>
-                <h4 className='landing__feature-title'>Активы под управлением профессионалов</h4>
-                <p className='landing__feature-text'>Тыры-пыры, трали-вали, тоси-боси, бла-бла-бла.</p>
+                <h4 className='landing__feature-title'>Высокий уровень безопасности</h4>
+                <p className='landing__feature-text'>Уровень безопасности электронных сделок соответствует требованиям международного стандарта информационной безопасности ISO/IEC 27001:2013</p>
               </div>
             </Col>
             <Col lg={4} md={4} sm={6} xs={12}>
@@ -45,8 +45,8 @@ export default class Features extends PureComponent {
                 <div className='landing__feature-img-wrap'>
                   <img src={process.env.PUBLIC_URL + '/img/landing/icons/clock.svg'} alt='' />
                 </div>
-                <h4 className='landing__feature-title'>Простое онлан-оформление</h4>
-                <p className='landing__feature-text'>Нужен только ваш паспорт или подтверждённая запись на Госуслугах.</p>
+                <h4 className='landing__feature-title'>Инвестирование 24х7</h4>
+                <p className='landing__feature-text'>Вы больше не зависите от часов работы управляющей компании, банка или агента</p>
               </div>
             </Col>
             <Col lg={4} md={4} sm={6} xs={12}>
@@ -56,8 +56,8 @@ export default class Features extends PureComponent {
                 </div>
 
 
-                <h4 className='landing__feature-title'>Без дополнительных комиссий.</h4>
-                <p className='landing__feature-text'>Совершая сделки через платформу комиссии будут такие же, как если бы вы пришли в офис управляющей компании.</p>
+                <h4 className='landing__feature-title'>Без дополнительных комиссий</h4>
+                <p className='landing__feature-text'>Вы не платите больше, пользуясь всеми преимущества онлайн-доступа на финансовый рынок</p>
               </div>
             </Col>
 
@@ -66,8 +66,8 @@ export default class Features extends PureComponent {
                 <div className='landing__feature-img-wrap'>
                   <img src={process.env.PUBLIC_URL + '/img/landing/icons/shield.svg'} alt='' />
                 </div>
-                <h4 className='landing__feature-title'>Высокий уровень безопасности</h4>
-                <p className='landing__feature-text'>Тыры-пыры, трали-вали, тоси-боси, бла-бла-бла.</p>
+                <h4 className='landing__feature-title'>Осознанное принятие решения</h4>
+                <p className='landing__feature-text'>Вы принимаете решение об инвестировании после внимательного изучения достоверной информации, с помощью удобных инструментов сравнения и выбора</p>
               </div>
             </Col>
 

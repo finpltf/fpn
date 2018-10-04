@@ -43,9 +43,6 @@ export default class Landing extends PureComponent {
                     </button>
                     <NavLink to={this.props.route ? this.props.route : '/funds'} onClick={this.props.onClick} >  Каталог фондов
                     </NavLink>
-                    <NavLink to={this.props.route ? this.props.route : '/investor'} onClick={this.props.onClick} > Личный кабинет
-                    <span className='landing__menu-nav-new' />
-                    </NavLink>
 
 
                   </nav>
@@ -61,7 +58,7 @@ export default class Landing extends PureComponent {
         </div>
         <Header />
 
-        <FundsLine />
+
         <span ref={(section) => {
           this.About = section;
         }} />
@@ -71,8 +68,8 @@ export default class Landing extends PureComponent {
           <Col md={6} sm={12} xs={12}>
             <div className='landing__code-text'>
               <div className='landing__code-wrap'>
-                <h3 className='landing__section-title'>Фонды на любой вкус</h3>
-                <p>Теперь банановыыыыый.<br /> Ну и во-первых — это красиво, во-вторых — полезно, интересно, стильно, модно и молодёжно. А ещё есть удобные фильтрики, поиск по типу, уровню риска, минимальной суммы инвестиций. </p>
+                <h3 className='landing__section-title'>Широкая линейка финансовых инструментов</h3>
+                <p>Представленные в нашей витрине паи инвестиционных фондов вы легко можете сравнить по разным показателям, важным именно для вас. Удобная система фильтров  облегчает поиск нужных финансовых инструментов.</p>
 
               </div>
             </div>
@@ -102,8 +99,8 @@ export default class Landing extends PureComponent {
           <Col md={6} sm={12} xs={12}>
             <div className='landing__code-text'>
               <div className='landing__code-wrap'>
-                <h3 className='landing__section-title'>Подробная карточка фонда</h3>
-                <p>Динамика изменений стоимости пая и чистых активов за весь период существования фонда. Информация о скидках, надбавках. Все необходимые документы. Простой процесс приобретения. </p>
+                <h3 className='landing__section-title'>Вся необходимая информация – в одном месте</h3>
+                <p>Удобно структурированная информация об управляющей компании и ее фондах позволяет, не покидая сайт, получить точное представление о каждом финансовом продукте, представленном на Финансовой платформе. С карточки фонда вы можете перейти непосредственно к покупке паев. </p>
 
               </div>
             </div>
@@ -132,8 +129,8 @@ export default class Landing extends PureComponent {
 
 
 
-                <h3 className='landing__section-title'>Инвестируйте с компьютера или мобильных устройствах</h3>
-                <p>Тыры-пыры, трали-вали, тоси-боси, бла-бла-бла. Тыры-пыры, трали-вали, тоси-боси, бла-бла-бла. <br /><br />Тыры-пыры, трали-вали, тоси-боси, бла-бла-бла. Тыры-пыры, трали-вали, тоси-боси, бла-бла-бла.</p>
+                <h3 className='landing__section-title'>Инвестируйте на сайте или в мобильном приложении</h3>
+                <p>Мы разработали удобный сайт и мобильное приложение, чтобы выбор финансовых инструментов и сделки с ними были доступны для вас в любое время и в любом месте. Дома или на работе, в офисе или на пляже – теперь у вас есть все, чтобы принять осознанное решение об инвестировании и реализовать его с помощью Финансовой платформы в несколько кликов.</p>
                 <p className='text-center'>
                   <br /><br />
                   <Link className='landing__btn landing__btn--header rounded' to='/registration' >Создать личный кабинет</Link>
@@ -166,12 +163,12 @@ export default class Landing extends PureComponent {
         <span ref={(section) => {
           this.Technologies = section;
         }} />
-        <Technologies />
 
-        <br /><br /><br />
+
+        <FundsLine />
 
         <FeatureRequest />
-
+        <Technologies />
         <Footer />
       </div>
     )

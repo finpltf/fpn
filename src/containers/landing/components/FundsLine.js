@@ -21,10 +21,14 @@ export default class FundsLine extends PureComponent {
 
     render() {
         return (
+
             <Row className='funds__line'>
-                {funds.map((r, i) =>
-                    <FundCard key={i} title={r.shortName} link={r.buyOnlineURL} incomeOne={r.incomeOne} regNum={r.regNum} minInvestSum={r.minInvestSum} companyShortName={r.companyShortName} logoURL={r.logoURL} />
-                )}
+                <h2 className='landing__header-title'>Большой выбор ПИФ</h2>
+                <Row id='scroller' className='scroller'>
+                    {funds.map((r, i) =>
+                        <FundCard key={i} title={r.shortName} link={r.buyOnlineURL} incomeOne={r.incomeOne} regNum={r.regNum} minInvestSum={r.minInvestSum} companyShortName={r.companyShortName} logoURL={r.logoURL} />
+                    )}
+                </Row>
             </Row>
 
         )

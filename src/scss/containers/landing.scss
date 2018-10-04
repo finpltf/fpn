@@ -324,11 +324,14 @@ display: block;
 
 
   .funds__line {
-    animation: movefunds 165s infinite linear;
+
+    .scroller {
+animation: movefunds 125s infinite linear;
     flex-wrap: nowrap;
     width: auto;
 margin: 50px 0;
-
+    }
+    
 
 
     .fund__card {
@@ -916,7 +919,7 @@ p {
 
   .landing__feature-title {
     margin: 0;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 18px;
     line-height: 1.44;
     color: #333;

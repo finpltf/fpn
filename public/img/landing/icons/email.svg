@@ -5,20 +5,20 @@
 			<polygon style="fill:#EE1A2D" points="56.25,216.98 253.125,216.98 281.25,66.98 84.375,66.98    " data-original="#F9BA48" class="active-path" data-old_color="#ee1a2d"/>
 		</g>
 		<g>
-			<polygon style="fill:#333333" points="283.959,70.805 278.541,63.155 169.139,140.648 110.995,86.972 104.63,93.863      137.728,124.411 52.852,213.75 59.648,220.209 144.614,130.767 168.361,152.686 195.038,133.791 249.159,219.483      257.091,214.477 202.702,128.362    " data-original="#333333" class=""/>
+			<polygon style="fill:#666666" points="283.959,70.805 278.541,63.155 169.139,140.648 110.995,86.972 104.63,93.863      137.728,124.411 52.852,213.75 59.648,220.209 144.614,130.767 168.361,152.686 195.038,133.791 249.159,219.483      257.091,214.477 202.702,128.362    " data-original="#666666" class=""/>
 			
-				<rect x="86.72" y="64.068" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -25.562 86.3128)" style="fill:#333333" width="9.375" height="19.889" data-original="#333333" class=""/>
-			<rect x="18.75" y="90.417" style="fill:#333333" width="60.938" height="9.375" data-original="#333333" class=""/>
-			<rect x="9.375" y="137.292" style="fill:#333333" width="60.938" height="9.375" data-original="#333333" class=""/>
-			<rect y="184.167" style="fill:#333333" width="60.938" height="9.375" data-original="#333333" class=""/>
-			<rect x="89.063" y="38.855" style="fill:#333333" width="159.375" height="9.375" data-original="#333333" class=""/>
-			<rect x="56.25" y="38.855" style="fill:#333333" width="23.438" height="9.375" data-original="#333333" class=""/>
-			<rect x="70.313" y="15.417" style="fill:#333333" width="159.375" height="9.375" data-original="#333333" class=""/>
-			<rect x="37.5" y="15.417" style="fill:#333333" width="23.438" height="9.375" data-original="#333333" class=""/>
-			<rect x="46.875" y="235.73" style="fill:#333333" width="112.5" height="9.375" data-original="#333333" class=""/>
-			<rect x="14.063" y="235.73" style="fill:#333333" width="23.438" height="9.375" data-original="#333333" class=""/>
-			<rect x="32.813" y="259.167" style="fill:#333333" width="107.813" height="9.375" data-original="#333333" class=""/>
-			<rect y="259.167" style="fill:#333333" width="23.438" height="9.375" data-original="#333333" class=""/>
+				<rect x="86.72" y="64.068" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -25.562 86.3128)" style="fill:#666666" width="9.375" height="19.889" data-original="#666666" class=""/>
+			<rect x="18.75" y="90.417" style="fill:#666666" width="60.938" height="9.375" data-original="#666666" class=""/>
+			<rect x="9.375" y="137.292" style="fill:#666666" width="60.938" height="9.375" data-original="#666666" class=""/>
+			<rect y="184.167" style="fill:#666666" width="60.938" height="9.375" data-original="#666666" class=""/>
+			<rect x="89.063" y="38.855" style="fill:#666666" width="159.375" height="9.375" data-original="#666666" class=""/>
+			<rect x="56.25" y="38.855" style="fill:#666666" width="23.438" height="9.375" data-original="#666666" class=""/>
+			<rect x="70.313" y="15.417" style="fill:#666666" width="159.375" height="9.375" data-original="#666666" class=""/>
+			<rect x="37.5" y="15.417" style="fill:#666666" width="23.438" height="9.375" data-original="#666666" class=""/>
+			<rect x="46.875" y="235.73" style="fill:#666666" width="112.5" height="9.375" data-original="#666666" class=""/>
+			<rect x="14.063" y="235.73" style="fill:#666666" width="23.438" height="9.375" data-original="#666666" class=""/>
+			<rect x="32.813" y="259.167" style="fill:#666666" width="107.813" height="9.375" data-original="#666666" class=""/>
+			<rect y="259.167" style="fill:#666666" width="23.438" height="9.375" data-original="#666666" class=""/>
 		</g>
 	</g>
 </g></g> </svg>

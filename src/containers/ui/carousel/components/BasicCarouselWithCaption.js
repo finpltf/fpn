@@ -1,14 +1,14 @@
-import React, {PureComponent} from 'react';
-import {Card, CardBody, Col} from 'reactstrap';
+import React, { PureComponent } from 'react';
+import { Card, CardBody, Col } from 'reactstrap';
 import Carousel from '../../../../components/carousel/CarouselSingle';
-import {translate} from 'react-i18next';
+import { translate } from 'react-i18next';
 
 const Slide1 = process.env.PUBLIC_URL + '/img/5.png';
 const Slide2 = process.env.PUBLIC_URL + '/img/6.png';
 
 class BasicCarouselWithCaption extends PureComponent {
   render() {
-    const {t} = this.props;
+    const { t } = this.props;
 
     return (
       <Col md={12} lg={6} xl={6}>
@@ -20,28 +20,24 @@ class BasicCarouselWithCaption extends PureComponent {
             </div>
             <Carousel>
               <div>
-                <img src={Slide2} alt='slide'/>
                 <div className='slick-slider__caption'>
                   <p className='slick-slider__caption-title'>Sayan mountains, Siberia</p>
                   <p className='slick-slider__caption-description'>Folly words widow one downs few age every seven.</p>
                 </div>
               </div>
               <div>
-                <img src={Slide1} alt='slide'/>
                 <div className='slick-slider__caption'>
                   <p className='slick-slider__caption-title'>Sayan mountains, Siberia</p>
                   <p className='slick-slider__caption-description'>Folly words widow one downs few age every seven.</p>
                 </div>
               </div>
               <div>
-                <img src={Slide2} alt='slide'/>
                 <div className='slick-slider__caption'>
                   <p className='slick-slider__caption-title'>Sayan mountains, Siberia</p>
                   <p className='slick-slider__caption-description'>Folly words widow one downs few age every seven.</p>
                 </div>
               </div>
               <div>
-                <img src={Slide1} alt='slide'/>
                 <div className='slick-slider__caption'>
                   <p className='slick-slider__caption-title'>Sayan mountains, Siberia</p>
                   <p className='slick-slider__caption-description'>Folly words widow one downs few age every seven.</p>
