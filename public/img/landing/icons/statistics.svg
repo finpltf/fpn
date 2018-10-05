@@ -5,22 +5,22 @@
 	<path style="fill:#EE1A2D" d="M176,248h-48V80h48V248z" data-original="#FFA64D" class="active-path" data-old_color="#ee1a2d"/>
 	<path style="fill:#EE1A2D" d="M240,248h-48V32h48V248z" data-original="#FFA64D" class="active-path" data-old_color="#ee1a2d"/>
 </g><g>
-	<path style="fill:#666666" d="M411.312,88H384V0H0v432c0,35.288,28.712,64,64,64h368c35.288,0,64-28.712,64-64V172.688L411.312,88   z M64,480c-26.472,0-48-21.528-48-48V16h352v416c0,19.096,8.408,36.264,21.712,48H64z M432,480c-26.472,0-48-21.528-48-48V104h16   v32h16v-20.688L468.688,168H416v-16h-16v32h80v248C480,458.472,458.472,480,432,480z" data-original="#666666" class=""/>
-	<rect x="64" y="320" style="fill:#666666" width="136" height="16" data-original="#666666" class=""/>
-	<rect x="32" y="320" style="fill:#666666" width="16" height="16" data-original="#666666" class=""/>
-	<rect x="184" y="352" style="fill:#666666" width="16" height="16" data-original="#666666" class=""/>
-	<rect x="32" y="352" style="fill:#666666" width="136" height="16" data-original="#666666" class=""/>
-	<rect x="32" y="416" style="fill:#666666" width="16" height="16" data-original="#666666" class=""/>
-	<rect x="64" y="416" style="fill:#666666" width="104" height="16" data-original="#666666" class=""/>
-	<rect x="184" y="416" style="fill:#666666" width="16" height="16" data-original="#666666" class=""/>
-	<rect x="32" y="384" style="fill:#666666" width="168" height="16" data-original="#666666" class=""/>
-	<polygon style="fill:#666666" points="48,32 32,32 32,264 240,264 240,248 48,248  " data-original="#666666" class=""/>
-	<rect x="256" y="120" style="fill:#666666" width="16" height="144" data-original="#666666" class=""/>
-	<rect x="288" y="120" style="fill:#666666" width="16" height="16" data-original="#666666" class=""/>
-	<rect x="320" y="120" style="fill:#666666" width="32" height="16" data-original="#666666" class=""/>
-	<rect x="288" y="184" style="fill:#666666" width="16" height="16" data-original="#666666" class=""/>
-	<rect x="320" y="184" style="fill:#666666" width="32" height="16" data-original="#666666" class=""/>
-	<rect x="288" y="152" style="fill:#666666" width="64" height="16" data-original="#666666" class=""/>
-	<rect x="288" y="216" style="fill:#666666" width="64" height="16" data-original="#666666" class=""/>
-	<rect x="288" y="248" style="fill:#666666" width="64" height="16" data-original="#666666" class=""/>
+	<path style="fill:#333333" d="M411.312,88H384V0H0v432c0,35.288,28.712,64,64,64h368c35.288,0,64-28.712,64-64V172.688L411.312,88   z M64,480c-26.472,0-48-21.528-48-48V16h352v416c0,19.096,8.408,36.264,21.712,48H64z M432,480c-26.472,0-48-21.528-48-48V104h16   v32h16v-20.688L468.688,168H416v-16h-16v32h80v248C480,458.472,458.472,480,432,480z" data-original="#333333" class=""/>
+	<rect x="64" y="320" style="fill:#333333" width="136" height="16" data-original="#333333" class=""/>
+	<rect x="32" y="320" style="fill:#333333" width="16" height="16" data-original="#333333" class=""/>
+	<rect x="184" y="352" style="fill:#333333" width="16" height="16" data-original="#333333" class=""/>
+	<rect x="32" y="352" style="fill:#333333" width="136" height="16" data-original="#333333" class=""/>
+	<rect x="32" y="416" style="fill:#333333" width="16" height="16" data-original="#333333" class=""/>
+	<rect x="64" y="416" style="fill:#333333" width="104" height="16" data-original="#333333" class=""/>
+	<rect x="184" y="416" style="fill:#333333" width="16" height="16" data-original="#333333" class=""/>
+	<rect x="32" y="384" style="fill:#333333" width="168" height="16" data-original="#333333" class=""/>
+	<polygon style="fill:#333333" points="48,32 32,32 32,264 240,264 240,248 48,248  " data-original="#333333" class=""/>
+	<rect x="256" y="120" style="fill:#333333" width="16" height="144" data-original="#333333" class=""/>
+	<rect x="288" y="120" style="fill:#333333" width="16" height="16" data-original="#333333" class=""/>
+	<rect x="320" y="120" style="fill:#333333" width="32" height="16" data-original="#333333" class=""/>
+	<rect x="288" y="184" style="fill:#333333" width="16" height="16" data-original="#333333" class=""/>
+	<rect x="320" y="184" style="fill:#333333" width="32" height="16" data-original="#333333" class=""/>
+	<rect x="288" y="152" style="fill:#333333" width="64" height="16" data-original="#333333" class=""/>
+	<rect x="288" y="216" style="fill:#333333" width="64" height="16" data-original="#333333" class=""/>
+	<rect x="288" y="248" style="fill:#333333" width="64" height="16" data-original="#333333" class=""/>
 </g></g> </svg>

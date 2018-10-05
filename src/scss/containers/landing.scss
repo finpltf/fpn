@@ -647,8 +647,7 @@ ol {
 
       .landing__code-text {
         text-align: center;
-        //margin-right: 30px;
-        margin-left: 30px;
+        margin-left: 0;
 
         @media screen and (min-width: 768px) {
           text-align: left;
@@ -701,7 +700,7 @@ ol {
     margin-bottom: 30px;
     text-align: center;
     margin-left: auto;
-    margin-right: 30px;
+    margin-right: 0;
 
     .landing__section-title {
       margin-bottom: 16px;
@@ -902,7 +901,7 @@ p {
 
                 @media (max-width: 576px) { 
           padding: 0px 0;
-    text-align: left;
+    text-align: center;
     margin: 0 15px 35px 15px;
   }
 
@@ -911,13 +910,13 @@ p {
 
   .landing__feature-img-wrap {
     width: 80px;
-    height: 80px;
+    height: 70px;
     margin: 18px 0 0 0;
     display: flex;
 
     img {
       margin: auto;
-      max-width: 80%;
+      max-width: 70%;
       margin: 0;
     }
 
@@ -925,6 +924,7 @@ p {
     
     @media (max-width: 576px) { 
     margin: 20px auto 10px auto;
+    text-align: center;
     }
 
 

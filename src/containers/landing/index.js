@@ -69,7 +69,7 @@ export default class Landing extends PureComponent {
             <div className='landing__code-text'>
               <div className='landing__code-wrap'>
                 <h3 className='landing__section-title'>Широкая линейка финансовых инструментов</h3>
-                <p>Представленные в нашей витрине паи инвестиционных фондов вы легко можете сравнить по разным показателям, важным именно для вас. Удобная система фильтров  облегчает поиск нужных финансовых инструментов.</p>
+                <p>Вы легко можете отфильтровать и сравнить инвестиционные фонды представленные в нашей витрине, по разным показателям, важным именно для вас.</p>
 
               </div>
             </div>
@@ -166,7 +166,6 @@ export default class Landing extends PureComponent {
         }} />
 
 
-        <FundsLine />
 
         <FeatureRequest />
         <Technologies />
