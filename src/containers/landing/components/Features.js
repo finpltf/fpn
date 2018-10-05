@@ -18,7 +18,7 @@ export default class Features extends PureComponent {
                   <img src={process.env.PUBLIC_URL + '/img/landing/icons/profile.svg'} alt='' />
                 </div>
                 <h4 className='landing__feature-title'>Онлайн-идентификация</h4>
-                <p className='landing__feature-text'>Вы сможете подтвердить свою личность на сайте Финансовой платформы, с помощью вашего аккаунта на Госуслугах, или по паспорту и СНИЛС</p>
+                <p className='landing__feature-text'>Вы сможете подтвердить свою личность на сайте Финансовой платформы, с помощью вашегоаккаунта на Госуслугах, или по паспорту и СНИЛС</p>
               </div>
             </Col>
             <Col lg={4} md={4} sm={6} xs={12}>
