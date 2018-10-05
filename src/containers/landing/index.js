@@ -15,7 +15,8 @@ import UserIcon from 'mdi-react/UserIcon';
 const logo = process.env.PUBLIC_URL + '/img/landing/logo_svg.svg';
 const funds_scroll = process.env.PUBLIC_URL + 'https://vgy.me/BHMrSL.png';
 const responsive = process.env.PUBLIC_URL + '/img/landing/admin_book.png';
-const fund_page = process.env.PUBLIC_URL + 'https://vgy.me/NkQAed.png';
+const fund_page = process.env.PUBLIC_URL + 'https://is.gd/P4YYvv';
+const dashboard = process.env.PUBLIC_URL + 'https://is.gd/swGyxG';
 
 
 
@@ -99,7 +100,7 @@ export default class Landing extends PureComponent {
           <Col md={6} sm={12} xs={12}>
             <div className='landing__code-text'>
               <div className='landing__code-wrap'>
-                <h3 className='landing__section-title'>Вся необходимая информация – в одном месте</h3>
+                <h3 className='landing__section-title'>Вся информация в одном месте </h3>
                 <p>Удобно структурированная информация об управляющей компании и ее фондах позволяет, не покидая сайт, получить точное представление о каждом финансовом продукте, представленном на Финансовой платформе. С карточки фонда вы можете перейти непосредственно к покупке паев. </p>
 
               </div>
@@ -122,6 +123,40 @@ export default class Landing extends PureComponent {
             </div>
           </Col>
         </Row>
+
+        <Row className='landing__code'>
+          <Col md={6} sm={12} xs={12}>
+            <div className='landing__code-text'>
+              <div className='landing__code-wrap'>
+                <h3 className='landing__section-title'>Многофункциональный личный кабинет</h3>
+                <p>Управление инвестиционным портфелем из единого интерфейса. Уведомление и документы. Коммуникации с управляющими компаниями. Персональная аналитика. Всё это специально для вас. </p>
+
+              </div>
+            </div>
+          </Col>
+          <Col md={6} sm={12} xs={12}>
+            <div className='landing__code-img landing__code-img--no-shadow'>
+              <div className='landing__code-wrap'>
+
+                <div className='browser'>
+                  <div className='panel'>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <img className='' src={dashboard} alt='' />
+                </div>
+
+              </div>
+            </div>
+          </Col>
+        </Row>
+        <span ref={(section) => {
+          this.Features = section;
+        }} />
+        <Features />
+
+
         <section className='landing__section mob'>
           <Row className='landing__code'>
             <Col md={6} sm={12} xs={12}>
@@ -154,10 +189,6 @@ export default class Landing extends PureComponent {
         </section>
 
 
-        <span ref={(section) => {
-          this.Features = section;
-        }} />
-        <Features />
 
 
 
@@ -166,9 +197,9 @@ export default class Landing extends PureComponent {
         }} />
 
 
-
-        <FeatureRequest />
         <Technologies />
+        <FeatureRequest />
+
         <Footer />
       </div>
     )
