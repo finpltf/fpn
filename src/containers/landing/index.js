@@ -16,7 +16,7 @@ const logo = process.env.PUBLIC_URL + '/img/landing/logo_svg.svg';
 const funds_scroll = process.env.PUBLIC_URL + 'https://vgy.me/BHMrSL.png';
 const responsive = process.env.PUBLIC_URL + '/img/landing/admin_book.png';
 const fund_page = process.env.PUBLIC_URL + 'https://is.gd/P4YYvv';
-const dashboard = process.env.PUBLIC_URL + 'https://is.gd/3ZM1m4';
+const dashboard = process.env.PUBLIC_URL + 'https://vgy.me/PNaVCZ.png';
 
 
 
