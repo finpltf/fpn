@@ -15,7 +15,7 @@ const investmanagement = process.env.PUBLIC_URL + '/img/landing/uk/investmanagem
 export default class Technologies extends PureComponent {
   render() {
     return (
-      <section className='landing__section'>
+      <section className='landing__section friends'>
         <Container>
           <Row>
             <Col md={12}>

@@ -10,7 +10,7 @@ export default class FeatureRequest extends PureComponent {
             <Col md={12}>
               <h3 className='end__text'>
 
-                Зарегистрируйтесь и <b>инвестируйте онлайн</b> прямо сейчас! <br />
+                Регистрируйте и <b>инвестируйте в ПИФы </b> онлайн, прямо сейчас! <br />
               </h3>
               <div className='landing__center-btn'>
                 <a className='landing__btn rounded' target='_blank' rel='noopener noreferrer'

@@ -4,7 +4,7 @@ import { Col, Row, Container } from 'reactstrap';
 export default class Features extends PureComponent {
   render() {
     return (
-      <section className='landing__section'>
+      <section className='landing__section features'>
         <Container>
           <Row>
             <Col md={12}>
