@@ -10,10 +10,9 @@ import ShieldIcon from 'mdi-react/ShieldIcon';
 import ShieldOutlineIcon from 'mdi-react/ShieldOutlineIcon';
 import StarIcon from 'mdi-react/StarIcon';
 import StarBorderIcon from 'mdi-react/StarBorderIcon';
-import SimpleLineChart from './SimpleLineChart';
 
-const graphUp = process.env.PUBLIC_URL + '/img/graph_up2.svg';
-const graphDown = process.env.PUBLIC_URL + '/img/graph_down2.svg';
+const graphUp = process.env.PUBLIC_URL + '/img/graph_up.svg';
+const graphDown = process.env.PUBLIC_URL + '/img/graph_down.svg';
 
 
 

@@ -11,7 +11,7 @@ class BuyButton extends PureComponent {
 
     return (
       <Col md={12} lg={3}>
-        <Button color='primary' className='rounded margin-30'><CartIcon /> Купить онлайн</Button>
+        <Button color='primary' className='rounded'><CartIcon /> Купить онлайн</Button>
       </Col>
     )
   }

@@ -398,15 +398,19 @@ margin: 0px 0 50px 0;
 
   &.mob {
     
-margin-top: 150px;
+            margin-top: 150px;
 
-                    @media (max-width: 576px) { 
+            @media (max-width: 576px) { 
               margin-top: 0;
             }
 
 
             .landing__code-text {
               margin-left: 50px !important;
+
+              @media (max-width: 576px) { 
+              margin-left: 0 !important;
+            }
             }
   }
 
@@ -526,7 +530,7 @@ margin-top: 150px;
 
   .landing__technology-img {
     width: 100%;
-    max-height: 110px;
+    max-height: 70px;
     margin: auto;
   }
 
@@ -619,6 +623,10 @@ ol {
   //New feature
 .features {
   padding-top:190px;
+
+                @media (max-width: 576px) { 
+              padding-top: 0;
+            }
 }
   .landing__new-feature {
     padding-bottom: 50px;

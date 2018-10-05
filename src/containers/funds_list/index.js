@@ -11,9 +11,7 @@ export default class FundsList extends PureComponent {
           <h3 className='page-title'>Каталог фондов</h3>
         </Row>
         <FundFilter />
-        <Row>
           <GetFundsList />
-        </Row>
       </Container>
     )
   }
