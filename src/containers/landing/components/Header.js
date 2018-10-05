@@ -21,7 +21,7 @@ export default class Header extends PureComponent {
 
 
 </p>
-              <Link className='landing__btn landing__btn--header rounded' to='/funds' >Перейти в каталог ПИФ</Link>
+              <Link className='landing__btn landing__btn--header rounded' to='/funds' >Перейти в каталог фондов</Link>
             </Col>
           </Row>
         </Container>
