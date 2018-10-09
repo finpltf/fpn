@@ -7,6 +7,7 @@ import SidebarMobile from './topbar_with_navigation/sidebar_mobile/SidebarMobile
 import NotificationSystem from 'rc-notification';
 import { BasicNotification } from '../../components/Notification';
 
+
 let notification = null;
 NotificationSystem.newInstance({}, (n) => notification = n);
 
@@ -50,5 +51,6 @@ class Layout extends PureComponent {
 export default connect(state => {
   return {
     customizer: state.customizer
+
   }
 })(Layout);

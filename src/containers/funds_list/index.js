@@ -2,8 +2,22 @@ import React, { PureComponent } from 'react';
 import { Col, Container, Row } from 'reactstrap';
 import GetFundsList from './components/FundsList';
 import FundFilter from './components/fundFilter';
+import API from '../../classes/api';
 
 export default class FundsList extends PureComponent {
+
+  constructor(props) {
+    super(props);
+  }
+
+  componentWillMount() {
+  }
+
+  componentWillMount() {
+  }
+
+
+
   render() {
     return (
       <Container className='fundsList'>
@@ -11,7 +25,7 @@ export default class FundsList extends PureComponent {
           <h3 className='page-title'>Каталог фондов</h3>
         </Row>
         <FundFilter />
-          <GetFundsList />
+        <GetFundsList />
       </Container>
     )
   }

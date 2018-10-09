@@ -1,14 +1,14 @@
-import {combineReducers, createStore} from 'redux';
-import {reducer as reduxFormReducer} from 'redux-form';
+import { combineReducers, createStore } from 'redux';
 import {
   newOrderTableReducer,
   sidebarReducer,
   themeReducer,
-  customizerReducer
+  customizerReducer,
+  api
 } from '../redux/reducers/index';
 
 const reducer = combineReducers({
-  form: reduxFormReducer, // mounted under "form",
+  api: api, // mounted under "form",
   theme: themeReducer,
   sidebar: sidebarReducer,
   newOrder: newOrderTableReducer,

@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '../scss/app.scss';
 import Router from './Router';
 
+
+
 class App extends Component {
   constructor() {
     super();
@@ -17,8 +19,7 @@ class App extends Component {
   componentDidMount() {
     window.addEventListener('load', () => {
       this.setState({ loading: false });
-      setTimeout(() => this.setState({ loaded: true }), 500);
-
+      setTimeout(() => this.setState({ loaded: true }), 50);
       this.setState();
     });
   }

@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import { Col, Row, Container, section } from 'reactstrap';
 import scrollToComponent from 'react-scroll-to-component';
 import Header from './components/Header';
-import Price from './components/Price';
 import Registration from './components/Registration';
 import Technologies from './components/Technologies';
 import FundsLine from './components/FundsLine';
@@ -13,9 +12,9 @@ import { NavLink, Link } from 'react-router-dom';
 import UserIcon from 'mdi-react/UserIcon';
 
 const logo = process.env.PUBLIC_URL + '/img/landing/logo_svg.svg';
-const funds_scroll = process.env.PUBLIC_URL + 'https://vgy.me/BHMrSL.png';
+const funds_scroll = process.env.PUBLIC_URL + 'https://is.gd/d2Y5t5';
 const responsive = process.env.PUBLIC_URL + '/img/landing/admin_book.png';
-const fund_page = process.env.PUBLIC_URL + 'https://is.gd/P4YYvv';
+const fund_page = process.env.PUBLIC_URL + 'https://is.gd/Qr0OlC';
 const dashboard = process.env.PUBLIC_URL + 'https://vgy.me/PNaVCZ.png';
 
 
@@ -59,7 +58,6 @@ export default class Landing extends PureComponent {
         </div>
         <Header />
 
-
         <span ref={(section) => {
           this.About = section;
         }} />
@@ -70,7 +68,7 @@ export default class Landing extends PureComponent {
             <div className='landing__code-text'>
               <div className='landing__code-wrap'>
                 <h3 className='landing__section-title'>Широкая линейка финансовых инструментов</h3>
-                <p>Вы легко можете отфильтровать и сравнить инвестиционные фонды представленные в нашей витрине, по разным показателям, важным именно для вас.</p>
+                <p>Вы легко можете отфильтровать и сравнить инвестиционные фонды, представленные в нашей витрине, по разным показателям, важным именно для вас.</p>
 
               </div>
             </div>
