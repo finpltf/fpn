@@ -14,6 +14,7 @@ export default class Footer extends PureComponent {
             </Col>
           </Row>
         </Container>
+        
       </footer>
     )
   }

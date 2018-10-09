@@ -299,8 +299,8 @@ display: block;
     margin: auto;
     color: $landing-accent-color;
     margin-bottom: 10px;
-    font-weight: 500;
-    font-size:36px;
+    font-weight: 600;
+    font-size:42px;
 
       @media (max-width: 576px) {
         font-size: 28px;
@@ -309,13 +309,16 @@ display: block;
 
   }
 .landing__header-subtitle {
-      display: block;
+    display: block;
     width: 100%;
     padding: 0 10%;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #646777;
 
           @media (max-width: 576px) {
-    font-size: 18px;
+    font-size: 16px;
     padding: 0 5%;
     font-weight: 400;
     line-height: 1.1;
@@ -622,7 +625,7 @@ ol {
   }
   //New feature
 .features {
-  padding-top:190px;
+  padding-top:50px;
 
                 @media (max-width: 576px) { 
               padding-top: 0;
@@ -664,9 +667,8 @@ ol {
     margin-top: 105px;
     flex-direction: row-reverse;
     padding-bottom: 0;
-    max-width: 1500px;
     margin: 0 auto;
-
+    max-width: 1360px;
     
                 @media (max-width: 576px) { 
  padding-bottom: 10px;
