@@ -43,6 +43,7 @@
     "mdi-react": "^4.3.0",
     "minimatch": "^3.0.4",
     "moment": "^2.22.2",
+    "netlify-cms": "^2.1.2",
     "npm": "^6.4.1",
     "object-assign": "4.1.1",
     "pm2": "^3.1.2",
