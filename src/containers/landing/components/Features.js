@@ -46,8 +46,8 @@ export default class Features extends PureComponent {
                 </div>
 
 
-                <h4 className='landing__feature-title'>Без дополнительных комиссий</h4>
-                <p className='landing__feature-text'>Вы не платите больше, пользуясь всеми преимуществами онлайн-доступа на финансовый рынок</p>
+                <h4 className='landing__feature-title'>Без конских комиссий</h4>
+                <p className='landing__feature-text'>Вы платите не так уж и много, пользуясь всеми преимуществами онлайн-доступа на финансовый рынок. Нужно заменить это преимущество.</p>
               </div>
             </Col>
 
