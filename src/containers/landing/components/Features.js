@@ -27,7 +27,7 @@ export default class Features extends PureComponent {
                   <img src={process.env.PUBLIC_URL + '/img/landing/icons/certificate.svg'} alt='' />
                 </div>
                 <h4 className='landing__feature-title'>Сделки с паями онлайн</h4>
-                <p className='landing__feature-text'>Дистанционное заключение договора с управляющей компанией проще, чем в офисе, и занимает меньше времени</p>
+                <p className='landing__feature-text'>Дистанционное оформление сделок с управляющей компанией проще, чем в офисе, и занимает меньше времени</p>
               </div>
             </Col>
             <Col lg={4} md={4} sm={6} xs={12}>
