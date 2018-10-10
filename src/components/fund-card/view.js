@@ -13,27 +13,19 @@ class FundCard extends Component {
     };
   }
 
-  componentDidMount() {
-    this.getFund();
+  componentWillMount() {
+    this.loadFundsList();
   }
 
-  getFund() {
-    let get_cs = helper.findObjectInArray(this.props.pifList, 'id', parseInt(this.props.id));
-    if (!!get_cs) {
-      this.setState({
-        loading: true,
-        data: get_cs,
-      });
-    } else {
-      API.getFund(this.props.id).then(data => {
-        this.setState({
-          loading: true,
-          data: data,
-        });
-        this.props.loadPif(data);
+  loadFundsList() {
+    if (!this.props.loadingUkList && this.props.ukList.length == 0) {
+      this.props.onLoadUkLIst(true);
+      API.getCompanies().then(data => {
+        this.props.loadUkLIst(data);
       });
     }
   }
+
 
   render() {
     return <div>

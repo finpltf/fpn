@@ -4,14 +4,14 @@ import {
 } from '../../constants';
 
 // Значения по умолчанию
-const _initialState = {
+const initialState = {
     showUkLIst: false,
     showUkLIstMobile: false
 };
 
-export default (state = _initialState, { type, payload }) => {
-    switch (type) {
 
+export default function (state = initialState, action) {
+    switch (action.type) {
         case SHOW_UK_SMALL_LIST:
             return Object.assign({}, state, {
                 showUkLIst: !state.showUkLIst,
@@ -20,7 +20,6 @@ export default (state = _initialState, { type, payload }) => {
             return Object.assign({}, state, {
                 showUkLIstMobile: !state.showUkLIstMobile,
             });
-
         default:
             return state;
     }

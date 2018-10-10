@@ -15,7 +15,7 @@ export default class Features extends PureComponent {
             <Col lg={4} md={4} sm={6} xs={12}>
               <div className='landing__feature'>
                 <div className='landing__feature-img-wrap'>
-                  <img src={process.env.PUBLIC_URL + '/img/landing/icons/profile.svg'} alt='' />
+                  <img src={process.env.PUBLIC_URL + '/img/landing/icons/fingerprint.svg'} alt='' />
                 </div>
                 <h4 className='landing__feature-title'>Онлайн-идентификация</h4>
                 <p className='landing__feature-text'>Вы сможете подтвердить свою личность на сайте Финансовой платформы с помощью вашего аккаунта на Госуслугах или по паспорту и СНИЛС</p>
@@ -24,17 +24,16 @@ export default class Features extends PureComponent {
             <Col lg={4} md={4} sm={6} xs={12}>
               <div className='landing__feature'>
                 <div className='landing__feature-img-wrap'>
-                  <img src={process.env.PUBLIC_URL + '/img/landing/icons/approve-invoice.svg'} alt='' />
+                  <img src={process.env.PUBLIC_URL + '/img/landing/icons/certificate.svg'} alt='' />
                 </div>
-                <h4 className='landing__feature-title'>Простая процедура заключения договора
-</h4>
-                <p className='landing__feature-text'>Онлайн-заключение договора с управляющей компанией проще, чем в офисе, и занимает меньше времени</p>
+                <h4 className='landing__feature-title'>Сделки с паями онлайн</h4>
+                <p className='landing__feature-text'>Дистанционное заключение договора с управляющей компанией проще, чем в офисе, и занимает меньше времени</p>
               </div>
             </Col>
             <Col lg={4} md={4} sm={6} xs={12}>
               <div className='landing__feature'>
                 <div className='landing__feature-img-wrap'>
-                  <img src={process.env.PUBLIC_URL + '/img/landing/icons/clock.svg'} alt='' />
+                  <img src={process.env.PUBLIC_URL + '/img/landing/icons/planet-earth.svg'} alt='' />
                 </div>
                 <h4 className='landing__feature-title'>Инвестиции 24х7</h4>
                 <p className='landing__feature-text'>Вы больше не зависите от часов работы управляющей компании, банка или агента. Инвестируйте находясь в любой точке мира</p>
@@ -55,7 +54,7 @@ export default class Features extends PureComponent {
             <Col lg={4} md={4} sm={6} xs={12}>
               <div className='landing__feature'>
                 <div className='landing__feature-img-wrap'>
-                  <img src={process.env.PUBLIC_URL + '/img/landing/icons/artificial-intelligence.svg'} alt='' />
+                  <img src={process.env.PUBLIC_URL + '/img/landing/icons/idea.svg'} alt='' />
                 </div>
                 <h4 className='landing__feature-title'>Осознанное принятие решения</h4>
                 <p className='landing__feature-text'>Вы принимаете решение об инвестировании после внимательного изучения достоверной информации, с помощью удобных инструментов сравнения и выбора</p>

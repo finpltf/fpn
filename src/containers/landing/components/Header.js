@@ -13,9 +13,9 @@ export default class Header extends PureComponent {
         <Container>
           <Row>
             <Col md={12}>
-              <h2 className='landing__header-title'>Инвестируйте в ПИФы онлайн<br />
+              <h2 className='landing__header-title'>Инвестируйте в ПИФ онлайн<br />
               </h2>
-              <span className='landing__header-subtitle'>без дополнительных комиссий и бумажных документов</span>
+              <span className='landing__header-subtitle'>без бумажных документов и очередей</span>
               <p class="landing__header-subhead">
                 Финансовая платформа – ваш новый инструмент для операций с паями инвестиционных фондов.<br />
                 Мы наладили сотрудничество с надежными управляющими компаниями и сделали процесс инвестирования простым и понятным.
@@ -23,7 +23,7 @@ export default class Header extends PureComponent {
                 <br />
                 Визиты в офисы компаний и бумажные документы вам больше не нужны:
 <br></br>
-                заключение договора и все операции с паями через интернет — теперь это возможно!
+                заключение договора и операции с паями через интернет — теперь это возможно!
 
 
 

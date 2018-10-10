@@ -4,14 +4,13 @@ require('isomorphic-fetch');
 
 class API {
 
-
     constructor() {
 
         if (process.env.NODE_ENV === 'production') {
             this.server = window.location.origin;
 
         } else {
-            this.server = CONFIG.apiUrl;
+            this.server = 'https://cors-anywhere.herokuapp.com/my.platform.finance';
         }
 
         this.auth = 'c2l0ZTo0ekJuV0Z4cDJ0RHV3NER4UDRucFEwN3p1ODludXAyag==';
@@ -22,7 +21,7 @@ class API {
     }
 
     getFunds() {
-        return this.callMethod('api/External/funds?limit=100');
+        return this.callMethod('api/v1/funds?limit=100');
     }
 
     getFundStructureTypes() {
@@ -38,7 +37,7 @@ class API {
     }
 
     getCompanies() {
-        return this.callMethod('api/External/companies');
+        return this.callMethod('api/v1/companies');
     }
 
     getCompany(id) {
@@ -72,7 +71,7 @@ class API {
             ).then(data => {
                 resolve(data);
             }).catch(function (err) {
-                console.log(err);
+                
             });
         });
     }

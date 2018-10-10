@@ -6,6 +6,8 @@ import UkSmallList from './view';
 import { loadUkLIst, loadingUkLIst } from '../../redux/actions/api';
 import { ukSmallList, ukSmallListMobile } from '../../redux/actions/ukSmallList';
 
+
+
 export function mapStateToProps(state) {
   return {
     ukList: state.api.ukList,
