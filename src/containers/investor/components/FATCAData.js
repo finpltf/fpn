@@ -59,7 +59,7 @@ class FATCAData extends PureComponent {
 
                         <div>
                             <div className='' id=''>
-                                <CheckBox label={t('podft.p_is_ipdl')} />
+                                <CheckBox className='tooltip' label={t('podft.p_is_ipdl')} />
                                 <QuestionMarkIcon id='p_is_ipdl' />
                             </div>
                             <UncontrolledTooltip placement='right' target='p_is_ipdl'>
@@ -67,24 +67,27 @@ class FATCAData extends PureComponent {
               </UncontrolledTooltip>
                         </div>
                         <div>
-                            <div className='' id='p_is_mpdl'>
+                            <div>
                                 <CheckBox label={t('podft.p_is_mpdl')} />
+                                <QuestionMarkIcon id='p_is_mpdl' />
                             </div>
                             <UncontrolledTooltip placement='right' target='p_is_mpdl'>
-                                {t('podft.p_is_adopter_tip')}
+                                {t('podft.p_is_mpdl_tip')}
                             </UncontrolledTooltip>
                         </div>
                         <div>
-                            <div id="p_is_adopter">
+                            <div>
                                 <CheckBox label={t('podft.p_is_adopter')} />
+                                <QuestionMarkIcon id='p_is_adopter' />
                             </div>
                             <UncontrolledTooltip placement='right' target='p_is_adopter'>
                                 {t('podft.p_is_adopter_tip')}
                             </UncontrolledTooltip>
                         </div>
                         <div>
-                            <div id='p_is_highpost_tip'>
+                            <div>
                                 <CheckBox label={t('podft.p_is_highpost')} />
+                                <QuestionMarkIcon id='p_is_highpost_tip' />
                             </div>
                             <UncontrolledTooltip placement='right' target='p_is_highpost_tip'>
                                 {t('podft.p_is_highpost_tip')}
@@ -93,14 +96,22 @@ class FATCAData extends PureComponent {
                         <div>
                             <div className=''>
                                 <CheckBox label={t('podft.p_is_beneficial_owner')} />
-
+                                <QuestionMarkIcon id='p_is_beneficial_owner' />
                             </div>
+                            <UncontrolledTooltip placement='right' target='p_is_beneficial_owner'>
+                                {t('podft.p_is_beneficial_owner_tip')}
+                            </UncontrolledTooltip>
+
                         </div>
                         <div>
                             <div className=''>
                                 <CheckBox label={t('podft.p_is_notcomply_fatf')} />
-
+                                <QuestionMarkIcon id='p_is_notcomply_fatf' />
                             </div>
+                            <UncontrolledTooltip placement='right' target='p_is_notcomply_fatf'>
+                                {t('podft.p_is_beneficial_owner_tip')}
+                            </UncontrolledTooltip>
+
                         </div>
                         <Button color='primary' type='submit' className='rounded w100'>Сохранить</Button>
                     </form>
