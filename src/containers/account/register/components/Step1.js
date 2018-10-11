@@ -1,28 +1,30 @@
 import React, { PureComponent } from 'react';
+import { Button } from 'reactstrap';
 import { Field, reduxForm } from 'redux-form';
-import { Card, CardBody, Col, Button, ButtonToolbar } from 'reactstrap';
-import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
 import { Link } from 'react-router-dom';
-
+import validate from './validate'
 
 const renderTextField = ({ input, label, meta: { touched, error }, children, select }) => (
-  <TextField
-    className='material-form__field'
-    label={label}
-    error={touched && error}
-    value={input.value}
-    children={children}
-    select={select}
-    onChange={(e) => {
-      e.preventDefault();
-      input.onChange(e.target.value);
-    }}
-  />
+  <div className="form__form-group-input-wrap">
+    <TextField
+      className='material-form__field'
+      label={label}
+      value={input.value}
+      children={children}
+      select={select}
+      onChange={(e) => {
+        e.preventDefault();
+        input.onChange(e.target.value);
+      }}
+    />
+    {touched && error && <span className="form__form-group-error">{error}</span>}
+  </div>
 );
 
 
-class RegisterForm extends PureComponent {
+
+class Step1 extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -40,8 +42,7 @@ class RegisterForm extends PureComponent {
   }
 
   render() {
-    const { handleSubmit } = this.props;
-
+    const { handleSubmit, pristine, reset, submitting, t } = this.props;
     return (
       <div className='registration'>
         <div className='card__title'>
@@ -51,18 +52,21 @@ class RegisterForm extends PureComponent {
         <form className='material-form' onSubmit={handleSubmit}>
           <div>
             <Field
-              name='uremaill'
+              name='login'
+              className='inp'
               component={renderTextField}
-              placeholder='your@email.com'
               label='E-mail или телефон'
+              fullWidth={true}
               type='text'
             />
           </div>
           <div>
             <Field
               name='password'
+              className='inp'
               component={renderTextField}
               type='password'
+              fullWidth={true}
               label='Пароль'
             />
           </div>
@@ -80,5 +84,6 @@ class RegisterForm extends PureComponent {
 }
 
 export default reduxForm({
-  form: 'register_form', // a unique identifier for this form
-})(RegisterForm);
+  form: 'Step1', // a unique identifier for this form
+  validate,
+})(Step1);

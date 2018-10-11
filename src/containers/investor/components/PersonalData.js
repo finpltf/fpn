@@ -1,54 +1,14 @@
 import React, { PureComponent } from 'react';
-import { Card, CardBody, Col, Row, Button, ButtonToolbar } from 'reactstrap';
+import { Card, CardBody, Col, Row, Button } from 'reactstrap';
 import { Field, reduxForm } from 'redux-form';
 import TextField from '@material-ui/core/TextField';
-import MenuItem from '@material-ui/core/MenuItem';
 import { translate } from 'react-i18next';
-import MaskedInput from 'react-text-mask';
+import validate from './validate';
 
-
-
-const renderTextField = ({ input, label, meta: { touched, error }, children, select, mask }) => (
-  <TextField
-    className='material-form__field'
-    label={label}
-    error={touched && error}
-    value={input.value}
-    mask={mask}
-    children={children}
-    select={select}
-    onChange={(e) => {
-      e.preventDefault();
-      input.onChange(e.target.value);
-    }}
-  />
-);
-const renderTextFieldMask = ({ input, label, meta: { touched, error }, children, select, mask }) => (
-  <MaskedInput {...input}
-    className='material-form__field'
-    label={label}
-    error={touched && error}
-    value={input.value}
-    mask={mask}
-    children={children}
-    select={select}
-    onChange={(e) => {
-      e.preventDefault();
-      input.onChange(e.target.value);
-    }}
-  />
-);
-
-const renderField = ({ input, label, placeholder, type, meta: { touched, error }, children, mask }) => (
-  <MaskedInput {...input} placeholder={placeholder} type={type} mask={mask} className='material-form__field' error={touched && error}
-    value={input.value} children={children} mask={mask} label={label} />
-);
-
-const all = /[A-Za-z0-9]/;
 
 class PersonalData extends PureComponent {
   render() {
-    const { handleSubmit } = this.props;
+    const { handleSubmit, pristine, reset, submitting, t } = this.props;
     return (
       <Card>
         <CardBody>
@@ -61,35 +21,42 @@ class PersonalData extends PureComponent {
             <div>
               <Field
                 name='lname'
-                component={renderTextField}
-                placeholder='Фамилия'
+                className='inp'
+                fullWidth='true'
+                component={TextField}
+                placeholder=''
                 label='Фамилия'
-                value='Константинопольский'
               />
             </div>
             <div>
               <Field
-                name='name'
-                component={renderTextField}
-                placeholder='Константин'
+                name='fname'
+                className='inp'
+                fullWidth='true'
+                component={TextField}
+                placeholder=''
+                maxlenght='6'
                 label='Имя'
-                value='Константин'
               />
             </div>
-  
+
             <div>
               <Field
                 name='mname'
-                component={renderTextField}
-                placeholder='Отчество'
+                className='inp'
+                fullWidth='true'
+                component={TextField}
+                placeholder=''
                 label='Отчество'
               />
             </div>
             <div>
               <Field
                 name='bday'
-                component={renderTextField}
-                placeholder='Дата рождения'
+                className='inp'
+                fullWidth='true'
+                component={TextField}
+                placeholder=''
                 label='Дата рождения'
                 type='text'
               />
@@ -100,8 +67,10 @@ class PersonalData extends PureComponent {
                 <div>
                   <Field
                     name='pass_seria'
-                    component={renderTextField}
-                    placeholder='Серия'
+                    className='inp'
+                    fullWidth='true'
+                    component={TextField}
+                    placeholder='0000'
                     label='Серия'
                   />
                 </div>
@@ -112,8 +81,10 @@ class PersonalData extends PureComponent {
                 <div>
                   <Field
                     name='pass_num'
-                    component={renderTextField}
-                    placeholder='Номер'
+                    className='inp'
+                    fullWidth='true'
+                    component={TextField}
+                    placeholder=''
                     label='Номер'
                   />
                 </div>
@@ -123,7 +94,9 @@ class PersonalData extends PureComponent {
             <div>
               <Field
                 name='vendor'
-                component={renderTextField}
+                className='inp'
+                fullWidth='true'
+                component={TextField}
                 placeholder='Кем выдан'
                 label='Кем выдан'
               />
@@ -134,7 +107,9 @@ class PersonalData extends PureComponent {
                 <div>
                   <Field
                     name='data'
-                    component={renderTextField}
+                    className='inp'
+                    fullWidth='true'
+                    component={TextField}
                     placeholder='Дата выдачи'
                     label='Дата выдачи'
                   />
@@ -146,7 +121,9 @@ class PersonalData extends PureComponent {
                 <div>
                   <Field
                     name='pass_code'
-                    component={renderTextField}
+                    className='inp'
+                    fullWidth='true'
+                    component={TextField}
                     placeholder='Код подразделения'
                     label='Код подразделения'
                     value='125-384'
@@ -155,34 +132,40 @@ class PersonalData extends PureComponent {
 
               </Col>
             </Row>
-                                <Row>
-          <Col xs={6}>  
-          <div>
-                <Field
-                  name='snils'
-                  component={renderTextField}
-                  placeholder='СНИЛС'
-                  label='СНИЛС'
-                />
-              </div>
+            <Row>
+              <Col xs={6}>
+                <div>
+                  <Field
+                    name='snils'
+                    className='inp'
+                    fullWidth='true'
+                    component={TextField}
+                    placeholder='СНИЛС'
+                    label='СНИЛС'
+                  />
+                </div>
 
-          </Col>
-          <Col xs={6}>  
- 
-          <div>
-                <Field
-                  name='inn'
-                  component={renderTextField}
-                  label='ИНН'
-                />
-              </div>
-          
-          </Col>
-        </Row>
+              </Col>
+              <Col xs={6}>
+
+                <div>
+                  <Field
+                    name='inn'
+                    className='inp'
+                    fullWidth='true'
+                    component={TextField}
+                    label='ИНН'
+                  />
+                </div>
+
+              </Col>
+            </Row>
             <div>
               <Field
                 name='address2'
-                component={renderTextField}
+                className='inp'
+                fullWidth='true'
+                component={TextField}
                 placeholder='Адрес регистрации'
                 label='Адрес регистрации'
               />
@@ -190,7 +173,9 @@ class PersonalData extends PureComponent {
             <div>
               <Field
                 name='adddress1'
-                component={renderTextField}
+                className='inp'
+                fullWidth='true'
+                component={TextField}
                 placeholder='Адрес проживания'
                 label='Адрес проживания'
               />
@@ -207,4 +192,6 @@ class PersonalData extends PureComponent {
 
 export default reduxForm({
   form: 'PersonalData', // a unique identifier for this form
+  validate,
 })(translate('common')(PersonalData));
+

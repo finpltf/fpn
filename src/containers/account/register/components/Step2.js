@@ -24,7 +24,7 @@ const renderTextField = ({ input, label, meta: { touched, error }, children, sel
 
 
 
-class ConfirmPhone extends PureComponent {
+class Step2 extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -60,12 +60,13 @@ class ConfirmPhone extends PureComponent {
               <Field
                 name='uremaill'
                 component={renderTextField}
+                fullWidth={true}
                 label='Код подтверждения'
                 type='text'
               />
             </Col>
             <Col lg={3}>
-              <Link to='/login'><SyncIcon/></Link>
+              <Link to='/login'><SyncIcon /></Link>
             </Col>
           </Row>
           <Button color='primary' type='submit' className='next rounded w100' >Подтвердить</Button>
@@ -78,5 +79,5 @@ class ConfirmPhone extends PureComponent {
 }
 
 export default reduxForm({
-  form: 'ConfirmPhone', // a unique identifier for this form
-})(ConfirmPhone);
+  form: 'Step2', // a unique identifier for this form
+})(Step2);

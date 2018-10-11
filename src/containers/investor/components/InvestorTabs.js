@@ -37,7 +37,7 @@ export default class InvestorTabs extends PureComponent {
         <Row className='profile__card tabs'>
 
 
-          <Col xl={4}>
+          <Col xl={3}>
             <Nav tabs>
               <NavItem>
                 <NavLink
@@ -73,10 +73,10 @@ export default class InvestorTabs extends PureComponent {
                   Анкеты FATCA и ПОДФТ
                   </NavLink>
               </NavItem>
-      
+
             </Nav>
           </Col>
-          <Col xl={8}
+          <Col xl={9}
           >
             <TabContent activeTab={this.state.activeTab}>
               <TabPane tabId='1'>
@@ -88,7 +88,7 @@ export default class InvestorTabs extends PureComponent {
               <TabPane tabId='3'>
                 <FATCAData onSubmit={showResults} />
               </TabPane>
-   
+
             </TabContent>
           </Col>
 

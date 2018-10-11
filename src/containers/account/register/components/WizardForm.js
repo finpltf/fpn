@@ -1,15 +1,14 @@
 import React, { PureComponent } from 'react';
 import { Col, Card, Row } from 'reactstrap';
-import RegisterForm from './RegisterForm';
-import ConfirmPhone from './ConfirmPhone';
-import WizardForm2 from './WizardForm2';
-import WizardForm3 from './WizardForm3';
-import WizardForm4 from './WizardForm4';
+import Step1 from './Step1';
+import Step2 from './Step2';
+import Step3 from './Step3';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import NotificationSystem from 'rc-notification';
 import { BasicNotification } from '../../../../components/Notification';
+import PropTypes from 'prop-types';
 
 let notification = null;
 NotificationSystem.newInstance({}, (n) => notification = n);
@@ -52,6 +51,7 @@ export default class WizardForm extends PureComponent {
 
   nextPage() {
     this.setState({ page: this.state.page + 1 });
+    console.log(this.state);
 
   }
   notifyNextPage() {
@@ -84,20 +84,20 @@ export default class WizardForm extends PureComponent {
 
             <div className='wizard '>
               <div className='wizard__form-wrapper'>
-                {page === 1 && <RegisterForm onSubmit={this.nextPage} />}
+                {page === 1 && <Step1 onSubmit={this.nextPage} />}
                 {page === 2 &&
-                  <ConfirmPhone
+                  <Step2
                     previousPage={this.previousPage}
                     onSubmit={this.notifyNextPage}
                   />
                 }
                 {page === 3 &&
-                  <WizardForm3
+                  <Step3
                     previousPage={this.previousPage}
                     onSubmit={this.nextPage}
                   />}
                 {page === 4 &&
-                  <WizardForm4
+                  <Step3
                     previousPage={this.previousPage}
                     onSubmit={onSubmit}
                   />}
@@ -112,4 +112,6 @@ export default class WizardForm extends PureComponent {
     )
   }
 }
-
+WizardForm.propTypes = {
+  t: PropTypes.func.isRequired,
+};

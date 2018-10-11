@@ -9,7 +9,7 @@ class InvestorProfile extends PureComponent {
     const { t } = this.props;
 
     return (
-      <Container noWrap className='investorPage'>
+      <Container className='investorPage'>
         <Row>
           <Col sm={12} md={12} lg={6}>
             <h1 className='page-title'>{t('investor.title')}</h1>

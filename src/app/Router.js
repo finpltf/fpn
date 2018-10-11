@@ -22,6 +22,7 @@ import Dashboard from '../containers/dashboards/main';
 import Landing from '../containers/landing';
 
 
+import FormValidation from '../containers/form_validation';
 
 
 const Router = () => (
@@ -48,6 +49,7 @@ const wrappedRoutes = () => (
       <Route path='/settings' component={Settings} />
       <Route path='/mail' component={Mail} />
       <Route path='/faq' component={FAQ} />
+      <Route path="/form" component={FormValidation} />
     </div>
   </div>
 );
