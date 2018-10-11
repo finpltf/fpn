@@ -3,12 +3,12 @@ import { Card, CardBody, Col, Row, Nav, NavItem, NavLink, TabContent, TabPane } 
 import classnames from 'classnames';
 
 import PersonalData from './PersonalData';
-import PassportData from './PassportData';
-import AddressData from './AddressData';
-import AnketaPODFT from './AnketaPODFT';
+import FinanceData from './FinanceData';
+import FATCAData from './FATCAData';
 import showResults from './Show';
 import UserIcon from 'mdi-react/UserIcon';
-
+import WalletIcon from 'mdi-react/WalletMembershipIcon';
+import LayersIcon from 'mdi-react/LayersIcon';
 
 export default class InvestorTabs extends PureComponent {
 
@@ -34,79 +34,62 @@ export default class InvestorTabs extends PureComponent {
   render() {
     return (
       <Card>
-        <Row className='profile__card tabs tabs--bordered-bottom'>
+        <Row className='profile__card tabs'>
 
-          <Col xl={9}
+
+          <Col xl={4}>
+            <Nav tabs>
+              <NavItem>
+                <NavLink
+
+                  className={classnames({ active: this.state.activeTab === '1' })}
+                  onClick={() => {
+                    this.toggle('1');
+                  }}
+                >
+                  <UserIcon />
+                  Персональные данные
+                  </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  className={classnames({ active: this.state.activeTab === '2' })}
+                  onClick={() => {
+                    this.toggle('2');
+                  }}
+                >
+                  <WalletIcon />
+                  Банковские реквизиты
+                  </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  className={classnames({ active: this.state.activeTab === '3' })}
+                  onClick={() => {
+                    this.toggle('3');
+                  }}
+                >
+                  <LayersIcon />
+                  Анкеты FATCA и ПОДФТ
+                  </NavLink>
+              </NavItem>
+      
+            </Nav>
+          </Col>
+          <Col xl={8}
           >
             <TabContent activeTab={this.state.activeTab}>
               <TabPane tabId='1'>
                 <PersonalData onSubmit={showResults} />
               </TabPane>
               <TabPane tabId='2'>
-                <PassportData onSubmit={showResults} />
+                <FinanceData onSubmit={showResults} />
               </TabPane>
               <TabPane tabId='3'>
-                <AnketaPODFT onSubmit={showResults} />
+                <FATCAData onSubmit={showResults} />
               </TabPane>
-              <TabPane tabId='4'>
-                <AnketaPODFT onSubmit={showResults} />
-              </TabPane>
+   
             </TabContent>
-          </Col>
-
-
-          <Col xl={3}>
-            <Card>
-              <CardBody>
-                <Nav tabs>
-                  <NavItem>
-                    <NavLink
-
-                      className={classnames({ active: this.state.activeTab === '1' })}
-                      onClick={() => {
-                        this.toggle('1');
-                      }}
-                    >
-                      <UserIcon />
-                      Персональные данные
-                  </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      className={classnames({ active: this.state.activeTab === '2' })}
-                      onClick={() => {
-                        this.toggle('2');
-                      }}
-                    >
-                      <UserIcon />
-                      Банковские реквизиты
-                  </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      className={classnames({ active: this.state.activeTab === '3' })}
-                      onClick={() => {
-                        this.toggle('3');
-                      }}
-                    >
-                      <UserIcon />
-                      Анкета ПОД/ФТ
-                  </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      className={classnames({ active: this.state.activeTab === '4' })}
-                      onClick={() => {
-                        this.toggle('4');
-                      }}
-                    >
-                      <UserIcon />
-                      Анкета FATCA
-                </NavLink>
-                  </NavItem>
-                </Nav>
-              </CardBody>
-            </Card>
           </Col>
 
         </Row>

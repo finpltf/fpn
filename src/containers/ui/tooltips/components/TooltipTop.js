@@ -19,7 +19,7 @@ class TooltipTop extends PureComponent {
                 Tooltip on Top
               </Button>
               <UncontrolledTooltip placement='top' target='TooltipTop'>
-                Do you like dragons?
+                Близкие родственники по прямой, восходящей и нисходящей линии - сын, дочь (в том числе усыновленные), мать, отец (в том числе усыновители), бабушка, дедушка, полнородные и неполнородные (имеющие общих отца или мать) братья и сестры или супруг(а) граждан, относящихся к вышеперечисленным категориям
               </UncontrolledTooltip>
             </ButtonToolbar>
           </CardBody>

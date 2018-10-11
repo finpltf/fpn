@@ -21,7 +21,7 @@ const renderTextField = ({ input, label, meta: { touched, error }, children, sel
   />
 );
 
-class PassportData extends PureComponent {
+class FinanceData extends PureComponent {
   render() {
     const { handleSubmit, reset, t } = this.props;
     return (
@@ -82,5 +82,5 @@ class PassportData extends PureComponent {
 }
 
 export default reduxForm({
-  form: 'PassportData', // a unique identifier for this form
-})(translate('common')(PassportData));
+  form: 'FinanceData', // a unique identifier for this form
+})(translate('common')(FinanceData));

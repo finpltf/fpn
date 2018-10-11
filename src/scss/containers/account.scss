@@ -4,10 +4,14 @@
   min-height: 100vh;
   display: flex;
   overflow-y: auto;
+    box-sizing: inherit;
+
 
   .account__wrapper {
     margin: auto;
-    padding: 10px;
+    padding: 0;
+    min-width: 70%;
+    min-height: 500px;
   }
 
   .account__card {
@@ -16,12 +20,115 @@
       background-color: themed('colorBackground');
     }
 
-    background-color: #ffffff;
-    padding: 50px 60px;
-    max-width: 520px;
+    padding: 0;
+    max-width: 950px;
     width: 100%;
+    width: 100%;
+    margin: 0 auto;
+     box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.15);
+    .subhead {
+      font-size: 14px;
+      margin-top: 15px;
+    }
+    
+     h4 {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    p {
+      margin: 0;
+      a {
+        color:#333;
+        text-decoration: underline;
+      }
+    }
+    .row {
+&:first-child {
+          box-shadow: 0px 0px 20px 0px rgba(149, 149, 149, 0.52);
+          background: #FFF;        
+    }
+
+
+    .row {
+          box-shadow: 0 0 0 0;
+    }
+    }
+    .col {
+      min-width:300px;
+      padding: 4%;
+
+          display: flex;
+    -ms-flex-align: center;
+    /* -webkit-align-items: center; */
+    /* -webkit-box-align: center; */
+    flex-direction: column;
+    justify-content: center;
+
+      .col {
+        padding: 0;
+        
+      }
+
+
+
+    }
+
+
+    .material-form {
+      padding: 0;
+      margin: 0;
+    }
+
+    .side {
+      padding: 4%;
+
+      &.side__left {
+        background: #eee;
+      }
+    }
+
+    .text {
+      position: absolute;
+      top:50%;
+      transform:translateY(-50%)
+    }
+  
   }
 
+  .wizard__step {
+    display: inline-block;
+    background: #eee;
+    width:35px;
+    height:35px;
+    line-height: 35px;
+    border-radius: 50%;
+text-align: center;
+    &.wizard__step--active {
+      background: #ee1a2d;
+      p {
+color:#FFF;
+      }
+      
+    }
+  }
+.modal__title {
+width: 100%;
+text-align: center;
+margin-bottom: 50px;
+}
+
+
+.register__icons {
+  img {
+    max-width: 48px;
+  }
+}
+
+.confirmation {
+    max-width: 400px;
+    margin: 0 auto;
+}
   .account__profile {
     text-align: center;
   }

@@ -15,6 +15,8 @@ import FAQ from '../containers/faq';
 
 import Mail from '../containers/mail';
 
+import Registration from '../containers/account/register';
+import Login from '../containers/account/log_in';
 import Dashboard from '../containers/dashboards/main';
 
 import Landing from '../containers/landing';
@@ -38,6 +40,8 @@ const wrappedRoutes = () => (
     <Layout />
     <div className='container__wrap'>
       <Route path='/dashboard' component={Dashboard} />
+      <Route path='/registration' component={Registration} />
+      <Route path='/login' component={Login} />
       <Route path='/uk' component={Uk} />
       <Route path='/funds' component={Funds} />
       <Route path='/investor' component={InvestorProfile} />

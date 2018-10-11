@@ -58,16 +58,6 @@ class PersonalData extends PureComponent {
 Обратите внимание на заглавные и строчные буквы, сокращения (гор. Москва или г. Москва), точки и букву ё.</h5>
           </div>
           <form className='material-form' onSubmit={handleSubmit}>
-
-            <div>
-              <Field
-                name='name'
-                component={renderTextField}
-                placeholder='Константин'
-                label='Имя'
-                value='Константин'
-              />
-            </div>
             <div>
               <Field
                 name='lname'
@@ -77,6 +67,16 @@ class PersonalData extends PureComponent {
                 value='Константинопольский'
               />
             </div>
+            <div>
+              <Field
+                name='name'
+                component={renderTextField}
+                placeholder='Константин'
+                label='Имя'
+                value='Константин'
+              />
+            </div>
+  
             <div>
               <Field
                 name='mname'
@@ -155,6 +155,30 @@ class PersonalData extends PureComponent {
 
               </Col>
             </Row>
+                                <Row>
+          <Col xs={6}>  
+          <div>
+                <Field
+                  name='snils'
+                  component={renderTextField}
+                  placeholder='СНИЛС'
+                  label='СНИЛС'
+                />
+              </div>
+
+          </Col>
+          <Col xs={6}>  
+ 
+          <div>
+                <Field
+                  name='inn'
+                  component={renderTextField}
+                  label='ИНН'
+                />
+              </div>
+          
+          </Col>
+        </Row>
             <div>
               <Field
                 name='address2'

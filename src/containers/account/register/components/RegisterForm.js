@@ -1,10 +1,26 @@
-import React, {PureComponent} from 'react';
-import {Field, reduxForm} from 'redux-form';
-import EyeIcon from 'mdi-react/EyeIcon';
-import KeyVariantIcon from 'mdi-react/KeyVariantIcon';
-import AccountOutlineIcon from 'mdi-react/AccountOutlineIcon';
-import MailRuIcon from 'mdi-react/MailRuIcon';
-import {Link} from 'react-router-dom';
+import React, { PureComponent } from 'react';
+import { Field, reduxForm } from 'redux-form';
+import { Card, CardBody, Col, Button, ButtonToolbar } from 'reactstrap';
+import MenuItem from '@material-ui/core/MenuItem';
+import TextField from '@material-ui/core/TextField';
+import { Link } from 'react-router-dom';
+
+
+const renderTextField = ({ input, label, meta: { touched, error }, children, select }) => (
+  <TextField
+    className='material-form__field'
+    label={label}
+    error={touched && error}
+    value={input.value}
+    children={children}
+    select={select}
+    onChange={(e) => {
+      e.preventDefault();
+      input.onChange(e.target.value);
+    }}
+  />
+);
+
 
 class RegisterForm extends PureComponent {
   constructor(props) {
@@ -24,58 +40,41 @@ class RegisterForm extends PureComponent {
   }
 
   render() {
-    const {handleSubmit} = this.props;
+    const { handleSubmit } = this.props;
 
     return (
-      <form className='form' onSubmit={handleSubmit}>
-        <div className='form__form-group'>
-          <label className='form__form-group-label'>Username</label>
-          <div className='form__form-group-field'>
-            <div className='form__form-group-icon'>
-              <AccountOutlineIcon/>
-            </div>
+      <div className='registration'>
+        <div className='card__title'>
+          <h3>Регистрация</h3>
+          <h5 className='subhead'>Это не займёт у вас больше 3 минут.</h5>
+        </div>
+        <form className='material-form' onSubmit={handleSubmit}>
+          <div>
             <Field
-              name='username'
-              component='input'
+              name='uremaill'
+              component={renderTextField}
+              placeholder='your@email.com'
+              label='E-mail или телефон'
               type='text'
-              placeholder='Name'
             />
           </div>
-        </div>
-        <div className='form__form-group'>
-          <label className='form__form-group-label'>E-mail</label>
-          <div className='form__form-group-field'>
-            <div className='form__form-group-icon'>
-              <MailRuIcon/>
-            </div>
-            <Field
-              name='email'
-              component='input'
-              type='email'
-              placeholder='example@mail.com'
-            />
-          </div>
-        </div>
-        <div className='form__form-group form__form-group--forgot'>
-          <label className='form__form-group-label'>Password</label>
-          <div className='form__form-group-field'>
-            <div className='form__form-group-icon'>
-              <KeyVariantIcon/>
-            </div>
+          <div>
             <Field
               name='password'
-              component='input'
-              type={this.state.showPassword ? 'text' : 'password'}
-              placeholder='Password'
+              component={renderTextField}
+              type='password'
+              label='Пароль'
             />
-            <button className={`form__form-group-button${this.state.showPassword ? ' active' : ''}`}
-                    onClick={(e) => this.showPassword(e)}><EyeIcon/></button>
           </div>
+          <Button color='primary' type='submit' className='next rounded w100' >Зарегистрироваться</Button>
+
+        </form>
+
+        <div className='account__have-account'>
+          <p>Уже зарегистрированы? <Link to='/login'>Войдите</Link></p>
         </div>
-        <div className='account__btns'>
-          <Link className='btn btn-primary account__btn' to='/dashboard'>Sign Up</Link>
-        </div>
-      </form>
+      </div>
+
     )
   }
 }

@@ -1,12 +1,12 @@
-import React, { PureComponent } from 'react';
-import { Field, reduxForm } from 'redux-form';
+import React, {PureComponent} from 'react';
+import {Field, reduxForm} from 'redux-form';
 import EyeIcon from 'mdi-react/EyeIcon';
 import KeyVariantIcon from 'mdi-react/KeyVariantIcon';
 import AccountOutlineIcon from 'mdi-react/AccountOutlineIcon';
-import { Link } from 'react-router-dom';
-import renderCheckBoxField from '../../../../components/form/CheckBox';
+import MailRuIcon from 'mdi-react/MailRuIcon';
+import {Link} from 'react-router-dom';
 
-class LogInForm extends PureComponent {
+class RegisterForm extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -24,7 +24,7 @@ class LogInForm extends PureComponent {
   }
 
   render() {
-    const { handleSubmit } = this.props;
+    const {handleSubmit} = this.props;
 
     return (
       <form className='form' onSubmit={handleSubmit}>
@@ -32,7 +32,7 @@ class LogInForm extends PureComponent {
           <label className='form__form-group-label'>Username</label>
           <div className='form__form-group-field'>
             <div className='form__form-group-icon'>
-              <AccountOutlineIcon />
+              <AccountOutlineIcon/>
             </div>
             <Field
               name='username'
@@ -43,10 +43,24 @@ class LogInForm extends PureComponent {
           </div>
         </div>
         <div className='form__form-group'>
+          <label className='form__form-group-label'>E-mail</label>
+          <div className='form__form-group-field'>
+            <div className='form__form-group-icon'>
+              <MailRuIcon/>
+            </div>
+            <Field
+              name='email'
+              component='input'
+              type='email'
+              placeholder='example@mail.com'
+            />
+          </div>
+        </div>
+        <div className='form__form-group form__form-group--forgot'>
           <label className='form__form-group-label'>Password</label>
           <div className='form__form-group-field'>
             <div className='form__form-group-icon'>
-              <KeyVariantIcon />
+              <KeyVariantIcon/>
             </div>
             <Field
               name='password'
@@ -55,33 +69,17 @@ class LogInForm extends PureComponent {
               placeholder='Password'
             />
             <button className={`form__form-group-button${this.state.showPassword ? ' active' : ''}`}
-              onClick={(e) => this.showPassword(e)}><EyeIcon /></button>
-          </div>
-          <div className='account__forgot-password'>
-            <a href=''>Forgot a password?</a>
-          </div>
-        </div>
-        <div className='form__form-group'>
-          <div className='form__form-group-field'>
-            <Field
-              name='remember_me'
-              component={renderCheckBoxField}
-              label='Remember me'
-            />
+                    onClick={(e) => this.showPassword(e)}><EyeIcon/></button>
           </div>
         </div>
         <div className='account__btns'>
-          <Link className='btn btn-primary account__btn rounded' to='/dashboard'>Войти</Link>
+          <Link className='btn btn-primary account__btn' to='/dashboard'>Sign Up</Link>
         </div>
-        <div className='account__have-account'>
-          <p>Впервый раз здесь? <Link to='/registration'>Зарегистрируйтесь</Link></p>
-        </div>
-
       </form>
     )
   }
 }
 
 export default reduxForm({
-  form: 'log_in_form', // a unique identifier for this form
-})(LogInForm);
+  form: 'register_form', // a unique identifier for this form
+})(RegisterForm);
