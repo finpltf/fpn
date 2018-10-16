@@ -6,6 +6,7 @@ import TextField from '@material-ui/core/TextField';
 import EyeIcon from 'mdi-react/EyeIcon';
 import SyncIcon from 'mdi-react/SyncIcon';
 import { Link } from 'react-router-dom';
+import validate from './validate';
 
 const renderTextField = ({ input, label, meta: { touched, error }, children, select }) => (
   <TextField
@@ -24,22 +25,15 @@ const renderTextField = ({ input, label, meta: { touched, error }, children, sel
 
 
 
-class Step2 extends PureComponent {
+class RegSteps extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      showPassword: false,
+
     };
 
-    this.showPassword = this.showPassword.bind(this);
   }
 
-  showPassword(e) {
-    e.preventDefault();
-    this.setState({
-      showPassword: !this.state.showPassword
-    })
-  }
 
   componentDidMount() {
 
@@ -51,14 +45,15 @@ class Step2 extends PureComponent {
     return (
       <div className='confirmation'>
         <div className='card__title'>
-          <h3>Подтверждение телефона</h3>
-          <h5 className='subhead'>Мы отправили код подтверждения на <b>7 999 888 9999</b>. <br /> Введите его в поле ниже.</h5>
+          <h3>Подтвердите email</h3>
+          <h5 className='subhead'>Мы отправили письмо с кодом подтверждения на your@email.com</h5>
+
         </div>
         <form className='material-form' onSubmit={handleSubmit}>
-          <Row>
+          <Row className='jc' >
             <Col lg={9}>
               <Field
-                name='uremaill'
+                name='email_verif'
                 component={renderTextField}
                 fullWidth={true}
                 label='Код подтверждения'
@@ -79,5 +74,8 @@ class Step2 extends PureComponent {
 }
 
 export default reduxForm({
-  form: 'Step2', // a unique identifier for this form
-})(Step2);
+  form: 'RegSteps', // a unique identifier for this form
+  destroyOnUnmount: false, //        <------ preserve form data
+  forceUnregisterOnUnmount: true, // <------ unregister fields on unmount
+  validate,
+})(RegSteps);

@@ -45,21 +45,25 @@ class RegSteps extends PureComponent {
       <div className='confirmation'>
         <div className='card__title'>
           <h3>Подтверждение телефона</h3>
-          <h5 className='subhead'>Введите ваш номер мобильного телефона</h5>
+          <h5 className='subhead'>Мы отправили код подтверждения на номер +79997778899</h5>
         </div>
         <form className='material-form' onSubmit={handleSubmit}>
           <Row className='jc' >
-            <Col>
+            <Col lg={9}>
               <Field
-                name='phone'
+                name='phone_verif'
                 component={renderTextField}
                 fullWidth={true}
-                label='Мобильный телефон'
+                label='Код подтверждения'
                 type='text'
               />
             </Col>
+            <Col lg={3}>
+              <Link to='/login'><SyncIcon /></Link>
+            </Col>
           </Row>
           <Button color='primary' type='submit' className='next rounded w100' >Подтвердить</Button>
+          <Button color='secondary' type='button' className='previous rounded w100' onClick={previousPage}>Назад</Button>
 
         </form >
       </div>

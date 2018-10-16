@@ -46,7 +46,7 @@ export default class Landing extends PureComponent {
 
 
                   </nav>
-                  <NavLink className='cabinetIcon' to={this.props.route ? this.props.route : '/investor'} onClick={this.props.onClick} >
+                  <NavLink className='cabinetIcon' to={this.props.route ? this.props.route : '/register'} onClick={this.props.onClick} >
 
                     <UserIcon />
 

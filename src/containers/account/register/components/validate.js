@@ -1,21 +1,26 @@
-const validate1 = values => {
+const validate = values => {
   const errors = {};
-  if (!values.login) {
-    errors.login = 'Пожалуйста e-mail или телефон';
-  }
   if (!values.email) {
-    errors.email = 'Email field shouldn’t be empty';
+    errors.email = 'Без вашего email ну никак нельзя.';
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = 'Invalid email address'
+    errors.email = 'Некорректный email. Возможно вы опечатались?'
   }
   if (!values.password) {
-    errors.password = 'Укажите пароль';
+    errors.password = 'Без пароля не безопасно!';
   } else if (values.password == '12345') {
-    errors.password = 'Ты чё, ебанутыйй!?'
+    errors.password = 'Слишком простой пароль!'
+  } else if (values.password == '123') {
+    errors.password = 'Ты чё, ебанутый!!!?'
+  } else if (values.password == '1234') {
+    errors.password = 'Ты чё, ебанутый!!?'
+  } else if (values.password == '123456') {
+    errors.password = 'Ты чё, ёбнулся!?'
+  } else if (values.password == '123456') {
+    errors.password = 'Ты чё, ебанутый!?'
   }
 
 
   return errors;
 };
 
-export default validate1;
+export default validate;

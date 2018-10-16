@@ -4,6 +4,7 @@ import { Field, reduxForm } from 'redux-form';
 import TextField from '@material-ui/core/TextField';
 import { Link } from 'react-router-dom';
 import validate from './validate'
+import showResults from './Show';
 
 const renderTextField = ({ input, label, meta: { touched, error }, children, select }) => (
   <div className="form__form-group-input-wrap">
@@ -24,7 +25,7 @@ const renderTextField = ({ input, label, meta: { touched, error }, children, sel
 
 
 
-class Step1 extends PureComponent {
+class RegSteps extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -47,15 +48,15 @@ class Step1 extends PureComponent {
       <div className='registration'>
         <div className='card__title'>
           <h3>Регистрация</h3>
-          <h5 className='subhead'>Это не займёт у вас больше 3 минут.</h5>
+          <h5 className='subhead'>Создайте личный кабинет за несколько минут.</h5>
         </div>
         <form className='material-form' onSubmit={handleSubmit}>
           <div>
             <Field
-              name='login'
+              name='email'
               className='inp'
               component={renderTextField}
-              label='E-mail или телефон'
+              label='E-mail'
               fullWidth={true}
               type='text'
             />
@@ -71,6 +72,8 @@ class Step1 extends PureComponent {
             />
           </div>
           <Button color='primary' type='submit' className='next rounded w100' >Зарегистрироваться</Button>
+          <p class='text-center disclamer'>Регистрируясь вы соглашаетесь нашей <a href='https://platform.finance/docs/rules.pdf'>политикой обработки</a> персональных данных.
+</p>
 
         </form>
 
@@ -84,6 +87,8 @@ class Step1 extends PureComponent {
 }
 
 export default reduxForm({
-  form: 'Step1', // a unique identifier for this form
+  form: 'RegSteps', // a unique identifier for this form
+  destroyOnUnmount: false, //        <------ preserve form data
+  forceUnregisterOnUnmount: true, // <------ unregister fields on unmount
   validate,
-})(Step1);
+})(RegSteps);

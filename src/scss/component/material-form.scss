@@ -17,11 +17,11 @@
     }
 
     & > div:hover:before {
-      border-bottom: 1px solid $color-cian !important;
+      border-bottom: 1px solid $color-additional-hover !important;
     }
 
     & > div:after {
-      border-color: $color-cian;
+      border-color: $color-additional;
     }
 
     input, textarea {

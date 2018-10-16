@@ -1,15 +1,15 @@
-import React, {PureComponent} from 'react';
-import {Button, ButtonToolbar} from 'reactstrap';
-import {Field, reduxForm} from 'redux-form';
+import React, { PureComponent } from 'react';
+import { Button, ButtonToolbar } from 'reactstrap';
+import { Field, reduxForm } from 'redux-form';
 import renderSelectField from '../../../../components/form/Select';
 
-class WizardFormOne extends PureComponent {
-  
+class RegSteps extends PureComponent {
+
   render() {
-    const {handleSubmit, previousPage} = this.props;
-    
+    const { handleSubmit, previousPage } = this.props;
+
     return (
-      
+
       <form className='form form--horizontal wizard__form' onSubmit={handleSubmit}>
         <h3 className='wizard__title'>What’s your address</h3>
         <div className='form__form-group'>
@@ -20,8 +20,8 @@ class WizardFormOne extends PureComponent {
               component={renderSelectField}
               type='text'
               options={[
-                {value: 'one', label: 'One'},
-                {value: 'two', label: 'Two'},
+                { value: 'one', label: 'One' },
+                { value: 'two', label: 'Two' },
               ]}
               placeholder='Select country'
             />
@@ -75,7 +75,7 @@ class WizardFormOne extends PureComponent {
 }
 
 export default reduxForm({
-  form: 'wizard', //                 <------ same form name
+  form: 'RegSteps', //                 <------ same form name
   destroyOnUnmount: false, //        <------ preserve form data
   forceUnregisterOnUnmount: true, // <------ unregister fields on unmount
-})(WizardFormOne);
+})(WizardForm);

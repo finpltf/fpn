@@ -1,10 +1,19 @@
 .account {
-  height: 100vh;
-  width: 100%;
-  min-height: 100vh;
   display: flex;
   overflow-y: auto;
     box-sizing: inherit;
+    max-width: 375px;
+margin: 0 auto;
+    box-shadow: 0px 10px 30px 15px rgba(0, 0, 0, 0.075);
+    border-radius: 10px;
+float: none;
+
+
+            @media screen and (max-width: 576px) {
+
+    padding: 95px 0px 0 0px !important;
+    } 
+
 
 
   .account__wrapper {
@@ -12,19 +21,29 @@
     padding: 0;
     min-width: 70%;
   }
+  .card {
+    padding: 0;
+  }
+  .card-body {
+box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.075);
+
+
+    .card__title {
+      text-align: center;
+    }
+
+
+  }
 
   .account__card {
-
-    @include themify($themes) {
-      background-color: themed('colorBackground');
-    }
 
     padding: 0;
     max-width: 950px;
     width: 100%;
     width: 100%;
     margin: 0 auto;
-     box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.15);
+    
+
     .subhead {
       font-size: 14px;
       margin-top: 15px;
@@ -44,35 +63,13 @@
       }
     }
     .row {
-&:first-child {
-          box-shadow: 0px 0px 20px 0px rgba(149, 149, 149, 0.52);
-          background: #FFF;        
-    }
 
 
     .row {
           box-shadow: 0 0 0 0;
     }
     }
-    .col {
-      min-width:300px;
-      padding: 4%;
 
-          display: flex;
-    -ms-flex-align: center;
-    /* -webkit-align-items: center; */
-    /* -webkit-box-align: center; */
-    flex-direction: column;
-    justify-content: center;
-
-      .col {
-        padding: 0;
-        
-      }
-
-
-
-    }
 
 
     .material-form {
@@ -81,15 +78,27 @@
     }
 
     .side {
-      padding: 4%;
+      padding: 6%;
       min-height: 500px;
       &.side__left {
-        background: #ee1a2d;
+background: #ee1a2d;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 3% 7%;
+    color: #FFF;
+    position: absolute;
+    left: 10%;
+    top: -40px;
+    max-width: 300px;
+      }
+      &.side__right {
             display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3% 2%;
-    color:#FFF;
       }
     }
 
@@ -97,10 +106,11 @@
     }
   
   }
-
+.disclamer {
+  font-size: 12px;
+}
   .wizard__step {
     display: inline-block;
-    background: #eee;
     width:35px;
     height:35px;
     line-height: 35px;
@@ -294,7 +304,6 @@ margin-bottom: 50px;
 
     .account__card {
       background-color: rgba(0, 10, 16, 0.8);
-      color: #ffffff;
     }
 
     .form__form-group-icon, .form__form-group-button {
@@ -347,4 +356,25 @@ margin-bottom: 50px;
       flex-wrap: wrap;
     }
   }
+}
+
+
+.reg__features {
+  text-align: center;
+  max-width: 60%;
+  margin: 10px auto;
+  .feature__title {
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.44;
+    color: #333;
+  }
+    .feature__icon {
+
+      img {
+        max-width: 60px;
+      }
+  }
+
 }

@@ -35,8 +35,19 @@ export default class InvestorTabs extends PureComponent {
     return (
       <Card>
         <Row className='profile__card tabs'>
-
-
+          <Col xl={7}>
+            <TabContent activeTab={this.state.activeTab}>
+              <TabPane tabId='1'>
+                <PersonalData onSubmit={showResults} />
+              </TabPane>
+              <TabPane tabId='2'>
+                <FinanceData onSubmit={showResults} />
+              </TabPane>
+              <TabPane tabId='3'>
+                <FATCAData onSubmit={showResults} />
+              </TabPane>
+            </TabContent>
+          </Col>
           <Col xl={3}>
             <Nav tabs>
               <NavItem>
@@ -76,22 +87,6 @@ export default class InvestorTabs extends PureComponent {
 
             </Nav>
           </Col>
-          <Col xl={9}
-          >
-            <TabContent activeTab={this.state.activeTab}>
-              <TabPane tabId='1'>
-                <PersonalData onSubmit={showResults} />
-              </TabPane>
-              <TabPane tabId='2'>
-                <FinanceData onSubmit={showResults} />
-              </TabPane>
-              <TabPane tabId='3'>
-                <FATCAData onSubmit={showResults} />
-              </TabPane>
-
-            </TabContent>
-          </Col>
-
         </Row>
       </Card>
     )
